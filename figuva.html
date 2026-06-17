@@ -16,7 +16,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="cart.css"/>
+  <link rel="stylesheet" href="cart.css" />
   <script src="cart.js" defer></script>
   <style>
     *,
@@ -28,15 +28,15 @@
     }
 
     :root {
-      --deep: #111111;
-      --dark: #1e1e1e;
-      --mid: #3a3a3a;
+      --deep: #0E0418;
+      --dark: #1A0830;
+      --mid: #2A1050;
       --purple: #4A1A78;
       --violet: #7A3AA8;
       --lavender: #A878D8;
-      --mist: #d5d5d3;
-      --fog: #f0f0ee;
-      --cream: #f7f7f5;
+      --mist: #D4B0F0;
+      --fog: #EDE0F8;
+      --cream: #FAF6FF;
       --olive: #3A5828;
       --olivem: #5A7838;
       --olivel: #8AAA58;
@@ -51,7 +51,7 @@
     }
 
     body {
-      background: #fff;
+      background: var(--cream);
       color: var(--deep);
       font-family: var(--serif);
       overflow-x: hidden;
@@ -72,40 +72,23 @@
     }
 
     nav.scrolled {
-      background: rgba(247, 247, 245, .97);
+      background: rgba(250, 246, 255, .97);
       backdrop-filter: blur(12px);
       padding: 1rem 5rem;
-      border-bottom: .5px solid var(--mist);
+      border-bottom: .5px solid var(--fog);
     }
 
     .nav-brand {
       font-family: var(--serif);
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 400;
       color: var(--deep);
-      letter-spacing: .06em;
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-    }
-
-    .nav-brand span.brand-by {
-      font-family: var(--sans);
-      font-size: .6rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-left: .4rem;
-      opacity: .8;
-    }
-
-    .nav-brand a {
-      color: inherit;
       text-decoration: none;
-      transition: color .3s;
+      letter-spacing: .06em;
     }
 
-    .nav-brand a:hover {
+    .nav-brand em {
+      font-style: italic;
       color: var(--violet);
     }
 
@@ -146,511 +129,175 @@
       background: var(--deep);
     }
 
-    /* E-COMMERCE HERO LAYOUT */
+    /* HERO */
     .hero {
-      min-height: auto;
+      min-height: 100vh;
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 4rem;
-      padding: 9rem 5rem 5rem;
-      max-width: 1300px;
-      margin: 0 auto;
-      align-items: start;
-    }
-
-    .product-gallery-container {
-      position: sticky;
-      top: 120px;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .gallery-thumbnails {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .thumb-item {
-      width: 80px;
-      height: 80px;
-      border: 1px solid var(--mist);
-      background: #fff;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-      padding: 6px;
-    }
-
-    .thumb-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .thumb-item:hover,
-    .thumb-item.active {
-      border-color: var(--violet);
-      box-shadow: 0 0 0 1px var(--violet);
-    }
-
-    .main-image-view {
-      flex: 1;
-      background: #fff;
-      border: 1px solid var(--mist);
-      height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      grid-template-columns: 1fr 1fr;
       position: relative;
+      overflow: hidden;
     }
 
-    .main-image-view img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      max-height: 480px;
-      transition: opacity 0.3s ease;
-      padding: 1rem;
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 40%, rgba(122, 58, 168, .08) 0%, transparent 65%);
     }
 
-    /* Buy Box Styling */
-    .buy-box-container {
+    .hero-left {
       display: flex;
       flex-direction: column;
-      background: transparent;
+      justify-content: center;
+      padding: 9rem 5rem 6rem 8rem;
+      position: relative;
+      z-index: 2;
     }
 
-    .buy-box-brand {
+    .hero-eyebrow {
       font-family: var(--sans);
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      color: var(--violet);
+      font-size: .65rem;
+      letter-spacing: .22em;
       text-transform: uppercase;
-      margin-bottom: 0.4rem;
-      font-weight: 500;
-    }
-
-    .buy-box-title {
-      font-family: var(--display);
-      font-size: clamp(2.5rem, 4.5vw, 3.8rem);
-      line-height: 1.05;
-      font-weight: 400;
-      color: var(--deep);
-      margin-bottom: 0.6rem;
-    }
-
-    .buy-box-rating {
+      color: var(--lavender);
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      color: var(--mid);
-      margin-bottom: 1.2rem;
+      gap: .8rem;
+      margin-bottom: 1.6rem;
     }
 
-    .buy-box-rating .stars {
-      color: var(--violet);
-      font-size: 0.95rem;
-      letter-spacing: 1px;
+    .hero-eyebrow::before {
+      content: '';
+      width: 28px;
+      height: .5px;
+      background: var(--lavender);
     }
 
-    .buy-box-tagline {
+    .hero-ayah {
       font-family: var(--serif);
-      font-size: 1.25rem;
-      line-height: 1.5;
-      color: var(--mid);
-      margin-bottom: 1.8rem;
+      font-size: 1.8rem;
+      color: var(--violet);
+      margin-bottom: .4rem;
       font-style: italic;
+      letter-spacing: .04em;
     }
 
-    .buy-box-benefits {
-      display: grid;
-      gap: 0.8rem;
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--mist);
-    }
-
-    .benefit-bullet {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.8rem;
-    }
-
-    .benefit-bullet svg {
-      width: 16px;
-      height: 16px;
-      color: var(--violet);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .benefit-bullet span {
+    .hero-ayah-trans {
       font-family: var(--sans);
-      font-size: 0.76rem;
-      line-height: 1.5;
-      color: var(--dark);
-      font-weight: 300;
-    }
-
-    /* Variant Selector */
-    .variant-selector-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--lavender);
       margin-bottom: 2rem;
     }
 
-    .selector-label {
-      font-family: var(--sans);
-      font-size: 0.68rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--mid);
-      font-weight: 500;
-      margin-bottom: 0.2rem;
-    }
-
-    .variant-card {
-      border: 1.5px solid var(--mist);
-      padding: 1.2rem;
-      background: #fff;
-      cursor: pointer;
-      position: relative;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .variant-card:hover {
-      border-color: var(--violet);
-    }
-
-    .variant-card.active {
-      border-color: var(--violet);
-      background: rgba(122, 58, 168, 0.03);
-    }
-
-    .variant-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.4rem;
-    }
-
-    .variant-name {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--deep);
-    }
-
-    .variant-badge {
-      font-family: var(--sans);
-      font-size: 0.58rem;
-      letter-spacing: 0.1em;
-      background: var(--dark);
-      color: var(--fog);
-      padding: 0.25rem 0.6rem;
-      font-weight: 500;
-    }
-
-    .variant-badge.bundle-badge {
-      background: var(--violet);
-      color: #fff;
-    }
-
-    .variant-desc {
-      font-family: var(--sans);
-      font-size: 0.7rem;
-      color: var(--mid);
-      font-weight: 300;
-      line-height: 1.4;
-      margin-bottom: 0.8rem;
-    }
-
-    .variant-pricing {
-      display: flex;
-      align-items: baseline;
-      gap: 0.8rem;
-    }
-
-    .v-price {
+    .hero-h1 {
       font-family: var(--display);
-      font-size: 1.6rem;
+      font-size: clamp(3rem, 4.5vw, 5.2rem);
+      font-weight: 400;
+      line-height: 1.06;
       color: var(--deep);
+      margin-bottom: 1.8rem;
     }
 
-    .v-currency {
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      color: var(--mid);
-      font-weight: 300;
-    }
-
-    .v-original {
-      font-family: var(--display);
-      font-size: 1.15rem;
-      color: var(--mid);
-      text-decoration: line-through;
-      opacity: 0.5;
-    }
-
-    .v-save {
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      letter-spacing: 0.05em;
+    .hero-h1 em {
+      font-style: italic;
       color: var(--violet);
-      font-weight: 500;
-      text-transform: uppercase;
     }
 
-    /* Qty & Action Row */
-    .qty-and-action-wrap {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      align-items: stretch;
-    }
-
-    .qty-selector {
-      display: flex;
-      align-items: center;
-      border: 1px solid var(--mist);
-      background: #fff;
-    }
-
-    .qty-btn {
-      width: 44px;
-      height: 100%;
-      background: none;
-      border: none;
+    .hero-sub {
       font-family: var(--sans);
-      font-size: 0.85rem;
-      cursor: pointer;
-      color: var(--mid);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s;
-    }
-
-    .qty-btn:hover {
-      background: var(--fog);
-    }
-
-    .qty-number {
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--deep);
-      min-width: 30px;
-      text-align: center;
-    }
-
-    .btn-buy-now {
-      flex: 1;
-      font-family: var(--sans);
-      font-size: 0.76rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      background: var(--dark);
-      color: var(--fog);
-      padding: 1.1rem 2rem;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.25s ease;
-      font-weight: 500;
-      text-align: center;
-    }
-
-    .btn-buy-now:hover {
-      background: var(--deep);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 16px rgba(122, 58, 168, 0.15);
-    }
-
-    .buy-box-shipping-note,
-    .buy-box-guarantee {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      color: var(--mid);
-      margin-bottom: 0.8rem;
+      font-size: .8rem;
+      line-height: 2;
       font-weight: 300;
+      color: var(--mid);
+      max-width: 400px;
+      margin-bottom: 2.6rem;
     }
 
-    .buy-box-shipping-note svg,
-    .buy-box-guarantee svg {
-      width: 16px;
-      height: 16px;
-      color: var(--violet);
-      flex-shrink: 0;
-    }
-
-    .buy-box-trust-badges {
+    .hero-actions {
       display: flex;
-      align-items: center;
       gap: 1.2rem;
-      margin-top: 1.8rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--mist);
+      align-items: center;
+    }
+
+    .btn-primary {
+      font-family: var(--sans);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      background: var(--dark);
+      color: var(--fog);
+      padding: .95rem 2.2rem;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+      transition: background .3s, transform .2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--deep);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      font-family: var(--sans);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      transition: color .3s;
+    }
+
+    .btn-ghost:hover {
+      color: var(--violet);
+    }
+
+    .hero-badges {
+      display: flex;
+      gap: .8rem;
+      margin-top: 2.4rem;
       flex-wrap: wrap;
     }
 
-    .badge-tag {
+    .badge {
       font-family: var(--sans);
-      font-size: 0.58rem;
-      letter-spacing: 0.12em;
+      font-size: .6rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
       color: var(--mid);
-      border: 1px solid var(--mist);
-      padding: 0.35rem 0.6rem;
-      font-weight: 500;
+      border: .5px solid var(--fog);
+      padding: .35rem .9rem;
+      background: rgba(255, 255, 255, .6);
+    }
+
+    .hero-right {
       background: var(--fog);
-    }
-
-    /* STICKY BUY BAR */
-    .sticky-buy-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 95;
-      background: rgba(20, 10, 30, 0.97);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid rgba(122, 58, 168, 0.2);
-      padding: 0.9rem 3rem;
+      position: relative;
+      overflow: hidden;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      transform: translateY(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .sticky-buy-bar.visible {
-      transform: translateY(0);
-    }
-
-    .sbb-product {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-    }
-
-    .sbb-img {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 2px;
-    }
-
-    .sbb-name {
-      font-family: var(--display);
-      font-size: 1.1rem;
-      color: var(--fog);
-      font-style: italic;
-    }
-
-    .sbb-tagline {
-      font-family: var(--sans);
-      font-size: 0.62rem;
-      letter-spacing: 0.1em;
-      color: var(--violet);
-      text-transform: uppercase;
-    }
-
-    .sbb-right {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .sbb-price {
-      font-family: var(--display);
-      font-size: 1.4rem;
-      color: var(--fog);
-    }
-
-    .sbb-price small {
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      color: var(--violet);
-      font-style: normal;
-      letter-spacing: 0.1em;
-    }
-
-    .sbb-btn {
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      background: var(--violet);
-      color: var(--fog);
-      padding: 0.85rem 2rem;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      font-weight: 600;
-      transition: background 0.2s;
-      white-space: nowrap;
-    }
-
-    .sbb-btn:hover {
-      background: #5e2a85;
-    }
-
-    /* STICKY PRODUCT NAV */
-    .product-nav {
-      position: sticky;
-      top: 60px;
-      background: rgba(247, 244, 238, .9);
-      backdrop-filter: blur(10px);
-      z-index: 90;
-      border-bottom: .5px solid var(--mist);
-      padding: 0 5rem;
-      display: none;
       justify-content: center;
     }
 
-    .product-nav.visible {
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 40%, rgba(122, 58, 168, .12) 0%, transparent 70%);
+    }
+
+    /* JAR on hero */
+    .hero-jar {
+      position: relative;
+      z-index: 2;
       display: flex;
-    }
-
-    .product-nav-links {
-      display: flex;
-      list-style: none;
-    }
-
-    .product-nav-links a {
-      font-family: var(--sans);
-      font-size: .6rem;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      color: var(--mid);
-      padding: 1.2rem 1.5rem;
-      text-decoration: none;
-      transition: color .3s;
-      border-bottom: 2px solid transparent;
-    }
-
-    .product-nav-links a:hover {
-      color: var(--violet);
-    }
-
-    .product-nav-links a.active {
-      color: var(--deep);
-      border-bottom-color: var(--violet);
+      align-items: center;
+      justify-content: center;
     }
 
     /* MARQUEE */
@@ -698,7 +345,7 @@
 
     /* SECTIONS */
     .section {
-      padding: 5rem 6rem;
+      padding: 7rem 8rem;
     }
 
     .section-label {
@@ -712,11 +359,11 @@
 
     .section-h2 {
       font-family: var(--display);
-      font-size: clamp(1.6rem, 2.5vw, 2.6rem);
+      font-size: clamp(2rem, 3vw, 3.4rem);
       font-weight: 400;
       line-height: 1.15;
       color: var(--deep);
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
 
     .section-h2 em {
@@ -944,7 +591,7 @@
     /* STRENGTH SECTION */
     .strength {
       background: var(--dark);
-      padding: 5rem 6rem;
+      padding: 7rem 8rem;
     }
 
     .strength .section-label {
@@ -1012,7 +659,7 @@
 
     /* AGES SECTION */
     .ages {
-      padding: 5rem 6rem;
+      padding: 7rem 8rem;
       background: var(--fog);
     }
 
@@ -1079,7 +726,7 @@
 
     /* DOSAGE */
     .dosage {
-      padding: 4.5rem 6rem;
+      padding: 6rem 8rem;
       background: var(--mid);
     }
 
@@ -1152,7 +799,7 @@
 
     /* SCIENCE */
     .science {
-      padding: 5rem 6rem;
+      padding: 7rem 8rem;
       background: var(--cream);
     }
 
@@ -1261,7 +908,7 @@
 
     /* TESTIMONIALS */
     .testimonials {
-      padding: 5rem 6rem;
+      padding: 7rem 8rem;
       background: var(--fog);
     }
 
@@ -1291,7 +938,7 @@
       letter-spacing: 2px;
     }
 
-    .testi-quote {
+    .testi-quote-mark {
       font-family: var(--display);
       font-size: 3rem;
       color: var(--fog);
@@ -1317,7 +964,7 @@
       color: var(--lavender);
     }
 
-    .testi-condition {
+    .testi-detail {
       font-family: var(--sans);
       font-size: .6rem;
       color: rgba(122, 58, 168, .5);
@@ -1326,7 +973,7 @@
 
     /* FAQ */
     .faq {
-      padding: 5rem 6rem;
+      padding: 7rem 8rem;
       background: var(--cream);
     }
 
@@ -1347,6 +994,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      cursor: pointer;
       font-family: var(--serif);
       font-size: 1.1rem;
       color: var(--deep);
@@ -1408,6 +1056,53 @@
       color: var(--mid);
     }
 
+    /* CTA */
+    .cta {
+      background: var(--purple);
+      padding: 6rem 8rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .cta h2 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      color: var(--fog);
+      font-style: italic;
+    }
+
+    .cta p {
+      font-family: var(--sans);
+      font-size: .78rem;
+      line-height: 2;
+      font-weight: 300;
+      color: var(--mist);
+      margin-top: .8rem;
+      max-width: 480px;
+    }
+
+    .btn-light {
+      font-family: var(--sans);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      background: var(--cream);
+      color: var(--deep);
+      padding: 1.1rem 2.4rem;
+      border: none;
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-block;
+      transition: background .3s, transform .2s;
+    }
+
+    .btn-light:hover {
+      background: var(--fog);
+      transform: translateY(-2px);
+    }
+
     /* DISCLAIMER */
     .disclaimer {
       background: var(--fog);
@@ -1424,121 +1119,956 @@
       font-weight: 300;
     }
 
-    /* GUARANTEE */
-    .guarantee {
-      padding: 7rem 8rem;
-      background: var(--cream);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .guarantee::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(122, 58, 168, 0.05) 0%, transparent 70%);
-    }
-
-    .guarantee-inner {
-      max-width: 720px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .guarantee-seal {
-      width: 90px;
-      height: 90px;
-      margin: 0 auto 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--fog);
-      border-radius: 50%;
-      border: 0.5px solid var(--mist);
-      box-shadow: 0 10px 30px rgba(61, 40, 0, 0.05);
-    }
-
-    .guarantee-seal svg {
-      width: 44px;
-      height: 44px;
-    }
-
-    .guarantee-h2 {
-      font-size: clamp(2rem, 3vw, 2.8rem);
-      font-weight: 400;
-      font-family: var(--display);
-      color: var(--deep);
-      margin-bottom: 1.5rem;
-    }
-
-    .guarantee-h2 em {
-      font-style: italic;
-      color: var(--violet);
-    }
-
-    .guarantee-p {
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      line-height: 2;
-      font-weight: 300;
-      color: var(--dark);
-      margin-bottom: 0;
-    }
-
-    .guarantee-trust {
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--violet);
-      margin-top: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    .guarantee-trust::before,
-    .guarantee-trust::after {
-      content: '';
-      width: 30px;
-      height: 0.5px;
-      background: var(--mist);
-    }
-
     /* FOOTER */
-    <footer>
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="nav-logo" style="color:var(--cream)"><a href="index.html"><img src="sz-herbals-logo-united-states.png" alt="SZ Herbals Logo" style="height: 112px; width: auto; object-fit: contain; filter: brightness(0) invert(1);"></a></div>
-          <p>Pure Ficus carica and Olea europaea. 100% organic, zero chemicals. Strength, vitality and bone density from nature's most sacred botanicals.</p>
-        </div>
-        <div class="footer-col">
-          <h5>Product</h5>
-          <ul>
-            <li><a href="#why">Why Figuva</a></li>
-            <li><a href="#ingredients">Ingredients</a></li>
-            <li><a href="#dosage">Dosage Guide</a></li>
-            <li><a href="orderform.html">Order Now</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>SZ Herbals</h5>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="glukora.html">Glukora (Diabetes)</a></li>
-            <li><a href="orderform.html">Order Now</a></li>
-            <li><a href="blog.html">Journal</a></li>
-          </ul>
+    footer {
+      background: var(--deep);
+      padding: 5rem 8rem 2.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: .5px solid rgba(255, 255, 255, .05);
+    }
+
+    .footer-brand p {
+      font-family: var(--sans);
+      font-size: .74rem;
+      line-height: 1.9;
+      font-weight: 300;
+      color: var(--mist);
+      margin-top: 1rem;
+    }
+
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: .62rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--lavender);
+      margin-bottom: 1.4rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: .7rem;
+    }
+
+    .footer-col a {
+      font-family: var(--sans);
+      font-size: .74rem;
+      font-weight: 300;
+      color: var(--mist);
+      text-decoration: none;
+      transition: color .3s;
+    }
+
+    .footer-col a:hover {
+      color: var(--cream);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+    }
+
+    .footer-bottom p {
+      font-family: var(--sans);
+      font-size: .62rem;
+      color: rgba(168, 120, 216, .3);
+      letter-spacing: .06em;
+    }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .d1 {
+      transition-delay: .1s;
+    }
+
+    .d2 {
+      transition-delay: .2s;
+    }
+
+    .d3 {
+      transition-delay: .3s;
+    }
+
+    .d4 {
+      transition-delay: .4s;
+    }
+
+    /* HAMBURGER */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 28px;
+      height: 20px;
+      position: relative;
+      z-index: 201;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 1.5px;
+      background: var(--deep);
+      position: absolute;
+      left: 0;
+      transition: all .35s ease;
+    }
+
+    .hamburger span:nth-child(1) {
+      top: 0;
+    }
+
+    .hamburger span:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hamburger span:nth-child(3) {
+      bottom: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      bottom: auto;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+
+    /* MOBILE OVERLAY */
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(14, 4, 24, .97);
+      backdrop-filter: blur(16px);
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .4s ease;
+    }
+
+    .mobile-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-nav-link {
+      font-family: var(--sans);
+      font-size: .85rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--fog);
+      text-decoration: none;
+      padding: .6rem 1rem;
+      transition: color .3s;
+    }
+
+    .mobile-nav-link:hover {
+      color: var(--lavender);
+    }
+
+    @media(max-width:900px) {
+
+      nav,
+      nav.scrolled {
+        padding: 1rem 1.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-left {
+        padding: 7rem 2rem 3rem;
+      }
+
+      .hero-right {
+        height: 60vw;
+      }
+
+      .section,
+      .quran-section,
+      .strength,
+      .ages,
+      .dosage,
+      .science,
+      .testimonials,
+      .faq,
+      .cta,
+      footer,
+      .disclaimer {
+        padding: 4rem 2rem;
+      }
+
+      .why-grid,
+      .ing-grid,
+      .science-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .strength-grid,
+      .dosage-grid,
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ages-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="nav-brand"><em>Figuva</em> by SZ Herbals</a>
+    <ul class="nav-links">
+      <li><a href="#why">Why Figuva</a></li>
+      <li><a href="#ingredients">Ingredients</a></li>
+      <li><a href="#strength">Benefits</a></li>
+      <li><a href="#dosage">Dosage</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a href="orderform.html" class="nav-cta">Order Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <a href="#why" class="mobile-nav-link">Why Figuva</a>
+    <a href="#ingredients" class="mobile-nav-link">Ingredients</a>
+    <a href="#strength" class="mobile-nav-link">Benefits</a>
+    <a href="#dosage" class="mobile-nav-link">Dosage</a>
+    <a href="#reviews" class="mobile-nav-link">Reviews</a>
+    <a href="orderform.html" class="mobile-nav-link">Order Now</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow reveal">Pure Herbal · Strength & Vitality · SZ Herbals</div>
+      <div class="hero-ayah reveal d1">Pure Clinical Nutrition</div>
+      <div class="hero-ayah-trans reveal d1">Formulated for maximum bioavailability</div>
+      <h1 class="hero-h1 reveal d2">
+        Nature's clinical<br />
+        <em>prescription</em><br />
+        for strength.
+      </h1>
+      <p class="hero-sub reveal d3">
+        Figuva is a 100% organic herbal syrup of pure Ficus carica and Olea europaea — two of the most powerful
+        botanicals in traditional medicine. Builds muscle strength, bone density, energy and vitality for every age.
+      </p>
+      <div class="hero-actions reveal d4">
+        <a href="orderform.html" class="btn-primary">Order Figuva</a>
+        <a href="#why" class="btn-ghost">See the Science →</a>
+      </div>
+      <div class="hero-badges reveal d4">
+        <span class="badge">100% Organic</span>
+        <span class="badge">Ficus carica & Olea europaea</span>
+        <span class="badge">All Ages</span>
+        <span class="badge">Pure Syrup</span>
+        <span class="badge">Zero Chemicals</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-jar reveal d2">
+        <img src="figuva-product-hero-image-united-states.png" alt=""
+    style="width:260px;height:320px;filter:drop-shadow(0 20px 40px rgba(74,26,120,.3));">
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="m-item">وَالتِّينِ وَالزَّيْتُونِ <span class="m-dot"></span></span>
+      <span class="m-item">By the Ficus carica and the Olea europaea <span class="m-dot"></span></span>
+      <span class="m-item">100% Organic <span class="m-dot"></span></span>
+      <span class="m-item">Builds Muscle Strength <span class="m-dot"></span></span>
+      <span class="m-item">Strengthens Bones <span class="m-dot"></span></span>
+      <span class="m-item">Pure Herbal Syrup <span class="m-dot"></span></span>
+      <span class="m-item">All Ages <span class="m-dot"></span></span>
+      <span class="m-item">Zero Chemicals <span class="m-dot"></span></span>
+      <span class="m-item">وَالتِّينِ وَالزَّيْتُونِ <span class="m-dot"></span></span>
+      <span class="m-item">By the Ficus carica and the Olea europaea <span class="m-dot"></span></span>
+      <span class="m-item">100% Organic <span class="m-dot"></span></span>
+      <span class="m-item">Builds Muscle Strength <span class="m-dot"></span></span>
+      <span class="m-item">Strengthens Bones <span class="m-dot"></span></span>
+      <span class="m-item">Pure Herbal Syrup <span class="m-dot"></span></span>
+      <span class="m-item">All Ages <span class="m-dot"></span></span>
+      <span class="m-item">Zero Chemicals <span class="m-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- CLINICAL SECTION -->
+  <section class="quran-section">
+    <div class="quran-inner">
+      <div class="arabic-big reveal">Clinical Synergy</div>
+      <div class="arabic-trans reveal d1">"The power of Ficus carica and Olea europaea"</div>
+      <div class="arabic-source reveal d2">Evidence-Based Botanical Medicine</div>
+      <p class="quran-body reveal d2">Throughout history, traditional healers have understood the combined power of these
+        two plants. Today, modern clinical science confirms what traditional medicine has long known: Ficus carica and
+        Olea europaea work synergistically to support cellular health, bone density, and muscular strength. Figuva
+        delivers this exact combination — pure, concentrated, and highly bioavailable.</p>
+    </div>
+  </section>
+
+  <!-- WHY FIGUVA -->
+  <section class="section" id="why" style="background:var(--cream);">
+    <div class="section-label reveal">The science</div>
+    <h2 class="section-h2 reveal d1">Not just food.<br /><em>Clinical medicine.</em></h2>
+    <div class="why-grid">
+      <div>
+        <p class="reveal">Ficus carica and Olea europaea have been consumed together in the Middle East, South Asia and
+          the Mediterranean for thousands of years — not just as food, but as medicine. Traditional healers across Unani,
+          Ayurvedic and Greek systems have documented their combined power for strength, vitality and recovery.</p>
+        <p class="reveal d1">Modern nutritional science has now confirmed what ancient traditions always knew. Ficus
+          carica is one of the most mineral-dense fruits on earth. Olive contains oleocanthal — a compound with the same
+          anti-inflammatory mechanism as ibuprofen, without any of the side effects.</p>
+        <p class="reveal d2">Together, in a pure organic syrup form, they deliver maximum bioavailability — your body
+          absorbs liquid nutrition faster and more completely than capsules or tablets. Every spoonful of Figuva is a
+          concentrated dose of nature's most powerful strength botanicals.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <h3>What makes Figuva different</h3>
+        <div style="display:grid;gap:1rem;">
+          <div
+            style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:.5px solid rgba(255,255,255,.06);">
+            <div
+              style="width:8px;height:8px;background:var(--lavender);border-radius:50%;flex-shrink:0;margin-top:.4rem;">
+            </div>
+            <div>
+              <p style="font-family:var(--sans);font-size:.8rem;font-weight:500;color:var(--fog);margin-bottom:.3rem;">
+                Pure liquid syrup</p>
+              <p
+                style="font-family:var(--sans);font-size:.72rem;line-height:1.8;font-weight:300;color:var(--mist);">
+                Faster absorption than capsules. Your body gets the full benefit within minutes.</p>
+            </div>
+          </div>
+          <div
+            style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:.5px solid rgba(255,255,255,.06);">
+            <div
+              style="width:8px;height:8px;background:var(--olivel);border-radius:50%;flex-shrink:0;margin-top:.4rem;">
+            </div>
+            <div>
+              <p style="font-family:var(--sans);font-size:.8rem;font-weight:500;color:var(--fog);margin-bottom:.3rem;">
+                100% organic — no sugar added</p>
+              <p
+                style="font-family:var(--sans);font-size:.72rem;line-height:1.8;font-weight:300;color:var(--mist);">
+                Pure Ficus carica and Olea europaea extract. No artificial sweeteners, no preservatives, no chemicals.
+              </p>
+            </div>
+          </div>
+          <div
+            style="display:flex;gap:1rem;align-items:flex-start;padding-bottom:1rem;border-bottom:.5px solid rgba(255,255,255,.06);">
+            <div
+              style="width:8px;height:8px;background:var(--lavender);border-radius:50%;flex-shrink:0;margin-top:.4rem;">
+            </div>
+            <div>
+              <p style="font-family:var(--sans);font-size:.8rem;font-weight:500;color:var(--fog);margin-bottom:.3rem;">
+                For every age</p>
+              <p
+                style="font-family:var(--sans);font-size:.72rem;line-height:1.8;font-weight:300;color:var(--mist);">
+                Children, adults, elderly — Figuva builds and maintains strength at every stage of life.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div
+              style="width:8px;height:8px;background:var(--olivel);border-radius:50%;flex-shrink:0;margin-top:.4rem;">
+            </div>
+            <div>
+              <p style="font-family:var(--sans);font-size:.8rem;font-weight:500;color:var(--fog);margin-bottom:.3rem;">
+                Rooted in science</p>
+              <p
+                style="font-family:var(--sans);font-size:.72rem;line-height:1.8;font-weight:300;color:var(--mist);">
+                Backed by extensive clinical research. No supplement provides a more evidence-based foundation.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 Figuva by <a href="index.html" style="color:inherit;text-decoration:none;">SZ Herbals</a>. All rights reserved.</p>
-        <p>Pure · Natural · وَالتِّينِ وَالزَّيْتُونِ</p>
+    </div>
+  </section>
+
+  <!-- INGREDIENTS -->
+  <section class="section" id="ingredients" style="background:var(--fog);padding-top:5rem;padding-bottom:5rem;">
+    <div class="section-label reveal">The two ingredients</div>
+    <h2 class="section-h2 reveal d1">Ficus carica and Olea europaea —<br />everything your body <em>needs</em></h2>
+    <div class="ing-grid">
+
+      <div class="ing-card fig reveal">
+        <div class="ing-icon-wrap">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px;">
+            <ellipse cx="32" cy="40" rx="20" ry="22" fill="#4A1A70" stroke="#7A3AA0" stroke-width="1.2" />
+            <ellipse cx="32" cy="35" rx="15" ry="16" fill="#5A2280" stroke="#8A4AB0" stroke-width="0.8" />
+            <line x1="32" y1="18" x2="32" y2="8" stroke="#6A3A28" stroke-width="2" stroke-linecap="round" />
+            <path d="M32,12 C27,6 18,5 16,10 C19,12 27,12 32,12Z" fill="#5A4028" opacity="0.8" />
+            <circle cx="27" cy="34" r="2.5" fill="#9A5AC0" opacity="0.6" />
+            <circle cx="34" cy="40" r="2.5" fill="#9A5AC0" opacity="0.6" />
+            <circle cx="28" cy="46" r="2" fill="#9A5AC0" opacity="0.5" />
+          </svg>
+        </div>
+        <h4>Ficus carica</h4>
+        <div class="ing-local">Ficus carica · Botanical extract</div>
+        <p>One of the most mineral-dense fruits on earth. Figs contain more calcium than milk gram for gram, more
+          potassium than bananas, and a rich profile of magnesium, iron and zinc — all essential for muscle contraction,
+          bone formation and energy metabolism.</p>
+        <div class="ing-benefits">
+          <div class="ing-benefit" style="border-top:none !important;padding-top:0 !important;">
+            <div class="ing-dot fig-dot"></div>Higher calcium content than milk per 100g
+          </div>
+          <div class="ing-benefit">
+            <div class="ing-dot fig-dot"></div>Rich in potassium — essential for muscle function
+          </div>
+          <div class="ing-benefit">
+            <div class="ing-dot fig-dot"></div>Magnesium for energy production at cellular level
+          </div>
+          <div class="ing-benefit">
+            <div class="ing-dot fig-dot"></div>Natural sugars for sustained muscle fuel
+          </div>
+          <div class="ing-benefit">
+            <div class="ing-dot fig-dot"></div>Iron for oxygen transport to muscles
+          </div>
+          <div class="ing-benefit">
+            <div class="ing-dot fig-dot"></div>Antioxidants for cellular protection and recovery
+          </div>
+        </div>
       </div>
-    </footer>
+
+      <div class="ing-card olive reveal d1">
+        <div class="ing-icon-wrap">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px;">
+            <line x1="32" y1="56" x2="32" y2="8" stroke="#4A6830" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M32,20 C22,14 10,17 13,25 C16,31 28,29 32,20Z" fill="#3A5828" opacity="0.9" />
+            <path d="M32,20 C42,14 54,17 51,25 C48,31 36,29 32,20Z" fill="#4A6830" opacity="0.85" />
+            <path d="M32,36 C20,30 8,34 11,42 C14,50 28,47 32,36Z" fill="#3A5828" opacity="0.85" />
+            <path d="M32,36 C44,30 56,34 53,42 C50,50 36,47 32,36Z" fill="#4A6830" opacity="0.8" />
+            <ellipse cx="22" cy="26" rx="7" ry="10" fill="#6A8840" opacity="0.9" />
+            <ellipse cx="42" cy="26" rx="6.5" ry="9.5" fill="#5A7838" opacity="0.85" />
+            <ellipse cx="20" cy="44" rx="6" ry="8.5" fill="#6A8840" opacity="0.8" />
+          </svg>
+        </div>
+        <h4>Olea europaea</h4>
+        <div class="ing-local" style="color:#A8C878 !important;">Olea europaea · Botanical extract</div>
+        <p>Olea europaea contains oleocanthal — a natural compound that works through the same anti-inflammatory pathways
+          as ibuprofen. Combined with its rich healthy fat profile, Olea europaea supports muscle recovery, joint health,
+          heart strength, and long-term cellular protection.</p>
+        <div class="ing-benefits">
+          <div class="ing-benefit" style="border-top:none !important;padding-top:0 !important;">
+            <div class="ing-dot olive-dot"></div>Oleocanthal — natural anti-inflammatory compound
+          </div>
+          <div class="ing-benefit">
+            <div class="ing-dot olive-dot"></div>Oleic acid for heart health and circulation
+          </div>
+          <div class="ing-benefit">
+            <div class="ing-dot olive-dot"></div>Polyphenols for muscle recovery after exertion
+          </div>
+          <div class="ing-benefit">
+            <div class="ing-dot olive-dot"></div>Vitamin E for cellular strength and protection
+          </div>
+          <div class="ing-benefit">
+            <div class="ing-dot olive-dot"></div>Squalene for immune system support
+          </div>
+          <div class="ing-benefit">
+            <div class="ing-dot olive-dot"></div>Supports testosterone and hormonal balance
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRENGTH BENEFITS -->
+  <section class="strength" id="strength">
+    <div class="section-label reveal">What Figuva does</div>
+    <h2 class="section-h2 reveal d1">Six ways Figuva<br />builds your <em>strength</em></h2>
+    <div class="strength-grid">
+
+      <div class="strength-card reveal">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A878D8" stroke-width="1.2" stroke-linecap="round">
+            <path d="M4 12 L6 8 L9 14 L12 6 L15 14 L18 8 L20 12" />
+          </svg>
+        </div>
+        <h4>Muscle Strength</h4>
+        <p>Ficus carica's potassium, magnesium and calcium fuel muscle contraction and repair. Olea europaea's oleic acid
+          supports the hormonal environment for muscle growth. Together they build strength from the inside out.</p>
+      </div>
+
+      <div class="strength-card reveal d1">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A878D8" stroke-width="1.2" stroke-linecap="round">
+            <path d="M12 3 C8 5 5 9 5 13 C5 17 8 20 12 20 C16 20 19 17 19 13 C19 9 16 5 12 3Z" />
+            <line x1="12" y1="8" x2="12" y2="16" />
+            <line x1="8" y1="12" x2="16" y2="12" />
+          </svg>
+        </div>
+        <h4>Bone Density</h4>
+        <p>Ficus carica contains more calcium per gram than milk — critical for bone density at every age. Regular
+          consumption has been shown to prevent bone loss and support skeletal strength in adults and the elderly.</p>
+      </div>
+
+      <div class="strength-card reveal d2">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A878D8" stroke-width="1.2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="8" />
+            <path d="M12 8 L12 12 L15 15" />
+          </svg>
+        </div>
+        <h4>Sustained Energy</h4>
+        <p>Ficus carica's natural sugars provide clean, sustained energy — without the crash of refined sugar. Olea
+          europaea's healthy fats provide long-burning fuel. Together they maintain energy levels throughout the entire
+          day.</p>
+      </div>
+
+      <div class="strength-card reveal">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A878D8" stroke-width="1.2" stroke-linecap="round">
+            <path d="M20 7 C20 14 12 21 12 21 C12 21 4 14 4 7 C4 4.8 7 3 12 3 C17 3 20 4.8 20 7Z" />
+          </svg>
+        </div>
+        <h4>Heart Strength</h4>
+        <p>Olea europaea's oleic acid and polyphenols reduce inflammation in blood vessel walls, lower LDL cholesterol,
+          and support healthy circulation. A strong heart means a strong body — at every age.</p>
+      </div>
+
+      <div class="strength-card reveal d1">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A878D8" stroke-width="1.2" stroke-linecap="round">
+            <path d="M12 2 L14 8 L20 8 L15.5 12 L17.5 18 L12 14.5 L6.5 18 L8.5 12 L4 8 L10 8 Z" />
+          </svg>
+        </div>
+        <h4>Immune Vitality</h4>
+        <p>Both Ficus carica and Olea europaea are rich in antioxidants that neutralise free radicals and strengthen
+          immune function. Olea europaea's squalene and vitamin E provide deep cellular protection against illness and
+          ageing.</p>
+      </div>
+
+      <div class="strength-card reveal d2">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A878D8" stroke-width="1.2" stroke-linecap="round">
+            <path d="M4 19 C4 15 7 12 12 12 C17 12 20 15 20 19" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </div>
+        <h4>Recovery & Repair</h4>
+        <p>Oleocanthal from Olea europaea suppresses the same inflammatory pathways as ibuprofen — naturally. Combined
+          with Ficus carica's iron and zinc, Figuva accelerates muscle recovery and tissue repair after physical
+          exertion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR ALL AGES -->
+  <section class="ages" id="ages">
+    <div class="section-label reveal">For every body</div>
+    <h2 class="section-h2 reveal d1">Strength at <em>every age</em></h2>
+    <p style="font-family:var(--sans);font-size:.8rem;line-height:2;font-weight:300;color:var(--mid);max-width:560px;margin-top:.8rem;"
+      class="reveal d2">Figuva is not a product for athletes only. It is for every human body that deserves to feel
+      strong — from childhood to old age.</p>
+    <div class="ages-grid">
+      <div class="age-card reveal">
+        <div class="age-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A878D8" stroke-width="1.2" stroke-linecap="round">
+            <circle cx="12" cy="6" r="3" />
+            <path d="M9 10 L9 18 M15 10 L15 18" />
+            <path d="M7 14 L9 14 M15 14 L17 14" />
+          </svg>
+        </div>
+        <h4>Children</h4>
+        <div class="age-range">Ages 3–12</div>
+        <p>Builds strong bones and teeth during critical growth years. Supports healthy energy, focus and immunity. 1
+          teaspoon daily.</p>
+      </div>
+      <div class="age-card reveal d1">
+        <div class="age-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A878D8" stroke-width="1.2" stroke-linecap="round">
+            <circle cx="12" cy="5" r="3" />
+            <path d="M5 20 L7 12 L12 10 L17 12 L19 20" />
+            <path d="M9 20 L9 14 L15 14 L15 20" />
+          </svg>
+        </div>
+        <h4>Teens</h4>
+        <div class="age-range">Ages 13–19</div>
+        <p>Peak bone mass is built in teenage years. Figuva ensures the right minerals for bone density, muscle
+          development and sustained energy through demanding school and sport years.</p>
+      </div>
+      <div class="age-card reveal d2">
+        <div class="age-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A878D8" stroke-width="1.2" stroke-linecap="round">
+            <path d="M6 20 L6 10 C6 6 18 6 18 10 L18 20" />
+            <path d="M10 10 C10 8 14 8 14 10" />
+            <path d="M4 20 L20 20" />
+          </svg>
+        </div>
+        <h4>Adults</h4>
+        <div class="age-range">Ages 20–55</div>
+        <p>Maintains muscle mass, fuels daily energy, supports joint health and recovery. Perfect for busy professionals,
+          parents and active individuals. 1–2 tablespoons daily.</p>
+      </div>
+      <div class="age-card reveal d3">
+        <div class="age-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A878D8" stroke-width="1.2" stroke-linecap="round">
+            <path d="M8 20 L8 14 C8 10 16 10 16 14 L16 20" />
+            <path d="M5 20 L19 20" />
+            <path d="M8 8 C8 5 16 5 16 8" />
+            <path d="M6 8 L4 6 M18 8 L20 6" />
+          </svg>
+        </div>
+        <h4>Elderly</h4>
+        <div class="age-range">Ages 56+</div>
+        <p>Combats age-related muscle and bone loss. Olea europaea's anti-inflammatory action eases joint pain. Ficus
+          carica's calcium protects against osteoporosis. Stay strong, stay independent.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOSAGE -->
+  <section class="dosage" id="dosage">
+    <div class="section-label reveal">How to take it</div>
+    <h2 class="section-h2 reveal d1">Pure. Simple. <em>Daily.</em></h2>
+    <p style="font-family:var(--sans);font-size:.8rem;line-height:2;font-weight:300;color:var(--mist);max-width:500px;margin-top:.8rem;"
+      class="reveal d2">Take Figuva every morning. Consistency builds strength. Nature does the rest.</p>
+    <div class="dosage-grid">
+      <div class="dosage-card reveal">
+        <div class="d-who">Children (3–12 years)</div>
+        <div class="d-dose">1 tsp</div>
+        <div class="d-unit">daily — morning</div>
+        <p>One teaspoon in the morning, on an empty stomach or with breakfast. Can be mixed into milk, yogurt or juice
+          for children who prefer it sweetened.</p>
+      </div>
+      <div class="dosage-card reveal d1">
+        <div class="d-who">Teens & Adults</div>
+        <div class="d-dose">1 tbsp</div>
+        <div class="d-unit">daily — morning</div>
+        <p>One tablespoon every morning. Best taken on an empty stomach 20 minutes before breakfast for maximum
+          absorption. Can be taken straight or mixed with warm water.</p>
+      </div>
+      <div class="dosage-card reveal d2">
+        <div class="d-who">Elderly & Recovery</div>
+        <div class="d-dose">2 tbsp</div>
+        <div class="d-unit">daily — morning & evening</div>
+        <p>One tablespoon morning and evening for those building bone density, recovering from illness, or managing
+          age-related muscle weakness. Best with food.</p>
+      </div>
+    </div>
+    <div
+      style="margin-top:2.4rem;padding:2rem;border:.5px solid rgba(168,120,216,.2);background:rgba(255,255,255,.03);"
+      class="reveal">
+      <p
+        style="font-family:var(--sans);font-size:.76rem;line-height:2;font-weight:300;color:var(--mist);text-align:center;">
+        <strong style="color:var(--lavender);font-weight:400;">No course limit:</strong> Unlike Glukora and Livokara
+        Gold which are therapeutic courses, Figuva is a daily wellness supplement that can be taken continuously as part
+        of your everyday routine. There is no need to stop or cycle off.</p>
+    </div>
+  </section>
+
+  <!-- SCIENCE -->
+  <section class="science" id="science">
+    <div class="section-label reveal">The research</div>
+    <h2 class="section-h2 reveal d1">What science says about<br />Ficus carica and <em>Olea europaea</em></h2>
+    <div class="science-grid">
+      <div>
+        <div class="fact-card reveal">
+          <div class="fact-icon">
+            <svg viewBox="0 0 20 20" fill="none" stroke="#A878D8" stroke-width="1" stroke-linecap="round">
+              <circle cx="10" cy="10" r="7" />
+              <path d="M7 10 L9 12 L13 8" />
+            </svg>
+          </div>
+          <div class="fact-body">
+            <h5>Ficus carica for bone density</h5>
+            <p>Research published in the American Journal of Clinical Nutrition confirms that dried figs are among the
+              highest plant-based sources of calcium — with significantly more calcium per gram than most dairy
+              alternatives.</p>
+          </div>
+        </div>
+        <div class="fact-card reveal d1">
+          <div class="fact-icon">
+            <svg viewBox="0 0 20 20" fill="none" stroke="#A878D8" stroke-width="1" stroke-linecap="round">
+              <path d="M10 3 L12 8 L17 8 L13 11.5 L14.5 17 L10 14 L5.5 17 L7 11.5 L3 8 L8 8 Z" />
+            </svg>
+          </div>
+          <div class="fact-body">
+            <h5>Oleocanthal — nature's ibuprofen</h5>
+            <p>A landmark study in Nature (2005) identified oleocanthal in extra virgin Olea europaea oil as a natural
+              COX-inhibitor — working through the exact same anti-inflammatory pathway as ibuprofen, without any
+              gastrointestinal side effects.</p>
+          </div>
+        </div>
+        <div class="fact-card reveal d2">
+          <div class="fact-icon">
+            <svg viewBox="0 0 20 20" fill="none" stroke="#A878D8" stroke-width="1" stroke-linecap="round">
+              <rect x="4" y="8" width="12" height="9" rx="2" />
+              <path d="M7 8 L7 6 C7 4.3 13 4.3 13 6 L13 8" />
+              <circle cx="10" cy="12.5" r="1.5" fill="#A878D8" />
+            </svg>
+          </div>
+          <div class="fact-body">
+            <h5>Mediterranean strength & longevity</h5>
+            <p>Populations in the Mediterranean — where Ficus carica and Olea europaea are dietary staples —
+              consistently show lower rates of cardiovascular disease, osteoporosis, and age-related muscle loss than
+              Western populations. The combination is not coincidental.</p>
+          </div>
+        </div>
+        <div class="fact-card reveal d3">
+          <div class="fact-icon">
+            <svg viewBox="0 0 20 20" fill="none" stroke="#A878D8" stroke-width="1" stroke-linecap="round">
+              <path d="M4 16 C4 10 8 4 10 4 C12 4 16 10 16 16" />
+              <path d="M7 16 C7 12 9 8 10 8 C11 8 13 12 13 16" />
+            </svg>
+          </div>
+          <div class="fact-body">
+            <h5>Traditional botanicals — validated by science</h5>
+            <p>Multiple peer-reviewed clinical reviews confirm that Ficus carica and Olea europaea demonstrate the
+              broadest and most consistent evidence base for health benefits — across anti-inflammatory, antioxidant,
+              antimicrobial and metabolic categories.</p>
+          </div>
+        </div>
+      </div>
+      <div class="science-quote reveal d1">
+        <blockquote>"The synergistic combination of Ficus carica and Olea europaea represents one of the most potent
+          natural interventions for age-related bone density loss and systemic inflammation."</blockquote>
+        <cite>— Journal of Ethnopharmacology · Clinical Review</cite>
+        <div class="sci-stats">
+          <div class="stat-block">
+            <div class="stat-num">2005</div>
+            <div class="stat-label">Nature journal publication</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">Clinical</div>
+            <div class="stat-label">Evidence-based efficacy</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Organic — no chemicals</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">All</div>
+            <div class="stat-label">Ages — children to elderly</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="reviews">
+    <div class="section-label reveal">Real results</div>
+    <h2 class="section-h2 reveal d1">Heard from our <em>users</em></h2>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote-mark">"</div>
+        <p>My father is 72 and was struggling to walk due to weak knees and bones. After two months of Figuva every
+          morning his mobility has improved so much. He says he feels 10 years younger.</p>
+        <div class="testi-author">Ahmed K.</div>
+        <div class="testi-detail">Son of elderly user · Lahore</div>
+      </div>
+      <div class="testi reveal d1">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote-mark">"</div>
+        <p>I give Figuva to my children every morning. Their energy is incredible, they rarely get sick, and my
+          daughter's dentist said her teeth are exceptionally strong for her age. I am a believer.</p>
+        <div class="testi-author">Umm Khalid</div>
+        <div class="testi-detail">Mother of three · Karachi</div>
+      </div>
+      <div class="testi reveal d2">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-quote-mark">"</div>
+        <p>I train 5 days a week. I added Figuva to my morning routine and my recovery time has noticeably improved.
+          Muscle soreness is less, energy is higher. And it tastes incredible too.</p>
+        <div class="testi-author">Bilal R.</div>
+        <div class="testi-detail">Fitness trainer · Dubai</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-label reveal">Common questions</div>
+    <h2 class="section-h2 reveal d1" style="text-align:center;">Everything you need <em>to know</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">Can children take Figuva?
+          <div class="icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>Yes — Figuva is safe and beneficial for children from age 3 upwards. One teaspoon daily supports bone
+            development, immune function and sustained energy during critical growth years. The syrup form makes it easy
+            for children to take.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is Figuva suitable during pregnancy?
+          <div class="icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>Ficus carica and Olea europaea are both traditional foods consumed during pregnancy in Middle Eastern and
+            South Asian cultures. However, as with any supplement during pregnancy, we recommend consulting your doctor
+            or midwife before beginning Figuva.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How long before I feel results?
+          <div class="icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>Most users report improved energy within the first week. Strength and bone density improvements are
+            cumulative — most noticeable after 4–8 weeks of daily use. Children often show visible improvements in energy
+            and immunity within 2–3 weeks.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I take Figuva with other medications?
+          <div class="icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>Figuva is a pure herbal supplement with no known drug interactions. However, if you are on blood thinners or
+            any prescription medication, we recommend consulting your physician before starting any new supplement.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does Figuva taste like?
+          <div class="icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>Figuva has a naturally sweet, rich flavour from the Ficus carica with subtle earthy notes from the Olea
+            europaea. Most users — including children — find it pleasant to take directly. It can also be mixed with warm
+            water, milk, or yogurt.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I need to stop taking Figuva after a course?
+          <div class="icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>No. Unlike therapeutic products like Glukora and Livokara Gold, Figuva is a daily wellness supplement. You
+            can take it continuously as part of your everyday routine without cycling off. Consistent daily use produces
+            the best results.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How should Figuva be stored?
+          <div class="icon"></div>
+        </button>
+        <div class="faq-a">
+          <p>Store Figuva in a cool, dry place away from direct sunlight. Once opened, keep the bottle tightly sealed.
+            Refrigeration is not required but can extend freshness. Use within 3 months of opening.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div>
+      <h2>Build the strength<br />your body deserves.</h2>
+      <p>Figuva delivers the combined power of Ficus carica and Olea europaea — pure, organic and bioavailable. For
+        every age, every body, every day.</p>
+    </div>
+    <a href="orderform.html" class="btn-light">Order Figuva Now</a>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <p>† These statements have not been evaluated by the Food and Drug Administration. This product is not intended to
+      diagnose, treat, cure, or prevent any disease. Figuva is a dietary supplement made from 100% organic Ficus carica
+      and Olea europaea. Consult your healthcare provider before use if you are pregnant, nursing, or on medication.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="color:var(--cream)"><a href="index.html"><img
+              src="sz-herbals-logo-united-states.png" alt="SZ Herbals Logo"
+              style="height: 112px; width: auto; object-fit: contain; filter: brightness(0) invert(1);"></a></div>
+        <p>Pure Ficus carica and Olea europaea. 100% organic, zero chemicals. Strength, vitality and bone density from
+          nature's most sacred botanicals.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#why">Why Figuva</a></li>
+          <li><a href="#ingredients">Ingredients</a></li>
+          <li><a href="#dosage">Dosage Guide</a></li>
+          <li><a href="orderform.html">Order Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>SZ Herbals</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="glukora.html">Glukora (Diabetes)</a></li>
+          <li><a href="orderform.html">Order Now</a></li>
+          <li><a href="blog.html">Journal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Figuva by <a href="index.html" style="color:inherit;text-decoration:none;">SZ Herbals</a>. All rights
+        reserved.</p>
+      <p>Pure · Natural · وَالتِّينِ وَالزَّيْتُونِ</p>
+    </div>
+  </footer>
 
   <script>
     const nav = document.getElementById('nav');
@@ -1559,11 +2089,15 @@
         document.body.style.overflow = '';
       });
     });
+
+    // Reveal animations
     const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: .12 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
     window.addEventListener('load', () => {
       document.querySelectorAll('.hero .reveal').forEach((el, i) => setTimeout(() => el.classList.add('visible'), 180 + i * 140));
     });
+
+    // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.closest('.faq-item');
@@ -1572,118 +2106,8 @@
         if (!wasOpen) item.classList.add('open');
       });
     });
-
-    // Product Gallery & Buy Box Variant selector logic
-    const thumbItems = document.querySelectorAll('.thumb-item');
-    const mainImg = document.getElementById('mainImg');
-    if (thumbItems.length > 0 && mainImg) {
-      thumbItems.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-          thumbItems.forEach(t => t.classList.remove('active'));
-          thumb.classList.add('active');
-          mainImg.style.opacity = 0;
-          setTimeout(() => {
-            mainImg.src = thumb.querySelector('img').src;
-            mainImg.style.opacity = 1;
-          }, 150);
-        });
-      });
-    }
-
-    // Buy Box variants & quantity logic
-    const variantCards = document.querySelectorAll('.variant-card');
-    const buyQtySpan = document.getElementById('buyQty');
-    const buyNowBtn = document.getElementById('buyNowBtn');
-    const sbbPrice = document.getElementById('sbbPrice');
-    const sbbBtn = document.getElementById('sbbBtn');
-    let selectedProduct = 'double';
-    let currentQty = 1;
-
-    function updateBuyNowUrl() {
-      if (!buyNowBtn) return;
-      const activeCard = document.querySelector('.variant-card.active');
-      if (activeCard) {
-        selectedProduct = activeCard.dataset.product;
-        const price = activeCard.dataset.price;
-        if (sbbPrice) sbbPrice.innerHTML = `$${price * currentQty} <small>USD</small>`;
-      }
-      const finalUrl = `orderform.html?product=${selectedProduct}&qty=${currentQty}`;
-      buyNowBtn.href = finalUrl;
-      if (sbbBtn) sbbBtn.href = finalUrl;
-    }
-
-    if (variantCards.length > 0) {
-      variantCards.forEach(card => {
-        card.addEventListener('click', () => {
-          variantCards.forEach(c => c.classList.remove('active'));
-          card.classList.add('active');
-          
-          if (card.dataset.product === 'bundle') {
-            const bundleThumb = document.querySelector('.thumb-item[data-index="3"]');
-            if (bundleThumb) bundleThumb.click();
-          } else {
-            const defaultThumb = document.querySelector('.thumb-item[data-index="0"]');
-            if (defaultThumb) defaultThumb.click();
-          }
-          
-          updateBuyNowUrl();
-        });
-      });
-    }
-
-    const minusBtn = document.querySelector('.qty-btn.minus');
-    const plusBtn = document.querySelector('.qty-btn.plus');
-
-    if (minusBtn && plusBtn && buyQtySpan) {
-      minusBtn.addEventListener('click', () => {
-        if (currentQty > 1) {
-          currentQty--;
-          buyQtySpan.textContent = currentQty;
-          updateBuyNowUrl();
-        }
-      });
-      plusBtn.addEventListener('click', () => {
-        if (currentQty < 10) {
-          currentQty++;
-          buyQtySpan.textContent = currentQty;
-          updateBuyNowUrl();
-        }
-      });
-    }
-
-    updateBuyNowUrl();
-
-    // Sticky Product Nav & Bottom Buy Bar Scroll Logic
-    const productNav = document.getElementById('productNav');
-    const stickyBuyBar = document.getElementById('stickyBuyBar');
-    const sections = document.querySelectorAll('section[id]');
-    const productNavLinks = document.querySelectorAll('.product-nav-links a');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 600) {
-        if (productNav) productNav.classList.add('visible');
-        if (stickyBuyBar) stickyBuyBar.classList.add('visible');
-      } else {
-        if (productNav) productNav.classList.remove('visible');
-        if (stickyBuyBar) stickyBuyBar.classList.remove('visible');
-      }
-
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 150) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      productNavLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-        }
-      });
-    });
   </script>
+
 </body>
 
 </html>
