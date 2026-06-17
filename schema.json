@@ -1,0 +1,474 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.szherbal.us/#organization",
+      "name": "SZ Herbals",
+      "url": "https://www.szherbal.us",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.szherbal.us/sz-herbals-logo-united-states.png",
+        "width": 328,
+        "height": 328
+      },
+      "description": "SZ Herbals is a United States-based herbal supplement brand producing 100% organic, chemical-free botanical formulations for blood sugar support, liver wellness, strength and vitality, iron and hemoglobin support, and weight management.",
+      "foundingDate": "2025",
+      "slogan": "Rooted in Nature",
+      "brand": {
+        "@type": "Brand",
+        "name": "SZ Herbals",
+        "slogan": "Rooted in Nature"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "knowsAbout": [
+        "Herbal supplements",
+        "Ayurvedic medicine",
+        "Picrorhiza Kurroa",
+        "Blood sugar support",
+        "Liver wellness",
+        "Natural healthcare",
+        "Organic botanicals",
+        "Ficus carica",
+        "Olea europaea",
+        "Vitis vinifera"
+      ],
+      "sameAs": []
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://www.szherbal.us/#website",
+      "name": "SZ Herbals",
+      "url": "https://www.szherbal.us",
+      "publisher": { "@id": "https://www.szherbal.us/#organization" },
+      "description": "Pure herbal wellness rooted in nature. 100% organic supplements with zero chemicals.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.szherbal.us/products.html?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "en-US"
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://www.szherbal.us/megan-woods.html#person",
+      "name": "Megan Woods",
+      "url": "https://www.szherbal.us/megan-woods.html",
+      "image": "https://www.szherbal.us/megan-woods-in-united-states.png",
+      "jobTitle": "Healthcare Content Strategist & Medical Journalist",
+      "description": "Healthcare Content Strategist and Medical Journalist who bridges the gap between complex medical research and patient-centered, trust-building communication.",
+      "worksFor": { "@id": "https://www.szherbal.us/#organization" },
+      "knowsAbout": [
+        "Healthcare journalism",
+        "Medical research translation",
+        "Patient education",
+        "Health literacy",
+        "Evidence-based content"
+      ]
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://www.szherbal.us/glukora.html#product",
+      "name": "Glukora",
+      "url": "https://www.szherbal.us/glukora.html",
+      "image": [
+        "https://www.szherbal.us/glukora-product-image-united-states.png",
+        "https://www.szherbal.us/glukora-product-hero-image-united-states.png",
+        "https://www.szherbal.us/glukora-product-image-closeup-united-states.png"
+      ],
+      "description": "100% organic herbal supplement for blood sugar support. Pure Picrorhiza Kurroa root extract. 40-day pancreatic restorative course. Natural GLP-1 booster. Injection-free alternative to synthetic medications.",
+      "brand": { "@type": "Brand", "name": "SZ Herbals" },
+      "manufacturer": { "@id": "https://www.szherbal.us/#organization" },
+      "category": "Herbal Supplements > Blood Sugar Support",
+      "sku": "SZH-GLK-001",
+      "material": "Picrorhiza Kurroa root extract",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Active Ingredient", "value": "Picrorhiza Kurroa" },
+        { "@type": "PropertyValue", "name": "Bioactive Compounds", "value": "Picrosides I and II" },
+        { "@type": "PropertyValue", "name": "Course Duration", "value": "40 days" },
+        { "@type": "PropertyValue", "name": "Organic Certification", "value": "100% Organic" },
+        { "@type": "PropertyValue", "name": "Chemicals", "value": "Zero" }
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "299",
+        "highPrice": "549",
+        "priceCurrency": "USD",
+        "offerCount": "2",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://www.szherbal.us/#organization" },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Single Course (40 days)",
+            "price": "299",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.szherbal.us/glukora.html"
+          },
+          {
+            "@type": "Offer",
+            "name": "Bundle of 3 (120 days)",
+            "price": "549",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.szherbal.us/glukora.html"
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "1000",
+        "reviewCount": "1000"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Aisha R." },
+          "reviewBody": "I've tried so many herbal brands and nothing came close. SZ Herbals actually works — I felt the difference within two weeks."
+        }
+      ]
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://www.szherbal.us/livokara-gold.html#product",
+      "name": "Livokara Gold",
+      "url": "https://www.szherbal.us/livokara-gold.html",
+      "image": [
+        "https://www.szherbal.us/livokara-gold-product-image.png",
+        "https://www.szherbal.us/livokara-gold-hero-image-united-states.png"
+      ],
+      "description": "100% organic herbal supplement for liver wellness. Supports liver detoxification, fatty liver, and hepatitis wellness. Pure botanical formulation with zero chemicals.",
+      "brand": { "@type": "Brand", "name": "SZ Herbals" },
+      "manufacturer": { "@id": "https://www.szherbal.us/#organization" },
+      "category": "Herbal Supplements > Liver Wellness",
+      "sku": "SZH-LVK-001",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Organic Certification", "value": "100% Organic" },
+        { "@type": "PropertyValue", "name": "Chemicals", "value": "Zero" },
+        { "@type": "PropertyValue", "name": "Benefits", "value": "Liver detoxification, fatty liver support, hepatitis wellness" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "249",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://www.szherbal.us/#organization" }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "500"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://www.szherbal.us/Figuva.html#product",
+      "name": "Figuva",
+      "url": "https://www.szherbal.us/Figuva.html",
+      "image": [
+        "https://www.szherbal.us/figuva-product-hero-image-united-states.png",
+        "https://www.szherbal.us/figuva-product-image-united-states.png"
+      ],
+      "description": "100% organic herbal syrup of pure Ficus carica (Fig) and Olea europaea (Olive) — two of the most powerful botanicals in traditional medicine. Builds muscle strength, bone density, energy and vitality for every age.",
+      "brand": { "@type": "Brand", "name": "SZ Herbals" },
+      "manufacturer": { "@id": "https://www.szherbal.us/#organization" },
+      "category": "Herbal Supplements > Strength & Vitality",
+      "sku": "SZH-FGV-001",
+      "material": "Ficus carica extract, Olea europaea extract",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Active Ingredients", "value": "Ficus carica (Fig), Olea europaea (Olive)" },
+        { "@type": "PropertyValue", "name": "Key Compound", "value": "Oleocanthal (natural COX-inhibitor)" },
+        { "@type": "PropertyValue", "name": "Form", "value": "Herbal syrup (liquid)" },
+        { "@type": "PropertyValue", "name": "Suitable Ages", "value": "Children (3+), Teens, Adults, Elderly" },
+        { "@type": "PropertyValue", "name": "Organic Certification", "value": "100% Organic" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "149",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://www.szherbal.us/#organization" }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "500"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://www.szherbal.us/globvin.html#product",
+      "name": "Globivin",
+      "url": "https://www.szherbal.us/globvin.html",
+      "image": [
+        "https://www.szherbal.us/globivin-product-image-united-states.png",
+        "https://www.szherbal.us/globivin-product-hero-image-united-states.png"
+      ],
+      "description": "100% organic haematic herbal syrup of pure Vitis vinifera L extract — nature's most powerful blood-building botanical. Supports healthy hemoglobin, iron levels and red blood cell production without constipation.",
+      "brand": { "@type": "Brand", "name": "SZ Herbals" },
+      "manufacturer": { "@id": "https://www.szherbal.us/#organization" },
+      "category": "Herbal Supplements > Iron & Hemoglobin",
+      "sku": "SZH-GLB-001",
+      "material": "Vitis vinifera L extract",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Active Ingredient", "value": "Vitis vinifera L (Grape vine extract)" },
+        { "@type": "PropertyValue", "name": "Form", "value": "Haematic herbal syrup (liquid)" },
+        { "@type": "PropertyValue", "name": "Organic Certification", "value": "100% Organic" },
+        { "@type": "PropertyValue", "name": "Key Benefit", "value": "Iron supplementation without constipation" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "149",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://www.szherbal.us/#organization" }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "500"
+      }
+    },
+
+    {
+      "@type": "Product",
+      "@id": "https://www.szherbal.us/slimzest.html#product",
+      "name": "SlimZest",
+      "url": "https://www.szherbal.us/slimzest.html",
+      "image": [
+        "https://www.szherbal.us/slimzest-product-hero-image-united-states.png",
+        "https://www.szherbal.us/slimzest-product-box-image-united-states.png"
+      ],
+      "description": "Herbal slimming tea made with Citrus limon and Trachyspermum ammi for natural weight management. 100% organic with zero chemicals.",
+      "brand": { "@type": "Brand", "name": "SZ Herbals" },
+      "manufacturer": { "@id": "https://www.szherbal.us/#organization" },
+      "category": "Herbal Supplements > Weight Management",
+      "sku": "SZH-SLZ-001",
+      "material": "Citrus limon, Trachyspermum ammi",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Active Ingredients", "value": "Citrus limon (Lemon), Trachyspermum ammi (Ajwain)" },
+        { "@type": "PropertyValue", "name": "Form", "value": "Herbal tea sachets" },
+        { "@type": "PropertyValue", "name": "Organic Certification", "value": "100% Organic" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "129",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://www.szherbal.us/#organization" }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "300"
+      }
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.szherbal.us/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is diabetes reversible?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Type 2 diabetes can often be reversed or significantly improved when the root cause — pancreatic beta cell exhaustion — is addressed. Picrorhiza Kurroa, the active ingredient in Glukora by SZ Herbals, has been studied for its ability to reduce pancreatic inflammation and support the regeneration of insulin-producing beta cells, potentially restoring the body's natural blood sugar regulation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What herbal supplements help with type 2 diabetes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Picrorhiza Kurroa is one of the most studied Ayurvedic herbs for blood sugar support. It contains picrosides I and II — bioactive compounds that reduce inflammation in pancreatic tissue and support beta cell regeneration. Glukora by SZ Herbals delivers pure Picrorhiza Kurroa extract in a 40-day therapeutic course."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a natural herbal alternative to Metformin or Ozempic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Picrorhiza Kurroa has been used in Ayurvedic medicine for over 5,000 years to support healthy blood sugar levels and pancreatic function. Glukora by SZ Herbals provides this extract in a concentrated, 100% organic formulation as a supportive herbal option for those seeking natural blood sugar balance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the pancreas heal itself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Research suggests that reducing inflammation and oxidative stress can support beta cell recovery in Type 2 diabetes. Herbal compounds like picrosides from Picrorhiza Kurroa have shown promise in supporting pancreatic regeneration in ethnopharmacological studies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best iron supplement without constipation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Liquid herbal iron supplements like Globivin by SZ Herbals (made from Vitis vinifera L extract) provide gentle iron absorption without the constipation commonly caused by synthetic iron tablets such as ferrous sulfate. The liquid form allows for better bioavailability and easier digestion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is oleocanthal and why is it important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oleocanthal is a natural compound found in Olea europaea (olive) that works through the same anti-inflammatory pathway as ibuprofen — COX-1 and COX-2 inhibition — without gastrointestinal side effects. It was identified in a landmark 2005 study published in Nature. Figuva by SZ Herbals contains Olea europaea extract rich in oleocanthal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are SZ Herbals products 100% organic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every SZ Herbals product uses 100% certified organic ingredients grown without pesticides, harvested at peak potency, and processed without any chemicals, synthetic additives, or fillers. The brand offers a 100% money-back guarantee on all products."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is better for diabetes: Berberine or Picrorhiza Kurroa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Berberine manages blood sugar symptoms by lowering glucose at the cellular level, but does not address the root cause — damaged pancreatic beta cells. Picrorhiza Kurroa targets the damaged pancreas itself through picrosides I and II, which reduce pancreatic inflammation and support beta cell regeneration. If berberine gave you stomach problems or stopped working, Picrorhiza Kurroa may address the underlying issue."
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.szherbal.us/#breadcrumb-products",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.szherbal.us/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.szherbal.us/products.html" }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.szherbal.us/#breadcrumb-glukora",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.szherbal.us/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.szherbal.us/products.html" },
+        { "@type": "ListItem", "position": 3, "name": "Glukora", "item": "https://www.szherbal.us/glukora.html" }
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.szherbal.us/#breadcrumb-blog",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.szherbal.us/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.szherbal.us/blog.html" }
+      ]
+    },
+
+    {
+      "@type": "Article",
+      "@id": "https://www.szherbal.us/berberine-vs-picrorhiza-kurroa.html#article",
+      "headline": "Berberine vs Picrorhiza Kurroa — Which Fixes the Root Cause?",
+      "url": "https://www.szherbal.us/berberine-vs-picrorhiza-kurroa.html",
+      "description": "Berberine manages blood sugar symptoms. Picrorhiza Kurroa targets the damaged pancreas itself. A comparison of two herbal approaches to blood sugar management.",
+      "author": { "@id": "https://www.szherbal.us/megan-woods.html#person" },
+      "publisher": { "@id": "https://www.szherbal.us/#organization" },
+      "datePublished": "2026-05-01",
+      "dateModified": "2026-06-17",
+      "mainEntityOfPage": "https://www.szherbal.us/berberine-vs-picrorhiza-kurroa.html",
+      "about": ["Berberine", "Picrorhiza Kurroa", "Type 2 diabetes", "Blood sugar management", "Herbal supplements"],
+      "inLanguage": "en-US"
+    },
+
+    {
+      "@type": "Article",
+      "@id": "https://www.szherbal.us/ozempic-natural-alternatives.html#article",
+      "headline": "Ozempic Made Me Sick — Here's What I Switched To",
+      "url": "https://www.szherbal.us/ozempic-natural-alternatives.html",
+      "description": "Ozempic side effects forcing you to stop? Learn why GLP-1 drugs cause nausea, vomiting, and pain — and what natural alternatives actually work instead.",
+      "author": { "@id": "https://www.szherbal.us/megan-woods.html#person" },
+      "publisher": { "@id": "https://www.szherbal.us/#organization" },
+      "datePublished": "2026-05-15",
+      "dateModified": "2026-06-17",
+      "mainEntityOfPage": "https://www.szherbal.us/ozempic-natural-alternatives.html",
+      "about": ["Ozempic", "Semaglutide", "GLP-1", "Natural alternatives", "Picrorhiza Kurroa"],
+      "inLanguage": "en-US"
+    },
+
+    {
+      "@type": "Article",
+      "@id": "https://www.szherbal.us/best-iron-supplement-without-constipation-in-united-states.html#article",
+      "headline": "Best Iron Supplement Without Constipation (2026): A Complete Guide",
+      "url": "https://www.szherbal.us/best-iron-supplement-without-constipation-in-united-states.html",
+      "description": "Comprehensive guide covering every iron form, side effects comparison, and gentler herbal and liquid options including Globivin by SZ Herbals.",
+      "author": { "@id": "https://www.szherbal.us/megan-woods.html#person" },
+      "publisher": { "@id": "https://www.szherbal.us/#organization" },
+      "datePublished": "2026-06-01",
+      "dateModified": "2026-06-17",
+      "mainEntityOfPage": "https://www.szherbal.us/best-iron-supplement-without-constipation-in-united-states.html",
+      "about": ["Iron supplements", "Constipation", "Anemia", "Vitis vinifera", "Globivin"],
+      "inLanguage": "en-US"
+    },
+
+    {
+      "@type": "Article",
+      "@id": "https://www.szherbal.us/glukora-story-blog.html#article",
+      "headline": "The Night in the Labor Room — A Real Story",
+      "url": "https://www.szherbal.us/glukora-story-blog.html",
+      "description": "Her blood sugar was 380. She was in labor. Doctors couldn't perform the C-section. This is the real story of what happened next.",
+      "author": { "@id": "https://www.szherbal.us/megan-woods.html#person" },
+      "publisher": { "@id": "https://www.szherbal.us/#organization" },
+      "datePublished": "2026-04-15",
+      "dateModified": "2026-06-17",
+      "mainEntityOfPage": "https://www.szherbal.us/glukora-story-blog.html",
+      "about": ["Diabetes", "Pregnancy", "Blood sugar crisis", "Natural intervention", "Glukora"],
+      "inLanguage": "en-US"
+    },
+
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://www.szherbal.us/why-glukora.html#medicalpage",
+      "name": "Why Glukora — The Real Cost of Diabetes",
+      "url": "https://www.szherbal.us/why-glukora.html",
+      "description": "Educational content about diabetes costs, complications, and why pancreatic restoration through Picrorhiza Kurroa matters.",
+      "lastReviewed": "2026-06-17",
+      "medicalAudience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Patient"
+      },
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Type 2 Diabetes",
+        "alternateName": "Diabetes mellitus type 2",
+        "associatedAnatomy": {
+          "@type": "AnatomicalStructure",
+          "name": "Pancreas"
+        }
+      }
+    }
+  ]
+}

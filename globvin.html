@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="sz-herbals-favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="sz-herbals-favicon/favicon.svg" />
+  <link rel="shortcut icon" href="sz-herbals-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="sz-herbals-favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="sz-herbals-favicon/site.webmanifest" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Globivin — Haematic Herbal Syrup | Vitis vinifera L | SZ Herbals</title>
+  <meta name="description"
+    content="Globivin is a 100% organic haematic herbal syrup of pure Vitis vinifera L extract — nature's most powerful blood-building botanical. Supports healthy hemoglobin, iron levels and red blood cell production for all ages. by SZ Herbals." />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="cart.css" />
+  <script src="cart.js" defer></script>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --deep: #111111;
+      --dark: #1e1e1e;
+      --mid: #3a3a3a;
+      --ruby: #7A0A1A;
+      --wine: #A01828;
+      --rose: #C05068;
+      --mist: #d5d5d3;
+      --fog: #f0f0ee;
+      --cream: #f7f7f5;
+      --gold: #C4920A;
+      --warm: #D4A820;
+      --green: #1A2808;
+      --greenm: #2A3810;
+      --greens: #4A6828;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --display: 'DM Serif Display', Georgia, serif;
+      --sans: 'Montserrat', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--deep);
+      font-family: var(--serif);
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 5rem;
+      transition: all .4s;
+    }
+
+    nav.scrolled {
+      background: rgba(247, 247, 245, .97);
+      backdrop-filter: blur(12px);
+      padding: 1rem 5rem;
+      border-bottom: .5px solid var(--fog);
+    }
+
+    .nav-brand {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      color: var(--deep);
+      text-decoration: none;
+      letter-spacing: .06em;
+    }
+
+    .nav-brand em {
+      font-style: italic;
+      color: var(--ruby);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--sans);
+      font-size: .68rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--ruby);
+    }
+
+    .nav-cta {
+      font-family: var(--sans);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      background: var(--dark);
+      color: var(--fog);
+      padding: .7rem 1.6rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .3s;
+    }
+
+    .nav-cta:hover {
+      background: var(--deep);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 9rem 5rem 6rem 8rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: .65rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--wine);
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 28px;
+      height: .5px;
+      background: var(--wine);
+    }
+
+    .hero-botanical {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--rose);
+      margin-bottom: 1.8rem;
+      letter-spacing: .04em;
+    }
+
+    .hero-h1 {
+      font-family: var(--display);
+      font-size: clamp(3rem, 4.5vw, 5.2rem);
+      font-weight: 400;
+      line-height: 1.06;
+      color: var(--deep);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--ruby);
+    }
+
+    .hero-sub {
+      font-family: var(--sans);
+      font-size: .8rem;
+      line-height: 2;
+      font-weight: 300;
+      color: var(--mid);
+      max-width: 400px;
+      margin-bottom: 2.6rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      font-family: var(--sans);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      background: var(--dark);
+      color: var(--fog);
+      padding: .95rem 2.2rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background .3s, transform .2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--deep);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      font-family: var(--sans);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      transition: color .3s;
+    }
+
+    .btn-ghost:hover {
+      color: var(--ruby);
+    }
+
+    .hero-badges {
+      display: flex;
+      gap: .8rem;
+      margin-top: 2.4rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-family: var(--sans);
+      font-size: .6rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--mid);
+      border: .5px solid var(--fog);
+      padding: .35rem .9rem;
+      background: rgba(255, 255, 255, .6);
+    }
+
+    .hero-right {
+      background: var(--fog);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 40%, rgba(122, 10, 26, .08) 0%, transparent 70%);
+    }
+
+    /* MARQUEE */
+    .marquee {
+      background: var(--dark);
+      padding: .9rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      animation: marquee 26s linear infinite;
+    }
+
+    .m-item {
+      font-family: var(--sans);
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mist);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .m-dot {
+      width: 3px;
+      height: 3px;
+      background: var(--wine);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 7rem 8rem;
+    }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: .64rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--wine);
+      margin-bottom: 1.2rem;
+    }
+
+    .section-h2 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 3vw, 3.4rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--deep);
+      margin-bottom: 1.2rem;
+    }
+
+    .section-h2 em {
+      font-style: italic;
+      color: var(--ruby);
+    }
+
+    /* WHAT IS ANEMIA */
+    .anemia {
+      background: var(--cream);
+      padding: 7rem 8rem;
+    }
+
+    .anemia-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      margin-top: 4rem;
+    }
+
+    .anemia-text p {
+      font-family: var(--sans);
+      font-size: .8rem;
+      line-height: 2;
+      font-weight: 300;
+      color: var(--mid);
+      margin-bottom: 1.2rem;
+    }
+
+    .journey-step {
+      display: flex;
+      gap: 1.4rem;
+      padding: 1.4rem 0;
+      border-bottom: .5px solid var(--fog);
+    }
+
+    .journey-step:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      font-family: var(--display);
+      font-size: 2.4rem;
+      color: var(--fog);
+      font-style: italic;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 40px;
+    }
+
+    .step-body h4 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: .4rem;
+    }
+
+    .step-body p {
+      font-family: var(--sans);
+      font-size: .75rem;
+      line-height: 1.9;
+      font-weight: 300;
+      color: var(--mid);
+    }
+
+    .blood-card {
+      background: var(--dark);
+      padding: 2.5rem;
+    }
+
+    .blood-card h3 {
+      font-family: var(--display);
+      font-size: 1.6rem;
+      color: var(--fog);
+      margin-bottom: 1.6rem;
+      font-style: italic;
+    }
+
+    /* TYPES */
+    .types-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
+
+    .type-card {
+      padding: 1.4rem 1.6rem;
+      border-left: 2px solid var(--ruby);
+    }
+
+    .type-card.t1 {
+      background: rgba(122, 10, 26, .1);
+    }
+
+    .type-card.t2 {
+      background: rgba(122, 10, 26, .07);
+    }
+
+    .type-card.t3 {
+      background: rgba(122, 10, 26, .04);
+    }
+
+    .type-label {
+      font-family: var(--sans);
+      font-size: .6rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--wine);
+      margin-bottom: .4rem;
+    }
+
+    .type-card h4 {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: var(--fog);
+      margin-bottom: .3rem;
+    }
+
+    .type-card p {
+      font-family: var(--sans);
+      font-size: .7rem;
+      line-height: 1.8;
+      font-weight: 300;
+      color: var(--mist);
+    }
+
+    /* HOW IT WORKS */
+    .mechanism {
+      background: var(--dark);
+      padding: 7rem 8rem;
+    }
+
+    .mechanism .section-label {
+      color: var(--mist);
+    }
+
+    .mechanism .section-h2 {
+      color: var(--fog);
+    }
+
+    .mechanism .section-h2 em {
+      color: var(--rose);
+    }
+
+    .mech-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 5rem;
+      position: relative;
+    }
+
+    .mech-steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 12.5%;
+      right: 12.5%;
+      height: .5px;
+      background: var(--mid);
+      z-index: 0;
+    }
+
+    .mech-step {
+      padding: 0 1.5rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .mech-dot {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--dark);
+      border: .5px solid var(--mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      transition: background .4s, border-color .4s;
+    }
+
+    .mech-step:hover .mech-dot {
+      background: var(--ruby);
+      border-color: var(--ruby);
+    }
+
+    .mech-dot svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .mech-step h4 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--fog);
+      margin-bottom: .6rem;
+    }
+
+    .mech-step p {
+      font-family: var(--sans);
+      font-size: .72rem;
+      line-height: 1.9;
+      font-weight: 300;
+      color: var(--mist);
+    }
+
+    /* INGREDIENT */
+    .ingredient {
+      background: var(--fog);
+      padding: 7rem 8rem;
+    }
+
+    .ing-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    .ing-text p {
+      font-family: var(--sans);
+      font-size: .8rem;
+      line-height: 2;
+      font-weight: 300;
+      color: var(--mid);
+      margin-bottom: 1.2rem;
+    }
+
+    .ing-props {
+      display: grid;
+      gap: .8rem;
+      margin-top: 2rem;
+    }
+
+    .prop {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+      background: var(--cream);
+    }
+
+    .prop-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--ruby);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .prop p {
+      font-family: var(--sans);
+      font-size: .74rem;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    .prop strong {
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    .vine-card {
+      background: var(--dark);
+      padding: 2.5rem;
+      text-align: center;
+    }
+
+    .vine-card h3 {
+      font-family: var(--display);
+      font-size: 1.5rem;
+      color: var(--fog);
+      margin-bottom: .3rem;
+      font-style: italic;
+    }
+
+    .vine-card .vine-sub {
+      font-family: var(--sans);
+      font-size: .65rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--wine);
+      margin-bottom: 1.6rem;
+    }
+
+    /* BENEFITS */
+    .benefits {
+      background: var(--dark);
+      padding: 7rem 8rem;
+    }
+
+    .benefits .section-label {
+      color: var(--mist);
+    }
+
+    .benefits .section-h2 {
+      color: var(--fog);
+    }
+
+    .benefits .section-h2 em {
+      color: var(--rose);
+    }
+
+    .ben-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .ben-card {
+      background: rgba(255, 255, 255, .03);
+      border: .5px solid rgba(160, 24, 40, .3);
+      padding: 2.4rem;
+      transition: background .3s, border-color .3s;
+    }
+
+    .ben-card:hover {
+      background: rgba(122, 10, 26, .1);
+      border-color: var(--ruby);
+    }
+
+    .ben-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(122, 10, 26, .2);
+      border: .5px solid rgba(122, 10, 26, .3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+    }
+
+    .ben-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .ben-card h4 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--fog);
+      margin-bottom: .6rem;
+    }
+
+    .ben-card p {
+      font-family: var(--sans);
+      font-size: .73rem;
+      line-height: 1.9;
+      font-weight: 300;
+      color: var(--mist);
+    }
+
+    /* AGES */
+    .ages {
+      padding: 7rem 8rem;
+      background: var(--cream);
+    }
+
+    .ages-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .age-card {
+      background: var(--fog);
+      padding: 2rem;
+      border: .5px solid rgba(122, 10, 26, .15);
+      text-align: center;
+      transition: transform .3s, border-color .3s;
+    }
+
+    .age-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--ruby);
+    }
+
+    .age-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem;
+    }
+
+    .age-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .age-card h4 {
+      font-family: var(--display);
+      font-size: 1.2rem;
+      color: var(--deep);
+      margin-bottom: .3rem;
+      font-style: italic;
+    }
+
+    .age-range {
+      font-family: var(--sans);
+      font-size: .6rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--wine);
+      margin-bottom: .7rem;
+    }
+
+    .age-card p {
+      font-family: var(--sans);
+      font-size: .72rem;
+      line-height: 1.8;
+      font-weight: 300;
+      color: var(--mid);
+    }
+
+    /* SCIENCE */
+    .science {
+      padding: 7rem 8rem;
+      background: var(--fog);
+    }
+
+    .science-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      margin-top: 4rem;
+    }
+
+    .fact-card {
+      display: flex;
+      gap: 1.4rem;
+      padding: 1.6rem;
+      background: var(--cream);
+      margin-bottom: 1.2rem;
+      transition: transform .3s;
+    }
+
+    .fact-card:hover {
+      transform: translateX(5px);
+    }
+
+    .fact-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .fact-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .fact-body h5 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--deep);
+      margin-bottom: .3rem;
+    }
+
+    .fact-body p {
+      font-family: var(--sans);
+      font-size: .72rem;
+      line-height: 1.9;
+      font-weight: 300;
+      color: var(--mid);
+    }
+
+    .sci-quote {
+      background: var(--dark);
+      padding: 3.5rem;
+    }
+
+    .sci-quote blockquote {
+      font-family: var(--display);
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--fog);
+      line-height: 1.5;
+      margin-bottom: 1.4rem;
+    }
+
+    .sci-quote cite {
+      font-family: var(--sans);
+      font-size: .65rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--rose);
+    }
+
+    .sci-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .stat-b {
+      padding: 1.4rem;
+      border: .5px solid var(--mid);
+    }
+
+    .stat-num {
+      font-family: var(--display);
+      font-size: 2.6rem;
+      color: var(--rose);
+      font-style: italic;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-family: var(--sans);
+      font-size: .6rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--mist);
+      margin-top: .3rem;
+    }
+
+    /* DOSAGE */
+    .dosage {
+      padding: 6rem 8rem;
+      background: var(--mid);
+    }
+
+    .dosage .section-label {
+      color: var(--mist);
+    }
+
+    .dosage .section-h2 {
+      color: var(--fog);
+    }
+
+    .dosage .section-h2 em {
+      color: var(--rose);
+    }
+
+    .dosage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .dosage-card {
+      background: rgba(255, 255, 255, .04);
+      border: .5px solid rgba(192, 80, 104, .2);
+      padding: 2.4rem;
+      text-align: center;
+      transition: background .3s, border-color .3s;
+    }
+
+    .dosage-card:hover {
+      background: rgba(122, 10, 26, .1);
+      border-color: var(--rose);
+    }
+
+    .d-who {
+      font-family: var(--sans);
+      font-size: .6rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: .6rem;
+    }
+
+    .d-dose {
+      font-family: var(--display);
+      font-size: 2.8rem;
+      color: var(--mist);
+      font-style: italic;
+      line-height: 1;
+      margin-bottom: .4rem;
+    }
+
+    .d-unit {
+      font-family: var(--sans);
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1rem;
+    }
+
+    .dosage-card p {
+      font-family: var(--sans);
+      font-size: .73rem;
+      line-height: 1.9;
+      font-weight: 300;
+      color: var(--mist);
+    }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      padding: 7rem 8rem;
+      background: var(--cream);
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .testi {
+      background: var(--fog);
+      padding: 2.4rem;
+      transition: transform .3s;
+      border: .5px solid transparent;
+    }
+
+    .testi:hover {
+      transform: translateY(-4px);
+      border-color: rgba(122, 10, 26, .2);
+    }
+
+    .testi-stars {
+      color: var(--ruby);
+      font-size: .75rem;
+      margin-bottom: .8rem;
+      letter-spacing: 2px;
+    }
+
+    .testi-q {
+      font-family: var(--display);
+      font-size: 3rem;
+      color: var(--mist);
+      line-height: .8;
+      margin-bottom: .8rem;
+      font-style: italic;
+    }
+
+    .testi p {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--deep);
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+
+    .testi-author {
+      font-family: var(--sans);
+      font-size: .62rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--wine);
+    }
+
+    .testi-detail {
+      font-family: var(--sans);
+      font-size: .6rem;
+      color: var(--rose);
+      margin-top: .2rem;
+    }
+
+    /* FAQ */
+    .faq {
+      padding: 7rem 8rem;
+      background: var(--fog);
+    }
+
+    .faq-list {
+      max-width: 720px;
+      margin: 4rem auto 0;
+    }
+
+    .faq-item {
+      border-bottom: .5px solid var(--mist);
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.6rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--deep);
+      text-align: left;
+    }
+
+    .faq-q .icon {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .faq-q .icon::before,
+    .faq-q .icon::after {
+      content: '';
+      position: absolute;
+      background: var(--ruby);
+      transition: transform .3s, opacity .3s;
+    }
+
+    .faq-q .icon::before {
+      width: 12px;
+      height: .5px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .faq-q .icon::after {
+      width: .5px;
+      height: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .faq-item.open .faq-q .icon::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+      opacity: 0;
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, padding .3s;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 200px;
+      padding-bottom: 1.4rem;
+    }
+
+    .faq-a p {
+      font-family: var(--sans);
+      font-size: .78rem;
+      line-height: 2;
+      font-weight: 300;
+      color: var(--mid);
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--ruby);
+      padding: 6rem 8rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .cta h2 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      color: var(--fog);
+      font-style: italic;
+    }
+
+    .cta p {
+      font-family: var(--sans);
+      font-size: .78rem;
+      line-height: 2;
+      font-weight: 300;
+      color: var(--mist);
+      margin-top: .8rem;
+      max-width: 480px;
+    }
+
+    .btn-light {
+      font-family: var(--sans);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      background: var(--cream);
+      color: var(--dark);
+      padding: 1.1rem 2.4rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-block;
+      transition: background .3s, transform .2s;
+    }
+
+    .btn-light:hover {
+      background: var(--fog);
+      transform: translateY(-2px);
+    }
+
+    .disclaimer {
+      background: var(--fog);
+      border-top: .5px solid var(--mist);
+      padding: 2rem 8rem;
+      text-align: center;
+    }
+
+    .disclaimer p {
+      font-family: var(--sans);
+      font-size: .66rem;
+      line-height: 1.8;
+      color: var(--wine);
+      font-weight: 300;
+    }
+
+    footer {
+      background: var(--deep);
+      padding: 5rem 8rem 2.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: .5px solid rgba(255, 255, 255, .05);
+    }
+
+    .footer-brand p {
+      font-family: var(--sans);
+      font-size: .74rem;
+      line-height: 1.9;
+      font-weight: 300;
+      color: var(--mist);
+      margin-top: 1rem;
+    }
+
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: .62rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1.4rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: .7rem;
+    }
+
+    .footer-col a {
+      font-family: var(--sans);
+      font-size: .74rem;
+      font-weight: 300;
+      color: var(--mist);
+      text-decoration: none;
+      transition: color .3s;
+    }
+
+    .footer-col a:hover {
+      color: var(--cream);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+    }
+
+    .footer-bottom p {
+      font-family: var(--sans);
+      font-size: .62rem;
+      color: rgba(192, 80, 104, .3);
+      letter-spacing: .06em;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .d1 {
+      transition-delay: .1s;
+    }
+
+    .d2 {
+      transition-delay: .2s;
+    }
+
+    .d3 {
+      transition-delay: .3s;
+    }
+
+    .d4 {
+      transition-delay: .4s;
+    }
+
+    @media(max-width:900px) {
+
+      nav,
+      nav.scrolled {
+        padding: 1rem 1.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-left {
+        padding: 7rem 2rem 3rem;
+      }
+
+      .hero-right {
+        height: 60vw;
+      }
+
+      .section,
+      .anemia,
+      .mechanism,
+      .ingredient,
+      .benefits,
+      .ages,
+      .science,
+      .dosage,
+      .testimonials,
+      .faq,
+      .cta,
+      footer,
+      .disclaimer {
+        padding: 4rem 2rem;
+      }
+
+      .anemia-grid,
+      .science-grid,
+      .ing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mech-steps,
+      .ben-grid,
+      .dosage-grid,
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mech-steps::before {
+        display: none;
+      }
+
+      .ages-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav id="nav">
+    <a href="#" class="nav-brand"><img src="sz-herbals-logo-united-states.png" alt="SZ Herbals Logo"
+        style="height: 112px; width: auto; object-fit: contain;"></a>
+    <ul class="nav-links">
+      <li><a href="#anemia">What is Anemia</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#ingredient">Ingredient</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a href="order-form.html" class="nav-cta">Order Now</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow reveal">Pure Herbal · Haematic Syrup · Blood Wellness</div>
+      <div class="hero-botanical reveal d1">Vitis vinifera L</div>
+      <h1 class="hero-h1 reveal d2">
+        Build rich,<br />
+        <em>healthy blood.</em><br />
+        Naturally.
+      </h1>
+      <p class="hero-sub reveal d3">Globivin is a 100% organic haematic herbal syrup of pure Vitis vinifera L — one of
+        nature's most powerful blood-building botanicals. Supports healthy hemoglobin production, iron absorption and
+        red blood cell formation for all ages.</p>
+      <div class="hero-actions reveal d4">
+        <a href="order-form.html" class="btn-primary">Order Globivin</a>
+        <a href="#anemia" class="btn-ghost">See How It Works →</a>
+      </div>
+      <div class="hero-badges reveal d4">
+        <span class="badge">100% Organic</span>
+        <span class="badge">Vitis vinifera L</span>
+        <span class="badge">All Ages</span>
+        <span class="badge">250ml Syrup</span>
+        <span class="badge">Zero Chemicals</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="reveal d2">
+        <svg viewBox="0 0 240 320" fill="none" xmlns="http://www.w3.org/2000/svg"
+          style="width:200px;filter:drop-shadow(0 20px 40px rgba(122,10,26,.25));">
+          <path
+            d="M20,220 C16,188 14,148 20,120 C24,104 40,96 120,96 C200,96 216,104 220,120 C226,148 224,188 220,220 C216,254 196,274 120,274 C44,274 24,254 20,220Z"
+            fill="#280410" stroke="#480818" stroke-width="1.2" />
+          <ellipse cx="120" cy="96" rx="100" ry="20" fill="#8A1020" />
+          <ellipse cx="120" cy="96" rx="100" ry="20" fill="none" stroke="#7A0818" stroke-width="1.2" />
+          <ellipse cx="106" cy="91" rx="52" ry="9" fill="#A03040" opacity="0.25" />
+          <text x="120" y="101" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#F0C8C0"
+            letter-spacing="2">GLOBIVIN</text>
+          <path
+            d="M28,160 C26,144 116,136 120,136 C124,136 214,144 212,160 L212,234 C210,250 124,258 120,258 C116,258 30,250 28,234 Z"
+            fill="#180208" stroke="#380610" stroke-width="0.6" />
+          <path d="M78,176 C76,166 82,160 88,158 C94,156 100,160 106,163" fill="none" stroke="#1A2008"
+            stroke-width="1.2" stroke-linecap="round" />
+          <path d="M106,163 C112,166 116,172 114,180" fill="none" stroke="#1A2008" stroke-width="1.2"
+            stroke-linecap="round" />
+          <path d="M86,164 C80,158 72,159 71,165 C70,171 76,174 83,171Z" fill="#142008" opacity="0.75" stroke="#1A2808"
+            stroke-width="0.4" />
+          <path d="M106,172 C112,166 120,167 121,173 C122,179 116,182 109,179Z" fill="#142008" opacity="0.7"
+            stroke="#1A2808" stroke-width="0.4" />
+          <circle cx="72" cy="188" r="5" fill="#5A0818" stroke="#3A0410" stroke-width="0.4" />
+          <circle cx="81" cy="184" r="5" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.4" />
+          <circle cx="76" cy="196" r="5" fill="#5A0818" stroke="#3A0410" stroke-width="0.4" />
+          <circle cx="66" cy="194" r="4.5" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.4" />
+          <circle cx="86" cy="192" r="4.5" fill="#5A0818" stroke="#3A0410" stroke-width="0.4" />
+          <circle cx="73" cy="204" r="4.5" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.4" />
+          <circle cx="69" cy="186" r="1.5" fill="#A03050" opacity="0.35" />
+          <circle cx="138" cy="178" r="4.5" fill="#5A0818" stroke="#3A0410" stroke-width="0.4" />
+          <circle cx="146" cy="174" r="4.5" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.4" />
+          <circle cx="142" cy="186" r="4.5" fill="#5A0818" stroke="#3A0410" stroke-width="0.4" />
+          <circle cx="132" cy="184" r="4" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.4" />
+          <circle cx="152" cy="182" r="4" fill="#5A0818" stroke="#3A0410" stroke-width="0.4" />
+          <circle cx="139" cy="194" r="4" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.4" />
+          <text x="120" y="218" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#F0C8C0"
+            letter-spacing="3">GLOBIVIN</text>
+          <text x="120" y="232" text-anchor="middle" font-family="'Montserrat',sans-serif" font-size="6.5"
+            fill="#904050" letter-spacing="2">HAEMATIC SYRUP</text>
+          <text x="120" y="244" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#703040"
+            font-style="italic">Vitis vinifera L</text>
+          <path d="M28,168 C26,190 24,220 28,248" fill="none" stroke="#5A0818" stroke-width="2.5" stroke-linecap="round"
+            opacity="0.18" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="m-item">Vitis vinifera L <span class="m-dot"></span></span>
+      <span class="m-item">Builds Healthy Blood <span class="m-dot"></span></span>
+      <span class="m-item">Boosts Hemoglobin <span class="m-dot"></span></span>
+      <span class="m-item">100% Organic <span class="m-dot"></span></span>
+      <span class="m-item">Supports Iron Absorption <span class="m-dot"></span></span>
+      <span class="m-item">All Ages <span class="m-dot"></span></span>
+      <span class="m-item">Zero Chemicals <span class="m-dot"></span></span>
+      <span class="m-item">Pure Haematic Syrup <span class="m-dot"></span></span>
+      <span class="m-item">Vitis vinifera L <span class="m-dot"></span></span>
+      <span class="m-item">Builds Healthy Blood <span class="m-dot"></span></span>
+      <span class="m-item">Boosts Hemoglobin <span class="m-dot"></span></span>
+      <span class="m-item">100% Organic <span class="m-dot"></span></span>
+      <span class="m-item">Supports Iron Absorption <span class="m-dot"></span></span>
+      <span class="m-item">All Ages <span class="m-dot"></span></span>
+      <span class="m-item">Zero Chemicals <span class="m-dot"></span></span>
+      <span class="m-item">Pure Haematic Syrup <span class="m-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- WHAT IS ANEMIA -->
+  <section class="anemia" id="anemia">
+    <div class="section-label reveal">Understanding the condition</div>
+    <h2 class="section-h2 reveal d1">What actually happens<br />when you have <em>anemia?</em></h2>
+    <div class="anemia-grid">
+      <div class="anemia-text">
+        <p class="reveal">Anemia is not simply "feeling tired." It is a fundamental deficiency in your blood's ability
+          to carry oxygen — because your body either lacks enough red blood cells, or those cells don't contain enough
+          hemoglobin to function properly.</p>
+        <p class="reveal d1">Every organ in your body depends on a steady supply of oxygen delivered by red blood cells.
+          When that supply is compromised — due to iron deficiency, poor nutrition, blood loss, or bone marrow issues —
+          every system suffers. Fatigue, paleness, shortness of breath, weakness and poor concentration are all symptoms
+          of oxygen-starved tissues.</p>
+        <div style="margin-top:2.4rem;">
+          <div class="journey-step reveal d2">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Iron deficiency — the most common cause</h4>
+              <p>Without enough iron, your body cannot produce hemoglobin — the protein in red blood cells that carries
+                oxygen. Low hemoglobin = low oxygen = constant fatigue.</p>
+            </div>
+          </div>
+          <div class="journey-step reveal d3">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Red blood cells become too few or too small</h4>
+              <p>Iron-deficient red blood cells are smaller and paler than normal. They carry less oxygen and die faster
+                — the body can't keep up with production and a deficit builds.</p>
+            </div>
+          </div>
+          <div class="journey-step reveal d4">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Every organ begins to suffer</h4>
+              <p>Heart works harder. Brain gets less oxygen. Muscles fatigue faster. Immune system weakens. In children
+                — cognitive development is affected. In women — periods worsen the deficit further.</p>
+            </div>
+          </div>
+          <div class="journey-step reveal">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>The solution — rebuild from the root</h4>
+              <p>Globivin delivers the bioactive compounds of Vitis vinifera L that support iron absorption, red blood
+                cell formation and hemoglobin synthesis — rebuilding healthy blood from within.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <div class="blood-card">
+          <h3>Types of Anemia</h3>
+          <div class="types-grid">
+            <div class="type-card t1">
+              <div class="type-label">Most Common · 50% of all cases</div>
+              <h4>Iron Deficiency Anemia</h4>
+              <p>Insufficient iron leads to reduced hemoglobin production. Most common in women, children and the
+                elderly. Globivin directly supports iron absorption and hemoglobin synthesis.</p>
+            </div>
+            <div class="type-card t2">
+              <div class="type-label">Nutritional</div>
+              <h4>Folate & B12 Deficiency</h4>
+              <p>Without adequate folate and B12, red blood cells cannot form correctly. Vitis vinifera L provides
+                folate and supports the metabolic pathways needed for healthy cell formation.</p>
+            </div>
+            <div class="type-card t3">
+              <div class="type-label">Blood Loss</div>
+              <h4>Post-hemorrhagic Anemia</h4>
+              <p>After surgery, injury or heavy menstruation — blood must be replenished. Globivin supports accelerated
+                red blood cell production to help the body recover faster.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="mechanism" id="how">
+    <div class="section-label reveal">The mechanism</div>
+    <h2 class="section-h2 reveal d1">How Globivin <em>builds</em><br />healthy blood step by step</h2>
+    <p style="font-family:var(--sans);font-size:.8rem;line-height:2;font-weight:300;color:var(--mist);max-width:580px;margin-top:1rem;"
+      class="reveal d2">Unlike iron supplements that cause constipation and side effects, Globivin works through
+      bioactive botanical compounds that support the body's own blood-building processes.</p>
+    <div class="mech-steps">
+      <div class="mech-step reveal">
+        <div class="mech-dot">
+          <svg viewBox="0 0 28 28" fill="none" stroke="#C05068" stroke-width="1.2" stroke-linecap="round">
+            <path d="M14 4 C8 7 4 11 4 16 C4 20 8 24 14 24 C20 24 24 20 24 16 C24 11 20 7 14 4Z" />
+            <path d="M10 15 L14 10 L18 15" />
+            <line x1="14" y1="10" x2="14" y2="20" />
+          </svg>
+        </div>
+        <h4>Absorbed into bloodstream</h4>
+        <p>Active compounds — anthocyanins, resveratrol, iron, folate and copper — are absorbed rapidly from the syrup
+          and carried into circulation.</p>
+      </div>
+      <div class="mech-step reveal d1">
+        <div class="mech-dot">
+          <svg viewBox="0 0 28 28" fill="none" stroke="#C05068" stroke-width="1.2" stroke-linecap="round">
+            <circle cx="14" cy="14" r="9" />
+            <circle cx="14" cy="14" r="4" />
+            <circle cx="14" cy="14" r="1.5" fill="#C05068" />
+          </svg>
+        </div>
+        <h4>Supports iron absorption</h4>
+        <p>Vitamin C from Vitis vinifera converts non-heme iron into its absorbable form — dramatically increasing how
+          much iron your intestines take in from food and supplements.</p>
+      </div>
+      <div class="mech-step reveal d2">
+        <div class="mech-dot">
+          <svg viewBox="0 0 28 28" fill="none" stroke="#C05068" stroke-width="1.2" stroke-linecap="round">
+            <path d="M8 20 C8 14 12 8 14 8 C16 8 20 14 20 20" />
+            <path d="M6 22 L22 22" />
+            <circle cx="14" cy="8" r="3" />
+          </svg>
+        </div>
+        <h4>Stimulates red blood cell production</h4>
+        <p>Folate and copper from Vitis vinifera L are essential cofactors for erythropoiesis — the bone marrow process
+          that produces new red blood cells.</p>
+      </div>
+      <div class="mech-step reveal d3">
+        <div class="mech-dot">
+          <svg viewBox="0 0 28 28" fill="none" stroke="#C05068" stroke-width="1.2" stroke-linecap="round">
+            <path d="M6 14 C6 8 10 4 14 4 C18 4 22 8 22 14 C22 18 20 22 14 24 C8 22 6 18 6 14Z" />
+            <path d="M10 14 L13 17 L18 11" />
+          </svg>
+        </div>
+        <h4>Hemoglobin rises — energy returns</h4>
+        <p>As hemoglobin levels increase, oxygen delivery to every organ improves. Fatigue lifts. Colour returns to the
+          skin. Energy, focus and vitality are restored.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INGREDIENT -->
+  <section class="ingredient" id="ingredient">
+    <div class="section-label reveal">The key ingredient</div>
+    <h2 class="section-h2 reveal d1">Vitis vinifera L —<br />nature's <em>blood builder</em></h2>
+    <div class="ing-grid">
+      <div class="ing-text">
+        <p class="reveal">Vitis vinifera L — the common vine — is one of the oldest cultivated plants in human history,
+          referenced across ancient Greek, Roman, Islamic and Ayurvedic medical traditions for its profound effect on
+          blood health, vitality and longevity.</p>
+        <p class="reveal d1">Modern biochemistry has confirmed why. Vitis vinifera is extraordinarily rich in
+          anthocyanins, resveratrol, proanthocyanidins, iron, copper, folate and Vitamin C — the precise combination of
+          compounds needed for healthy hemoglobin synthesis, red blood cell formation, and iron metabolism.</p>
+        <p class="reveal d2">In Globivin, we use only pure Vitis vinifera L extract — cold-processed to preserve all
+          bioactive compounds in their natural ratios. No synthetic iron. No chemical additives. Just the vine — exactly
+          as it was always meant to be used.</p>
+        <div class="ing-props reveal d3">
+          <div class="prop">
+            <div class="prop-dot"></div>
+            <p><strong>Anthocyanins</strong> — the deep red pigments that strengthen red blood cell membranes and extend
+              their lifespan</p>
+          </div>
+          <div class="prop">
+            <div class="prop-dot"></div>
+            <p><strong>Resveratrol</strong> — supports bone marrow health and the stem cells that produce all blood
+              cells</p>
+          </div>
+          <div class="prop">
+            <div class="prop-dot"></div>
+            <p><strong>Proanthocyanidins (OPCs)</strong> — potent antioxidants that protect red blood cells from
+              oxidative destruction</p>
+          </div>
+          <div class="prop">
+            <div class="prop-dot"></div>
+            <p><strong>Natural Iron & Copper</strong> — bioavailable minerals essential for hemoglobin synthesis</p>
+          </div>
+          <div class="prop">
+            <div class="prop-dot"></div>
+            <p><strong>Folate (B9)</strong> — essential for DNA synthesis in new red blood cells</p>
+          </div>
+          <div class="prop">
+            <div class="prop-dot"></div>
+            <p><strong>Vitamin C</strong> — dramatically enhances iron absorption from all food sources</p>
+          </div>
+        </div>
+      </div>
+      <div class="root-illustration reveal d1">
+        <div class="vine-card">
+          <svg viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;">
+            <path d="M80,170 C78,148 82,126 88,110 C94,94 106,86 120,84 C134,82 146,88 152,102" fill="none"
+              stroke="#1A2008" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M152,102 C158,116 158,134 154,148 C150,162 142,172 132,176" fill="none" stroke="#1A2008"
+              stroke-width="1.8" stroke-linecap="round" />
+            <path d="M100,120 C88,110 74,112 72,122 C70,132 82,138 96,132 C102,129 104,123 100,120Z" fill="#142008"
+              opacity="0.75" stroke="#1A2808" stroke-width="0.5" />
+            <path d="M100,120 C106,110 118,112 120,122" fill="none" stroke="#1A2008" stroke-width="0.5" opacity="0.5" />
+            <path d="M140,100 C150,90 164,92 166,102 C168,112 156,118 144,112 C138,109 138,103 140,100Z" fill="#142008"
+              opacity="0.7" stroke="#1A2808" stroke-width="0.5" />
+            <path d="M114,150 C102,140 88,142 86,152 C84,162 96,168 110,162 C116,159 116,153 114,150Z" fill="#142008"
+              opacity="0.65" stroke="#1A2808" stroke-width="0.5" />
+            <path d="M80,110 C70,102 58,106 57,114" fill="none" stroke="#2A2810" stroke-width="0.8"
+              stroke-linecap="round" />
+            <path d="M150,130 C160,122 172,126 173,134" fill="none" stroke="#2A2810" stroke-width="0.8"
+              stroke-linecap="round" />
+            <circle cx="70" cy="148" r="6" fill="#5A0818" stroke="#3A0410" stroke-width="0.5" />
+            <circle cx="80" cy="144" r="6" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.5" />
+            <circle cx="75" cy="158" r="6" fill="#5A0818" stroke="#3A0410" stroke-width="0.5" />
+            <circle cx="63" cy="156" r="5.5" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.5" />
+            <circle cx="87" cy="154" r="5.5" fill="#5A0818" stroke="#3A0410" stroke-width="0.5" />
+            <circle cx="72" cy="168" r="5.5" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.5" />
+            <circle cx="82" cy="166" r="5" fill="#5A0818" stroke="#3A0410" stroke-width="0.5" />
+            <circle cx="66" cy="146" r="2" fill="#A03050" opacity="0.4" />
+            <circle cx="158" cy="116" r="5.5" fill="#5A0818" stroke="#3A0410" stroke-width="0.5" />
+            <circle cx="168" cy="112" r="5.5" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.5" />
+            <circle cx="163" cy="124" r="5.5" fill="#5A0818" stroke="#3A0410" stroke-width="0.5" />
+            <circle cx="151" cy="122" r="5" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.5" />
+            <circle cx="175" cy="120" r="5" fill="#5A0818" stroke="#3A0410" stroke-width="0.5" />
+            <circle cx="160" cy="132" r="5" fill="#6A0A1A" stroke="#4A0610" stroke-width="0.5" />
+            <circle cx="154" cy="114" r="2" fill="#A03050" opacity="0.4" />
+          </svg>
+          <h3>Vitis vinifera L</h3>
+          <div class="vine-sub">Common Vine · Haematic Botanical</div>
+          <div
+            style="margin-top:1.4rem;padding-top:1.4rem;border-top:.5px solid #480818;display:grid;grid-template-columns:1fr 1fr;gap:.8rem;">
+            <div style="text-align:center;">
+              <div
+                style="font-family:'Montserrat',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wine);">
+                Family</div>
+              <div
+                style="font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--fog);margin-top:.2rem;font-style:italic;">
+                Vitaceae</div>
+            </div>
+            <div style="text-align:center;">
+              <div
+                style="font-family:'Montserrat',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wine);">
+                Used Since</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--fog);margin-top:.2rem;">
+                8,000+ years</div>
+            </div>
+            <div style="text-align:center;">
+              <div
+                style="font-family:'Montserrat',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wine);">
+                Key Compound</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--fog);margin-top:.2rem;">
+                Resveratrol · OPCs</div>
+            </div>
+            <div style="text-align:center;">
+              <div
+                style="font-family:'Montserrat',sans-serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wine);">
+                Processing</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:.9rem;color:var(--fog);margin-top:.2rem;">
+                Cold-extracted</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits" id="benefits">
+    <div class="section-label reveal">What Globivin does</div>
+    <h2 class="section-h2 reveal d1">Six ways Globivin<br />rebuilds your <em>blood</em></h2>
+    <div class="ben-grid">
+      <div class="ben-card reveal">
+        <div class="ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C05068" stroke-width="1.2"
+            stroke-linecap="round">
+            <path d="M20 7 C20 14 12 21 12 21 C12 21 4 14 4 7 C4 4.8 7 3 12 3 C17 3 20 4.8 20 7Z" />
+          </svg></div>
+        <h4>Raises Hemoglobin Levels</h4>
+        <p>The combination of bioavailable iron, copper, folate and Vitamin C in Vitis vinifera L directly supports
+          hemoglobin synthesis — the protein that carries oxygen in your blood.</p>
+      </div>
+      <div class="ben-card reveal d1">
+        <div class="ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C05068" stroke-width="1.2"
+            stroke-linecap="round">
+            <circle cx="12" cy="12" r="8" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="12" cy="12" r="1.5" fill="#C05068" />
+          </svg></div>
+        <h4>Stimulates Red Blood Cell Production</h4>
+        <p>Resveratrol supports bone marrow stem cell health — the source of all red blood cells. Folate provides the
+          DNA building blocks needed for new cell formation.</p>
+      </div>
+      <div class="ben-card reveal d2">
+        <div class="ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C05068" stroke-width="1.2"
+            stroke-linecap="round">
+            <path d="M12 3 L14 8 L20 8 L15.5 12 L17 18 L12 14.5 L7 18 L8.5 12 L4 8 L10 8 Z" />
+          </svg></div>
+        <h4>Maximises Iron Absorption</h4>
+        <p>Vitamin C from Vitis vinifera L converts non-heme iron (from food and supplements) into its absorbable
+          ferrous form — dramatically increasing how much iron your body actually uses.</p>
+      </div>
+      <div class="ben-card reveal">
+        <div class="ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C05068" stroke-width="1.2"
+            stroke-linecap="round">
+            <path d="M4 12 L6 8 L9 14 L12 6 L15 14 L18 8 L20 12" />
+          </svg></div>
+        <h4>Restores Energy & Vitality</h4>
+        <p>As hemoglobin rises and oxygen delivery improves, the debilitating fatigue of anemia lifts. Energy returns,
+          mental clarity improves and physical endurance is restored.</p>
+      </div>
+      <div class="ben-card reveal d1">
+        <div class="ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C05068" stroke-width="1.2"
+            stroke-linecap="round">
+            <rect x="4" y="8" width="12" height="9" rx="2" />
+            <path d="M7 8 L7 6 C7 4.3 13 4.3 13 6 L13 8" />
+            <circle cx="10" cy="12.5" r="1.5" fill="#C05068" />
+          </svg></div>
+        <h4>Protects Red Blood Cells</h4>
+        <p>OPCs and anthocyanins from Vitis vinifera are powerful antioxidants that protect red blood cell membranes
+          from oxidative damage — extending their lifespan and efficiency.</p>
+      </div>
+      <div class="ben-card reveal d2">
+        <div class="ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C05068" stroke-width="1.2"
+            stroke-linecap="round">
+            <path d="M4 19 C4 15 7 12 12 12 C17 12 20 15 20 19" />
+            <circle cx="12" cy="7" r="4" />
+          </svg></div>
+        <h4>Safe for All Ages</h4>
+        <p>Unlike iron supplements that cause constipation, dark stools and nausea — Globivin's natural phytocomplex is
+          gentle, well-tolerated and safe for children, adults and the elderly alike.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR ALL AGES -->
+  <section class="ages" id="ages">
+    <div class="section-label reveal">For every body</div>
+    <h2 class="section-h2 reveal d1">Anemia affects <em>every age</em></h2>
+    <p style="font-family:var(--sans);font-size:.8rem;line-height:2;font-weight:300;color:var(--mid);max-width:560px;margin-top:.8rem;"
+      class="reveal d2">Iron deficiency is the world's most common nutritional deficiency — affecting 2 billion people
+      globally. Globivin is formulated to support every one of them.</p>
+    <div class="ages-grid">
+      <div class="age-card reveal">
+        <div class="age-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C05068" stroke-width="1.2"
+            stroke-linecap="round">
+            <circle cx="12" cy="6" r="3" />
+            <path d="M9 10 L9 18 M15 10 L15 18" />
+            <path d="M7 14 L9 14 M15 14 L17 14" />
+          </svg></div>
+        <h4>Children</h4>
+        <div class="age-range">Ages 2–12</div>
+        <p>Iron deficiency in children impairs cognitive development, concentration and growth. Globivin in syrup form
+          is easy to take and gentle on small stomachs.</p>
+      </div>
+      <div class="age-card reveal d1">
+        <div class="age-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C05068" stroke-width="1.2"
+            stroke-linecap="round">
+            <circle cx="12" cy="5" r="3" />
+            <path d="M5 20 L7 12 L12 10 L17 12 L19 20" />
+            <path d="M9 20 L9 14 L15 14 L15 20" />
+          </svg></div>
+        <h4>Women</h4>
+        <div class="age-range">All ages — especially menstruating</div>
+        <p>Monthly blood loss makes women the highest-risk group for iron deficiency anemia. Globivin replenishes what
+          menstruation takes — every month, consistently.</p>
+      </div>
+      <div class="age-card reveal d2">
+        <div class="age-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C05068" stroke-width="1.2"
+            stroke-linecap="round">
+            <path d="M12 3 C8 5 5 9 5 14 C5 18 8 21 12 21 C16 21 19 18 19 14 C19 9 16 5 12 3Z" />
+            <line x1="12" y1="10" x2="12" y2="16" />
+            <line x1="9" y1="13" x2="15" y2="13" />
+          </svg></div>
+        <h4>Pregnant Women</h4>
+        <div class="age-range">During pregnancy</div>
+        <p>Pregnancy doubles iron requirements. Anemia in pregnancy increases risk for mother and baby. Globivin
+          provides natural iron support with the folate essential for fetal development.</p>
+      </div>
+      <div class="age-card reveal d3">
+        <div class="age-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C05068" stroke-width="1.2"
+            stroke-linecap="round">
+            <path d="M8 20 L8 14 C8 10 16 10 16 14 L16 20" />
+            <path d="M5 20 L19 20" />
+            <path d="M8 8 C8 5 16 5 16 8" />
+            <path d="M6 8 L4 6 M18 8 L20 6" />
+          </svg></div>
+        <h4>Elderly</h4>
+        <div class="age-range">Ages 60+</div>
+        <p>Reduced iron absorption with age leads to chronic anemia in many elderly people. Globivin's Vitamin C
+          dramatically improves absorption — restoring energy and cognitive function.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCIENCE -->
+  <section class="science" id="science">
+    <div class="section-label reveal">The research</div>
+    <h2 class="section-h2 reveal d1">What science says about<br /><em>Vitis vinifera L</em> and blood</h2>
+    <div class="science-grid">
+      <div>
+        <div class="fact-card reveal">
+          <div class="fact-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#C05068" stroke-width="1"
+              stroke-linecap="round">
+              <circle cx="10" cy="10" r="7" />
+              <path d="M7 10 L9 12 L13 8" />
+            </svg></div>
+          <div class="fact-body">
+            <h5>OPCs and red blood cell protection</h5>
+            <p>Multiple studies confirm that oligomeric proanthocyanidins (OPCs) from Vitis vinifera significantly
+              reduce oxidative damage to red blood cell membranes — extending cell lifespan and maintaining healthy
+              hematocrit levels.</p>
+          </div>
+        </div>
+        <div class="fact-card reveal d1">
+          <div class="fact-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#C05068" stroke-width="1"
+              stroke-linecap="round">
+              <path d="M10 3 L12 8 L17 8 L13 11.5 L14.5 17 L10 14 L5.5 17 L7 11.5 L3 8 L8 8 Z" />
+            </svg></div>
+          <div class="fact-body">
+            <h5>Resveratrol and bone marrow support</h5>
+            <p>Research published in Stem Cell Reviews shows resveratrol from Vitis vinifera promotes hematopoietic stem
+              cell survival in bone marrow — directly supporting the body's blood production capacity.</p>
+          </div>
+        </div>
+        <div class="fact-card reveal d2">
+          <div class="fact-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#C05068" stroke-width="1"
+              stroke-linecap="round">
+              <rect x="4" y="8" width="12" height="9" rx="2" />
+              <path d="M7 8 L7 6 C7 4.3 13 4.3 13 6 L13 8" />
+              <circle cx="10" cy="12.5" r="1.5" fill="#C05068" />
+            </svg></div>
+          <div class="fact-body">
+            <h5>Vitamin C and iron absorption</h5>
+            <p>The Vitamin C naturally present in Vitis vinifera converts ferric iron (Fe³⁺) to ferrous iron (Fe²⁺) in
+              the gut — increasing non-heme iron absorption by up to 67% according to research in the American Journal
+              of Clinical Nutrition.</p>
+          </div>
+        </div>
+        <div class="fact-card reveal d3">
+          <div class="fact-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#C05068" stroke-width="1"
+              stroke-linecap="round">
+              <path d="M4 16 C4 10 8 4 10 4 C12 4 16 10 16 16" />
+              <path d="M7 16 C7 12 9 8 10 8 C11 8 13 12 13 16" />
+            </svg></div>
+          <div class="fact-body">
+            <h5>8,000 years of haematic use</h5>
+            <p>Vitis vinifera L has been used medicinally for blood health across ancient Greek, Roman, Persian and
+              Islamic medical traditions for over 8,000 years — making it one of the most time-tested haematic
+              botanicals in human history.</p>
+          </div>
+        </div>
+      </div>
+      <div class="sci-quote reveal d1">
+        <blockquote>"Vitis vinifera L extract demonstrated significant haematoprotective activity — increasing
+          hemoglobin concentration, red blood cell count and hematocrit in iron-deficient subjects, with excellent
+          tolerability."</blockquote>
+        <cite>— Pharmacological Review of Vitis vinifera L in Hematological Health</cite>
+        <div class="sci-stats">
+          <div class="stat-b">
+            <div class="stat-num">8,000+</div>
+            <div class="stat-label">Years of medicinal use</div>
+          </div>
+          <div class="stat-b">
+            <div class="stat-num">2B</div>
+            <div class="stat-label">People affected by anemia globally</div>
+          </div>
+          <div class="stat-b">
+            <div class="stat-num">67%</div>
+            <div class="stat-label">Increase in iron absorption with Vitamin C</div>
+          </div>
+          <div class="stat-b">
+            <div class="stat-num">0</div>
+            <div class="stat-label">Synthetic chemicals in Globivin</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOSAGE -->
+  <section class="dosage" id="dosage">
+    <div class="section-label reveal">How to take it</div>
+    <h2 class="section-h2 reveal d1">Simple. Daily. <em>Consistent.</em></h2>
+    <p style="font-family:var(--sans);font-size:.8rem;line-height:2;font-weight:300;color:var(--mist);max-width:540px;margin-top:.8rem;"
+      class="reveal d2">Blood building is cumulative. Hemoglobin rises gradually with consistent daily intake — stay the
+      course and the results compound.</p>
+    <div class="dosage-grid">
+      <div class="dosage-card reveal">
+        <div class="d-who">Children (2–12 years)</div>
+        <div class="d-dose">5ml</div>
+        <div class="d-unit">once daily · morning</div>
+        <p>One teaspoon every morning before breakfast. Can be mixed into juice or warm water. Gentle on small stomachs
+          — no constipation or nausea unlike iron supplements.</p>
+      </div>
+      <div class="dosage-card reveal d1">
+        <div class="d-who">Teens & Adults</div>
+        <div class="d-dose">10ml</div>
+        <div class="d-unit">twice daily · morning & evening</div>
+        <p>Two teaspoons in the morning and evening. Best taken before meals to maximise iron absorption from food. Most
+          users notice improved energy within 2–3 weeks.</p>
+      </div>
+      <div class="dosage-card reveal d2">
+        <div class="d-who">Severe Anemia & Pregnancy</div>
+        <div class="d-dose">15ml</div>
+        <div class="d-unit">twice daily · with medical guidance</div>
+        <p>Three teaspoons twice daily for those with significantly low hemoglobin or during pregnancy. Monitor
+          hemoglobin levels every 4 weeks. Always inform your doctor.</p>
+      </div>
+    </div>
+    <div style="margin-top:2.4rem;padding:2rem;border:.5px solid rgba(192,80,104,.2);background:rgba(255,255,255,.03);"
+      class="reveal">
+      <p
+        style="font-family:var(--sans);font-size:.76rem;line-height:2;font-weight:300;color:var(--mist);text-align:center;">
+        <strong style="color:var(--rose);font-weight:400;">Pro tip:</strong> Take Globivin with a meal rich in Vitamin C
+        — or simply take it as is, since Vitis vinifera L already contains natural Vitamin C that dramatically enhances
+        iron absorption from everything you eat alongside it.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="reviews">
+    <div class="section-label reveal">Real results</div>
+    <h2 class="section-h2 reveal d1">Heard from our <em>users</em></h2>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">"</div>
+        <p>My hemoglobin was 7.2 — dangerously low. The doctors wanted to give me an iron infusion. I tried Globivin
+          first. Within 6 weeks my hemoglobin was 11.4. I was astonished.</p>
+        <div class="testi-author">Nadia R.</div>
+        <div class="testi-detail">Hb: 7.2 → 11.4 · 6 weeks · Karachi</div>
+      </div>
+      <div class="testi reveal d1">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">"</div>
+        <p>My daughter was pale, always tired, always sick. Her iron was very low. After two months of Globivin she is a
+          different child — full of energy, rosy cheeks, eating well.</p>
+        <div class="testi-author">Umm Hassan</div>
+        <div class="testi-detail">Child — age 7 · Iron deficiency · Lahore</div>
+      </div>
+      <div class="testi reveal d2">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-q">"</div>
+        <p>I was anaemic throughout my last pregnancy. This time I took Globivin from the start. My iron levels stayed
+          healthy throughout and I had so much more energy than before.</p>
+        <div class="testi-author">Fatima S.</div>
+        <div class="testi-detail">Pregnancy anemia support · Dubai</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-label reveal">Common questions</div>
+    <h2 class="section-h2 reveal d1" style="text-align:center;">Everything you need <em>to know</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">How is Globivin different from iron supplements? <div class="icon"></div></button>
+        <div class="faq-a">
+          <p>Standard iron supplements often cause constipation, dark stools, nausea and stomach cramping — leading many
+            people to stop taking them. Globivin delivers iron in its natural botanical matrix alongside Vitamin C,
+            copper and folate — all the cofactors needed for gentle, effective iron absorption with no harsh side
+            effects.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How long before my hemoglobin improves? <div class="icon"></div></button>
+        <div class="faq-a">
+          <p>Most users notice improved energy and reduced fatigue within 2–3 weeks. Measurable hemoglobin improvement
+            typically appears after 4–6 weeks. For severely low hemoglobin (below 8 g/dL), we recommend using Globivin
+            alongside medical care and monitoring hemoglobin monthly.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is Globivin safe during pregnancy? <div class="icon"></div></button>
+        <div class="faq-a">
+          <p>Yes — Vitis vinifera L has a long history of safe use during pregnancy in traditional medicine. The natural
+            folate content also supports fetal neural development. However, always inform your obstetrician before
+            taking any supplement during pregnancy so they can monitor your iron and folate levels appropriately.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I give Globivin to my child? <div class="icon"></div></button>
+        <div class="faq-a">
+          <p>Yes — Globivin is safe for children from age 2 upwards. The syrup form is easy to administer and the
+            natural botanical iron is far gentler on children's stomachs than synthetic iron supplements. Start with 5ml
+            daily and adjust based on your child's response.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is Globivin available internationally? <div class="icon"></div></button>
+        <div class="faq-a">
+          <p>Yes. Globivin ships internationally as a herbal food supplement under SZ Herbals. We currently ship to UAE,
+            UK, Europe, North America and Southeast Asia. The liquid syrup is securely packaged for international
+            shipment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="order">
+    <div>
+      <h2 class="reveal">Build rich, healthy blood.<br /><em>Start with Globivin.</em></h2>
+      <p class="reveal d1">Pure Vitis vinifera L extract. 100% organic. Zero chemicals. Gentle on your stomach. Powerful
+        on your hemoglobin. For every age — from children to the elderly.</p>
+    </div>
+    <a href="order-form.html" class="btn-light reveal d2">Order Globivin Now</a>
+  </section>
+
+  <div class="disclaimer">
+    <p>* Globivin is a herbal dietary supplement. It is not intended to diagnose, treat, cure or prevent any disease.
+      Results may vary. Always consult a qualified healthcare professional before beginning any supplement regimen,
+      particularly if you have a diagnosed hematological condition or are pregnant. Monitor hemoglobin levels regularly
+      during use.</p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="color:var(--cream)"><a href="index.html"><img
+              src="sz-herbals-logo-united-states.png" alt="SZ Herbals Logo"
+              style="height: 112px; width: auto; object-fit: contain; filter: brightness(0) invert(1);"></a></div>
+        <p>Pure Vitis vinifera L haematic herbal syrup. Builds healthy hemoglobin, supports red blood cell production
+          and restores energy naturally. 100% organic, zero chemicals, for all ages.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Globivin</h5>
+        <ul>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Vitis vinifera L</a></li>
+          <li><a href="#">Dosage Guide</a></li>
+          <li><a href="#">Order Now</a></li>
+          <li><a href="#">For Children</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>SZ Herbals</h5>
+        <ul>
+          <li><a href="glukora.html">Glukora</a></li>
+          <li><a href="livokara.html">Livokara Gold</a></li>
+          <li><a href="figuva.html">Figuva</a></li>
+          <li><a href="slimzest.html">Slimzest</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding-top:2rem;">
+      <p style="font-family:var(--sans);font-size:.62rem;color:rgba(192,80,104,.3);letter-spacing:.06em;">© 2025
+        Globivin by SZ Herbals. All rights reserved.</p>
+      <p style="font-family:var(--sans);font-size:.62rem;color:rgba(192,80,104,.3);letter-spacing:.06em;">Pure · Natural
+        · Vitis vinifera L</p>
+    </div>
+  </footer>
+
+  <script>
+
+    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', scrollY > 60));
+    const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: .1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.hero .reveal').forEach((el, i) => setTimeout(() => el.classList.add('visible'), 180 + i * 150));
+    });
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+
+</html>

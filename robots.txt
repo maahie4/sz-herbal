@@ -1,0 +1,99 @@
+# ============================================================
+# robots.txt — SZ Herbals (szherbal.us)
+# Last updated: 2026-06-17
+# ============================================================
+# This file controls how search engines and AI crawlers
+# access the website. It explicitly allows all major AI bots
+# to ensure maximum discoverability in AI-generated answers.
+# ============================================================
+
+# ── GENERAL CRAWLERS ──
+User-agent: *
+Allow: /
+Disallow: /checkout.html
+Disallow: /cart.css
+Disallow: /cart.js
+Disallow: /sz-herbals-favicon/
+
+# ── GOOGLE ──
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ── BING / MICROSOFT ──
+User-agent: Bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# ── OPENAI / CHATGPT ──
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# ── ANTHROPIC / CLAUDE ──
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# ── PERPLEXITY ──
+User-agent: PerplexityBot
+Allow: /
+
+# ── META AI ──
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# ── APPLE ──
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ── COHERE ──
+User-agent: cohere-ai
+Allow: /
+
+# ── COMMON CRAWL ──
+User-agent: CCBot
+Allow: /
+
+# ── YANDEX ──
+User-agent: YandexBot
+Allow: /
+
+# ── SEMRUSH / AHREFS ──
+User-agent: SemrushBot
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+# ── SITEMAPS ──
+Sitemap: https://www.szherbal.us/sitemap.xml
+Sitemap: https://www.szherbal.us/sitemap-images.xml
+
+# ── AI CONTENT FILES ──
+# These files provide structured content for AI systems:
+# /llms.txt — Concise site summary for LLMs
+# /llms-full.txt — Detailed content feed for AI retrieval
+# /ai.txt — AI crawling preferences
+# /schema.json — Complete JSON-LD structured data
+# /knowledge-graph.json — Entity relationships
+# /entities.json — Entity definitions
+# /faq-database.json — FAQ database
+# /ai-citations.json — Citable facts and sources

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="sz-herbals-favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="sz-herbals-favicon/favicon.svg" />
+  <link rel="shortcut icon" href="sz-herbals-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="sz-herbals-favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="sz-herbals-favicon/site.webmanifest" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diabetes Reversal Assessment — SZ Herbals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --deep:    #1e3d35;
+      --mid:     #2D5C52;
+      --leaf:    #3D7A68;
+      --sage:    #7AAF9E;
+      --mist:    #B8D4CC;
+      --fog:     #E4EFEb;
+      --cream:   #F7F4EE;
+      --ink:     #1a2e28;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'Montserrat', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--serif);
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* PAGE LOADER */
+    .page-loader {
+      position: fixed; inset: 0; z-index: 10000;
+      background: var(--deep);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    .page-loader.done { opacity: 0; visibility: hidden; pointer-events: none; }
+    .loader-logo {
+      width: 60px; height: 60px;
+      animation: loaderPulse 1.2s ease-in-out infinite;
+    }
+    .loader-text {
+      font-family: var(--serif); font-size: 1.2rem;
+      color: var(--mist); margin-top: 1.2rem;
+      letter-spacing: 0.1em; font-weight: 300;
+    }
+    .loader-bar {
+      width: 120px; height: 1px; background: rgba(255,255,255,0.1);
+      margin-top: 2rem; position: relative; overflow: hidden;
+    }
+    .loader-bar::after {
+      content: ''; position: absolute; left: 0; top: 0;
+      height: 100%; width: 40%; background: var(--sage);
+      animation: loaderSlide 1s ease-in-out infinite;
+    }
+    @keyframes loaderPulse { 0%,100%{opacity:0.6;transform:scale(1)}50%{opacity:1;transform:scale(1.05)} }
+    @keyframes loaderSlide { 0%{left:-40%}100%{left:100%} }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.6rem 4rem;
+      transition: background 0.4s, padding 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(247,244,238,0.96);
+      backdrop-filter: blur(10px);
+      padding: 1rem 4rem;
+      border-bottom: 0.5px solid var(--mist);
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--deep);
+      letter-spacing: 0.05em;
+      display: flex; align-items: center; gap: 0.5rem;
+      text-decoration: none;
+    }
+    .nav-logo svg { width: 28px; height: 28px; }
+
+    /* QUIZ CONTAINER */
+    .quiz-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+    }
+    .quiz-card {
+      background: #fff;
+      width: 100%;
+      max-width: 680px;
+      padding: 3.5rem;
+      box-shadow: 0 40px 100px rgba(30,61,53,0.08);
+      position: relative;
+      overflow: hidden;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+    }
+    .quiz-progress {
+      position: absolute; top: 0; left: 0; height: 3px;
+      background: var(--mist); width: 100%;
+    }
+    .quiz-progress-bar {
+      height: 100%; background: var(--leaf);
+      width: 0%; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .quiz-step {
+      display: none;
+      animation: fadeIn 0.6s ease forwards;
+    }
+    .quiz-step.active {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .quiz-label {
+      font-family: var(--sans); font-size: 0.65rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--sage); margin-bottom: 1.2rem;
+    }
+    .quiz-question {
+      font-size: 2.2rem; font-weight: 300;
+      color: var(--deep); line-height: 1.2;
+      margin-bottom: 2rem;
+    }
+    .quiz-options {
+      display: grid; gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .option-btn {
+      font-family: var(--sans); font-size: 0.85rem;
+      padding: 1.2rem 1.6rem;
+      background: var(--fog);
+      border: 0.5px solid var(--mist);
+      color: var(--deep);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .option-btn:hover {
+      background: #fff;
+      border-color: var(--leaf);
+      transform: translateX(4px);
+    }
+    .option-btn.selected {
+      background: var(--deep);
+      color: var(--cream);
+      border-color: var(--deep);
+    }
+    .option-btn svg {
+      width: 16px; height: 16px; opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .option-btn.selected svg { opacity: 1; }
+
+    .quiz-input-wrap {
+      margin-bottom: 2.5rem;
+    }
+    .quiz-input {
+      width: 100%;
+      padding: 1.2rem;
+      font-family: var(--sans); font-size: 1.2rem;
+      border: none; border-bottom: 1px solid var(--mist);
+      outline: none; background: transparent;
+      color: var(--deep);
+      transition: border-color 0.3s;
+    }
+    .quiz-input:focus { border-color: var(--leaf); }
+
+    .quiz-nav {
+      margin-top: auto;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .btn-quiz-next, .btn-quiz-prev {
+      font-family: var(--sans); font-size: 0.72rem;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 1rem 2.4rem; border: none; cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-quiz-next {
+      background: var(--mid); color: #fff;
+    }
+    .btn-quiz-next:hover { background: var(--deep); }
+    .btn-quiz-next:disabled { background: var(--mist); cursor: not-allowed; }
+    .btn-quiz-prev {
+      background: transparent; color: var(--mid);
+    }
+    .btn-quiz-prev:hover { color: var(--deep); }
+
+    /* RESULTS */
+    .result-score {
+      text-align: center; margin-bottom: 2rem;
+    }
+    .score-circle {
+      width: 120px; height: 120px; border-radius: 50%;
+      border: 2px solid var(--leaf);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2.5rem; font-weight: 300; color: var(--deep);
+    }
+    .result-text {
+      font-family: var(--sans); font-size: 0.95rem;
+      line-height: 1.8; color: var(--mid);
+      text-align: center; margin-bottom: 2.5rem;
+    }
+    .result-cta {
+      display: flex; flex-direction: column; gap: 1rem; align-items: center;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--deep);
+      padding: 4rem 4rem 2rem;
+      margin-top: auto;
+    }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      color: rgba(184,212,204,0.5); font-size: 0.65rem;
+      font-family: var(--sans); letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 2rem; }
+      .quiz-card { padding: 2.5rem 1.5rem; min-height: 450px; }
+      .quiz-question { font-size: 1.6rem; }
+      footer { padding: 3rem 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <img class="loader-logo" src="sz-herbals-logo-united-states.png" alt="SZ Herbals Logo" style="object-fit: contain;">
+    <div class="loader-text">SZ Herbals</div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="index.html" class="nav-logo"><img src="sz-herbals-logo-united-states.png" alt="SZ Herbals Logo" style="height: 112px; width: auto; object-fit: contain;"></a>
+  </nav>
+
+  <section class="quiz-section">
+    <div class="quiz-card">
+      <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- STEP 1: WELCOME -->
+      <div class="quiz-step active" id="step1">
+        <div class="quiz-label">Know Your Reversal Score</div>
+        <h1 class="quiz-question">Quick assessment to understand your diabetes type, risk level & reversal potential.</h1>
+        <p style="font-family: var(--sans); font-size: 0.9rem; color: var(--mid); line-height: 1.6; margin-bottom: 2rem;">
+          Discover if your condition can be reversed through our natural herbal approach.
+        </p>
+        <div class="quiz-nav">
+          <span></span>
+          <button class="btn-quiz-next" onclick="nextStep(1)">Start My Assessment</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: TYPE -->
+      <div class="quiz-step" id="step2">
+        <div class="quiz-label">Condition Type</div>
+        <h2 class="quiz-question">What is your current condition?</h2>
+        <div class="quiz-options">
+          <button class="option-btn" onclick="selectOption('type', 'Type 1')">Type 1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('type', 'Type 2')">Type 2 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('type', 'Pre-Diabetes')">Pre-Diabetes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('type', 'Other')">Any Other Condition <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn-quiz-prev" onclick="prevStep(2)">Back</button>
+          <button class="btn-quiz-next" id="next2" disabled onclick="nextStep(2)">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: DURATION -->
+      <div class="quiz-step" id="step3">
+        <div class="quiz-label">History</div>
+        <h2 class="quiz-question">How many years have you been living with this?</h2>
+        <div class="quiz-options">
+          <button class="option-btn" onclick="selectOption('years', '1-5')">1 to 5 years <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('years', '5-10')">5 to 10 years <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('years', '10-20')">10 to 20 years <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('years', '20+')">20+ years <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn-quiz-prev" onclick="prevStep(3)">Back</button>
+          <button class="btn-quiz-next" id="next3" disabled onclick="nextStep(3)">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: HbA1c -->
+      <div class="quiz-step" id="step4">
+        <div class="quiz-label">Biomarkers</div>
+        <h2 class="quiz-question">What is your current HbA1c level? (%)</h2>
+        <div class="quiz-input-wrap">
+          <input type="number" step="0.1" class="quiz-input" id="hba1c" placeholder="e.g. 6.5" oninput="validateInput('hba1c')">
+          <div id="hba1cFeedback" style="font-family: var(--sans); font-size: 0.7rem; color: var(--sage); margin-top: 0.5rem; letter-spacing: 0.05em;"></div>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn-quiz-prev" onclick="prevStep(4)">Back</button>
+          <button class="btn-quiz-next" id="next4" disabled onclick="nextStep(4)">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 5: MEDICATIONS -->
+      <div class="quiz-step" id="step5">
+        <div class="quiz-label">Medications</div>
+        <h2 class="quiz-question">Are you currently taking any of these?</h2>
+        <div class="quiz-options">
+          <button class="option-btn" id="med-metformin" onclick="toggleMed('metformin')">Metformin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" id="med-insulin" onclick="toggleMed('insulin')">Insulin (2+ years) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" id="med-none" onclick="toggleMed('none')">None of these <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn-quiz-prev" onclick="prevStep(5)">Back</button>
+          <button class="btn-quiz-next" id="next5" onclick="nextStep(5)">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 6: AGE -->
+      <div class="quiz-step" id="step6">
+        <div class="quiz-label">Profile</div>
+        <h2 class="quiz-question">What is your age group?</h2>
+        <div class="quiz-options" style="grid-template-columns: 1fr 1fr;">
+          <button class="option-btn" onclick="selectOption('age', '20+')">20+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('age', '30+')">30+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('age', '40+')">40+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('age', '50+')">50+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('age', '60+')">60+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+          <button class="option-btn" onclick="selectOption('age', '70+')">70+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17L4 12"/></svg></button>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn-quiz-prev" onclick="prevStep(6)">Back</button>
+          <button class="btn-quiz-next" id="next6" disabled onclick="calculateResult()">Calculate Score</button>
+        </div>
+      </div>
+
+      <!-- STEP 7: RESULT -->
+      <div class="quiz-step" id="step7">
+        <div class="quiz-label">Your Reversal Potential</div>
+        <div class="result-score">
+          <div class="score-circle" id="scoreValue">95%</div>
+          <div id="scoreLabel" style="font-family: var(--sans); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--leaf);">High Potential</div>
+        </div>
+        <div class="result-text" id="resultText">
+          Loading your personalized results...
+        </div>
+        <div class="result-cta">
+          <a href="glukora.html" class="btn-quiz-next" style="text-decoration: none; text-align: center; width: 100%;">View Recommended Solution</a>
+          <a href="index.html" class="btn-quiz-prev" style="text-decoration: none;">Return to Home</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2025 SZ Herbals. All rights reserved.</p>
+      <p>Pure · Natural · Effective</p>
+    </div>
+  </footer>
+
+  <script>
+    let userData = {
+      type: '',
+      years: '',
+      hba1c: '',
+      meds: [],
+      age: ''
+    };
+
+    function nextStep(current) {
+      document.getElementById(`step${current}`).classList.remove('active');
+      document.getElementById(`step${current + 1}`).classList.add('active');
+      updateProgress(current + 1);
+    }
+
+    function prevStep(current) {
+      document.getElementById(`step${current}`).classList.remove('active');
+      document.getElementById(`step${current - 1}`).classList.add('active');
+      updateProgress(current - 1);
+    }
+
+    function updateProgress(step) {
+      const totalSteps = 7;
+      const progress = ((step - 1) / (totalSteps - 1)) * 100;
+      document.getElementById('progressBar').style.width = `${progress}%`;
+    }
+
+    function selectOption(key, value) {
+      userData[key] = value;
+      
+      // Update UI
+      const stepDiv = document.querySelector('.quiz-step.active');
+      const btns = stepDiv.querySelectorAll('.option-btn');
+      btns.forEach(btn => {
+        if (btn.textContent.includes(value)) {
+          btn.classList.add('selected');
+        } else {
+          btn.classList.remove('selected');
+        }
+      });
+
+      // Enable next button
+      const nextBtn = stepDiv.querySelector('.btn-quiz-next');
+      if (nextBtn) nextBtn.disabled = false;
+    }
+
+    function toggleMed(med) {
+      const btn = document.getElementById(`med-${med}`);
+      
+      if (med === 'none') {
+        userData.meds = [];
+        document.querySelectorAll('#step5 .option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      } else {
+        document.getElementById('med-none').classList.remove('selected');
+        if (userData.meds.includes(med)) {
+          userData.meds = userData.meds.filter(m => m !== med);
+          btn.classList.remove('selected');
+        } else {
+          userData.meds.push(med);
+          btn.classList.add('selected');
+        }
+      }
+    }
+
+    function validateInput(id) {
+      const val = document.getElementById(id).value;
+      const nextBtn = document.getElementById('next4');
+      const feedback = document.getElementById('hba1cFeedback');
+      
+      if (val && val > 0) {
+        nextBtn.disabled = false;
+        userData.hba1c = parseFloat(val);
+        
+        if (userData.hba1c < 5.7) {
+          feedback.textContent = "Normal Range (Below 5.7%)";
+        } else if (userData.hba1c >= 5.7 && userData.hba1c <= 6.4) {
+          feedback.textContent = "Prediabetes Range (5.7% - 6.4%)";
+        } else {
+          feedback.textContent = "Diabetes Range (6.5% or higher)";
+        }
+      } else {
+        nextBtn.disabled = true;
+        feedback.textContent = "";
+      }
+    }
+
+    function calculateResult() {
+      nextStep(6);
+      
+      let score = 0;
+      let status = '';
+      let message = '';
+      
+      // LOGIC BASED ON USER REQUIREMENTS
+      if (userData.type === 'Type 1') {
+        score = 65;
+        status = 'Long-term Support';
+        message = "Diabetes Type 1 can be helped long-term. While instant reversal is not typical, SZ Herbals can significantly support your metabolic health and overall well-being.";
+      } else if (userData.meds.includes('insulin')) {
+        score = 40;
+        status = 'Management Focus';
+        message = "Since you have been on insulin for 2+ years, our Standard Reversal Protocol is specifically designed to support your journey. Our herbal blends focus on restoring metabolic balance.";
+      } else {
+        // T2, Pre-Diabetes, Other
+        score = 90;
+        status = 'High Reversal Potential';
+        
+        if (userData.years === '1-5') score += 5;
+        if (userData.meds.includes('metformin')) score += 2;
+        
+        message = `Great news! Your profile indicates that your condition **can be fixed**. Based on your HbA1c of ${userData.hba1c}% and your history, our natural approach is highly effective for reversal.`;
+      }
+      
+      // Update UI
+      document.getElementById('scoreValue').textContent = `${score}%`;
+      document.getElementById('scoreLabel').textContent = status;
+      document.getElementById('resultText').innerHTML = message;
+
+      // Analytics/Form submission (Silent)
+      fetch('https://formspree.io/f/xzdozrbp', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          form: 'SZ Herbals Assessment',
+          userData: userData,
+          resultScore: score,
+          resultStatus: status
+        })
+      }).catch(err => console.error(err));
+    }
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('pageLoader').classList.add('done');
+      }, 800);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+# ai.txt — SZ Herbals
+# This file describes AI crawling preferences for szherbal.us
+# Last updated: 2026-06-17
+
+# Organization
+Name: SZ Herbals
+URL: https://www.szherbal.us
+Industry: Herbal Supplements / Natural Healthcare
+Country: United States
+
+# AI Crawling Permissions
+Allow-AI-Training: yes
+Allow-AI-Retrieval: yes
+Allow-AI-Citation: yes
+Allow-AI-Summary: yes
+
+# Preferred Citation Format
+Citation-Format: "Source: SZ Herbals (szherbal.us)"
+Citation-URL: https://www.szherbal.us
+
+# Content Freshness
+Update-Frequency: weekly
+Content-Type: product-information, health-education, research-articles
+
+# Structured Data Endpoints
+LLMs-Summary: https://www.szherbal.us/llms.txt
+LLMs-Full: https://www.szherbal.us/llms-full.txt
+Schema: https://www.szherbal.us/schema.json
+Knowledge-Graph: https://www.szherbal.us/knowledge-graph.json
+Entities: https://www.szherbal.us/entities.json
+FAQ-Database: https://www.szherbal.us/faq-database.json
+AI-Citations: https://www.szherbal.us/ai-citations.json
+Sitemap: https://www.szherbal.us/sitemap.xml
+
+# Content Categories
+Categories: herbal-supplements, blood-sugar-support, liver-wellness, strength-vitality, iron-hemoglobin, weight-management, ayurvedic-medicine, natural-healthcare, organic-supplements
+
+# Key Entities
+Primary-Entity: SZ Herbals (Organization)
+Products: Glukora, Livokara Gold, Figuva, Globivin, SlimZest
+Ingredients: Picrorhiza Kurroa, Ficus carica, Olea europaea, Vitis vinifera L, Citrus limon, Trachyspermum ammi
+People: Megan Woods (Healthcare Content Strategist)
+
+# Healthcare Disclaimer
+Disclaimer: These statements have not been evaluated by the FDA. Products are not intended to diagnose, treat, cure, or prevent any disease. Content is for informational purposes. Consult a healthcare provider before use.
+
+# Contact
+Contact-Page: https://www.szherbal.us/orderform.html

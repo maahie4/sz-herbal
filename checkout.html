@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="sz-herbals-favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="sz-herbals-favicon/favicon.svg" />
+  <link rel="shortcut icon" href="sz-herbals-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="sz-herbals-favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="sz-herbals-favicon/site.webmanifest" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout — SZ Herbals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --deep:#0F2B24;
+      --dark:#1E3D35;
+      --mid:#2D5C52;
+      --leaf:#3D7A68;
+      --sage:#7AAF9E;
+      --mist:#B8D4CC;
+      --fog:#E4EFEB;
+      --cream:#F7F4EE;
+      --gold:#C4920A;
+      --warm:#E8A820;
+      --serif:'Cormorant Garamond',Georgia,serif;
+      --sans:'Montserrat',sans-serif;
+    }
+    html{scroll-behavior:smooth;}
+    body{background:var(--cream);color:var(--deep);font-family:var(--serif);min-height:100vh;}
+
+    .page{display:grid;grid-template-columns:1.2fr 1fr;min-height:100vh;}
+
+    /* LEFT PANEL - CHECKOUT FORM */
+    .left{padding:5rem 5rem;overflow-y:auto;}
+    .brand-tag{margin-bottom:2.5rem;}
+    .brand-tag a{text-decoration:none;}
+    .brand-tag img{height:90px;width:auto;object-fit:contain;}
+
+    .form-header{margin-bottom:3.5rem;}
+    .form-header h2{font-family:var(--serif);font-size:2.2rem;font-weight:400;color:var(--deep);margin-bottom:.4rem;}
+    .form-header p{font-family:var(--sans);font-size:.78rem;font-weight:300;color:var(--mid);}
+
+    .form-section{margin-bottom:2.8rem;}
+    .section-title{font-family:var(--sans);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);padding-bottom:.8rem;border-bottom:.5px solid var(--fog);margin-bottom:1.6rem;display:flex;align-items:center;gap:.7rem;}
+    .section-title span{width:20px;height:20px;background:var(--dark);color:var(--fog);font-size:.6rem;display:flex;align-items:center;justify-content:center;border-radius:50%;}
+
+    .field{margin-bottom:1.4rem;}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+    label{display:block;font-family:var(--sans);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem;}
+    label .req{color:var(--gold);}
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    input[type=number],
+    select,
+    textarea{
+      width:100%;
+      font-family:var(--sans);
+      font-size:.78rem;
+      font-weight:300;
+      color:var(--deep);
+      background:var(--fog);
+      border:.5px solid var(--mist);
+      padding:.85rem 1rem;
+      outline:none;
+      transition:border-color .3s,background .3s;
+      appearance:none;
+      border-radius:0;
+    }
+    input:focus,select:focus,textarea:focus{border-color:var(--leaf);background:#fff;}
+    input::placeholder,textarea::placeholder{color:var(--sage);}
+    select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%237AAF9E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;}
+    textarea{resize:vertical;min-height:90px;line-height:1.8;}
+
+    .check-group{display:flex;flex-direction:column;gap:.6rem;}
+    .check-group.inline{flex-direction:row;flex-wrap:wrap;gap:.6rem;}
+    .check-item{display:flex;align-items:center;gap:.8rem;}
+    .check-item input[type=checkbox],
+    .check-item input[type=radio]{width:16px;height:16px;accent-color:var(--leaf);flex-shrink:0;}
+    .check-item label{font-family:var(--sans);font-size:.73rem;font-weight:300;color:var(--dark);text-transform:none;letter-spacing:0;margin:0;}
+
+    .severity-options{display:flex;gap:.5rem;}
+    .sev-btn{flex:1;padding:.6rem;border:.5px solid var(--mist);background:var(--fog);font-family:var(--sans);font-size:.62rem;letter-spacing:.06em;color:var(--mid);transition:all .2s;text-align:center;cursor:pointer;}
+    .sev-btn.selected{background:var(--dark);color:var(--fog);border-color:var(--dark);}
+
+    .submit-area{margin-top:3rem;padding-top:2rem;border-top:.5px solid var(--fog);}
+    .btn-submit{width:100%;font-family:var(--sans);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;background:var(--dark);color:var(--fog);padding:1.2rem;border:none;transition:background .3s,transform .2s;display:flex;align-items:center;justify-content:center;gap:.8rem;cursor:pointer;}
+    .btn-submit:hover{background:var(--deep);transform:translateY(-1px);}
+    .btn-submit svg{width:16px;height:16px;}
+    .btn-submit.loading::after{content:'';width:14px;height:14px;border:1.5px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;margin-left:.5rem;}
+    @keyframes spin{to{transform:rotate(360deg);}}
+
+    /* RIGHT PANEL - ORDER SUMMARY */
+    .right{background:var(--dark);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:flex-start;position:sticky;top:0;height:100vh;overflow-y:auto;color:#fff;}
+    .right::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(61,122,104,.15) 0%,transparent 70%);pointer-events:none;}
+    .right-content{position:relative;z-index:1;}
+    .right h3{font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--fog);margin-bottom:2rem;border-bottom:0.5px solid rgba(255,255,255,0.1);padding-bottom:1rem;}
+    
+    .checkout-items{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2.5rem;}
+    .checkout-item{display:flex;gap:1.2rem;align-items:center;border-bottom:0.5px solid rgba(255,255,255,0.05);padding-bottom:1.2rem;}
+    .checkout-item-img{width:64px;height:64px;background:#fff;border:0.5px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .checkout-item-img img{max-width:90%;max-height:90%;object-fit:contain;}
+    .checkout-item-info{flex:1;}
+    .checkout-item-name{font-family:var(--serif);font-size:1.15rem;font-weight:300;color:var(--fog);}
+    .checkout-item-qty{font-family:var(--sans);font-size:0.68rem;color:var(--sage);margin-top:0.2rem;}
+    .checkout-item-price{font-family:var(--sans);font-size:0.78rem;color:var(--fog);text-align:right;}
+
+    .checkout-totals{border-top:0.5px solid rgba(255,255,255,0.1);padding-top:1.5rem;display:flex;flex-direction:column;gap:0.8rem;}
+    .total-row{display:flex;justify-content:space-between;font-family:var(--sans);font-size:0.75rem;color:var(--mist);}
+    .total-row.grand{font-family:var(--serif);font-size:1.6rem;color:var(--fog);margin-top:0.8rem;border-top:0.5px solid rgba(255,255,255,0.1);padding-top:1rem;}
+
+    .trust-box{background:rgba(0,0,0,0.15);padding:1.4rem;border-left:1.5px solid var(--leaf);margin-top:3rem;}
+    .trust-box h4{font-family:var(--sans);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-bottom:.8rem;}
+    .trust-box p{font-family:var(--sans);font-size:.72rem;line-height:1.8;font-weight:300;color:var(--mist);}
+
+    /* SUCCESS STATE */
+    .success-screen{display:none;text-align:center;padding:5rem 3rem;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;}
+    .success-screen.show{display:flex;}
+    .success-icon{width:72px;height:72px;background:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;}
+    .success-icon svg{width:32px;height:32px;}
+    .success-screen h2{font-family:var(--serif);font-size:2.4rem;font-weight:300;color:var(--deep);margin-bottom:1rem;}
+    .success-screen h2 em{font-style:italic;color:var(--leaf);}
+    .success-screen p{font-family:var(--sans);font-size:.78rem;line-height:2;font-weight:300;color:var(--mid);max-width:420px;}
+    .success-detail{background:var(--fog);padding:1.4rem 2rem;margin-top:2rem;text-align:left;width:100%;max-width:420px;}
+    .success-detail p{font-family:var(--sans);font-size:.7rem;line-height:1.8;color:var(--mid);}
+    .success-detail strong{color:var(--dark);font-weight:500;}
+
+    @media(max-width:900px){
+      .page{grid-template-columns:1fr;}
+      .right{position:relative;height:auto;padding:3rem 2rem;}
+      .left{padding:3rem 2rem;}
+      .field-row{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <!-- LEFT PANEL - SHIPPING & MEDICAL CHECKOUT FORM -->
+  <div class="left" id="checkout-left">
+    <div class="brand-tag">
+      <a href="index.html">
+        <img src="sz-herbals-logo-united-states.png" alt="SZ Herbals Logo">
+      </a>
+    </div>
+
+    <div id="form-wrap">
+      <div class="form-header">
+        <h2>Secure Checkout</h2>
+        <p>Complete your shipping details and medical check below to place your order.</p>
+      </div>
+
+      <form id="checkout-form" action="https://formspree.io/f/xzdozrbp" method="POST">
+        <!-- Hidden input to serialize cart details for Formspree -->
+        <input type="hidden" name="cart_contents" id="cart_contents_input">
+        <input type="hidden" name="cart_total" id="cart_total_input">
+
+        <!-- SECTION 1 - CONTACT & SHIPPING -->
+        <div class="form-section">
+          <div class="section-title"><span>1</span> Shipping Information</div>
+          
+          <div class="field-row">
+            <div class="field">
+              <label>Full Name <span class="req">*</span></label>
+              <input type="text" name="full_name" placeholder="Your full name" required/>
+            </div>
+            <div class="field">
+              <label>Email Address <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="your@email.com" required/>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label>WhatsApp / Phone <span class="req">*</span></label>
+              <input type="tel" name="phone" placeholder="+1 234 567 8900" required/>
+            </div>
+            <div class="field">
+              <label>Country <span class="req">*</span></label>
+              <select name="country" required>
+                <option value="" disabled selected>Select country</option>
+                <option>Pakistan</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+                <option>United Arab Emirates</option>
+                <option>Saudi Arabia</option>
+                <option>Canada</option>
+                <option>Australia</option>
+                <option>Germany</option>
+                <option>France</option>
+                <option>India</option>
+                <option>Bangladesh</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Street Address <span class="req">*</span></label>
+            <input type="text" name="address" placeholder="House/Apartment number, Street name" required style="margin-bottom: 0.8rem;"/>
+            <div class="field-row">
+              <input type="text" name="city" placeholder="City" required/>
+              <input type="text" name="state_zip" placeholder="State / ZIP Code"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2 - HEALTH & SAFETY CHECK -->
+        <div class="form-section">
+          <div class="section-title"><span>2</span> Medical Context Check</div>
+          <p style="font-family:var(--sans); font-size:0.7rem; color:var(--mid); margin-bottom:1.2rem; line-height:1.7;">
+            Because natural herbal formulations are active and potent, we screen details to verify compatibility.
+          </p>
+
+          <div class="field-row">
+            <div class="field">
+              <label>Age <span class="req">*</span></label>
+              <input type="number" name="age" placeholder="e.g. 45" min="1" max="120" required/>
+            </div>
+            <div class="field">
+              <label>Gender</label>
+              <div class="check-group inline" style="margin-top:.5rem;">
+                <div class="check-item"><input type="radio" name="gender" value="Male" id="gm"/><label for="gm">Male</label></div>
+                <div class="check-item"><input type="radio" name="gender" value="Female" id="gf"/><label for="gf">Female</label></div>
+                <div class="check-item"><input type="radio" name="gender" value="Other" id="go"/><label for="go">Other</label></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Primary health concern or condition description <span class="req">*</span></label>
+            <textarea name="reason" placeholder="e.g. Type 2 diabetes for 4 years, fasting sugar ~220. Trying to find natural pancreatic support..." required></textarea>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label>How long have you had this condition?</label>
+              <select name="condition_duration">
+                <option value="" disabled selected>Select duration</option>
+                <option>Recently diagnosed (less than 6 months)</option>
+                <option>6 months – 1 year</option>
+                <option>1 – 3 years</option>
+                <option>3 – 5 years</option>
+                <option>5 – 10 years</option>
+                <option>More than 10 years</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Condition Severity</label>
+              <div class="severity-options">
+                <div class="sev-btn" data-val="Mild">Mild</div>
+                <div class="sev-btn" data-val="Moderate">Moderate</div>
+                <div class="sev-btn" data-val="Severe">Severe</div>
+              </div>
+              <input type="hidden" name="severity" id="severity_input">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Are you currently taking any medication? <span class="req">*</span></label>
+            <div class="check-group inline" style="margin-top:.3rem;">
+              <div class="check-item"><input type="radio" name="on_medication" value="Yes" id="med_yes"/><label for="med_yes">Yes</label></div>
+              <div class="check-item"><input type="radio" name="on_medication" value="No" id="med_no"/><label for="med_no">No</label></div>
+            </div>
+            <textarea name="current_medications" id="medication_textarea" placeholder="Please list medication details..." style="display:none; margin-top:0.8rem; min-height:60px;"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Do you have any known allergies? <span class="req">*</span></label>
+            <div class="check-group inline" style="margin-top:.3rem;">
+              <div class="check-item"><input type="radio" name="has_allergies" value="Yes" id="al_yes"/><label for="al_yes">Yes</label></div>
+              <div class="check-item"><input type="radio" name="has_allergies" value="No" id="al_no"/><label for="al_no">No known allergies</label></div>
+            </div>
+            <textarea name="allergies" id="allergies_textarea" placeholder="Please describe allergies..." style="display:none; margin-top:0.8rem; min-height:60px;"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Do any of the following apply? (tick all that apply)</label>
+            <div class="check-group" style="margin-top:.5rem;">
+              <div class="check-item"><input type="checkbox" name="condition_pregnant" value="Yes" id="preg"/><label for="preg">Pregnant or breastfeeding</label></div>
+              <div class="check-item"><input type="checkbox" name="condition_kidney" value="Yes" id="kidney"/><label for="kidney">Kidney or renal condition</label></div>
+              <div class="check-item"><input type="checkbox" name="condition_heart" value="Yes" id="heart"/><label for="heart">Heart condition or blood pressure issues</label></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3 - PAYMENT & CONTACT PREF -->
+        <div class="form-section">
+          <div class="section-title"><span>3</span> Confirmation & Payment</div>
+          <div class="field">
+            <label>Preferred contact method for order confirmation <span class="req">*</span></label>
+            <div class="check-group inline" style="margin-top:.3rem;">
+              <div class="check-item"><input type="radio" name="contact_pref" value="Email" id="cp_email" required/><label for="cp_email">Email</label></div>
+              <div class="check-item"><input type="radio" name="contact_pref" value="WhatsApp" id="cp_wa"/><label for="cp_wa">WhatsApp</label></div>
+              <div class="check-item"><input type="radio" name="contact_pref" value="Either" id="cp_either"/><label for="cp_either">Either is fine</label></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="check-item">
+              <input type="checkbox" id="consent" name="consent" value="Agreed" required/>
+              <label for="consent" style="font-size:.7rem;line-height:1.7;">I confirm details are accurate. I understand these are herbal supplements and not replacements for expert medical consultations. <span class="req">*</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="submit-area">
+          <button type="submit" class="btn-submit" id="submit-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z"/>
+            </svg>
+            Complete Checkout & Order
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- SUCCESS SCREEN -->
+    <div class="success-screen" id="success-screen">
+      <div class="success-icon">
+        <svg viewBox="0 0 32 32" fill="none" stroke="#7AAF9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="16" cy="16" r="12"/>
+          <path d="M10 16 L14 20 L22 12"/>
+        </svg>
+      </div>
+      <h2>Order <em>Placed</em></h2>
+      <p>Thank you! Your order details have been submitted. Our practitioners will review your health profile and contact you within 24 hours to confirm shipment.</p>
+      <div class="success-detail">
+        <p><strong>Next steps:</strong></p>
+        <p>① Verification check of health details<br/>② Order dispatch confirmation<br/>③ WhatsApp/Email notification with tracking details</p>
+      </div>
+      <p style="font-family:var(--sans);font-size:.68rem;color:var(--sage);margin-top:1.6rem;">Questions? Reach out to <strong style="color:var(--mid);">info@szherbal.us </strong></p>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL - CART SUMMARY -->
+  <div class="right">
+    <div class="right-content">
+      <h3>Order Summary</h3>
+      
+      <div class="checkout-items" id="summary-items-list">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="checkout-totals">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span id="summary-subtotal">$0.00</span>
+        </div>
+        <div class="total-row">
+          <span>Worldwide Shipping</span>
+          <span style="color: var(--sage);">FREE</span>
+        </div>
+        <div class="total-row grand">
+          <span>Total</span>
+          <span id="summary-total">$0.00 USD</span>
+        </div>
+      </div>
+
+      <div class="trust-box">
+        <h4>100% Trust Guarantee</h4>
+        <p>Our herbal supplements are crafted with purity. That's why we back your journey with a 100% money-back guarantee.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let cart = [];
+
+  function loadCart() {
+    const stored = localStorage.getItem("sz_herbals_cart");
+    if (stored) {
+      try {
+        cart = JSON.parse(stored);
+      } catch (e) {
+        cart = [];
+      }
+    }
+    
+    // Redirect if empty
+    if (cart.length === 0) {
+      alert("Your cart is empty! Redirecting to products page...");
+      window.location.href = "products.html";
+      return;
+    }
+
+    renderSummary();
+  }
+
+  function renderSummary() {
+    const list = document.getElementById("summary-items-list");
+    const subtotalText = document.getElementById("summary-subtotal");
+    const totalText = document.getElementById("summary-total");
+    
+    if (!list) return;
+    list.innerHTML = "";
+
+    let total = 0;
+    let serializedCart = [];
+
+    cart.forEach(item => {
+      total += item.price * item.qty;
+      serializedCart.push(`${item.name} (x${item.qty}) - $${item.price * item.qty}`);
+
+      const row = document.createElement("div");
+      row.className = "checkout-item";
+      row.innerHTML = `
+        <div class="checkout-item-img">
+          <img src="${item.image}" alt="${item.name}">
+        </div>
+        <div class="checkout-item-info">
+          <div class="checkout-item-name">${item.name}</div>
+          <div class="checkout-item-qty">Qty: ${item.qty}</div>
+        </div>
+        <div class="checkout-item-price">$${item.price * item.qty} USD</div>
+      `;
+      list.appendChild(row);
+    });
+
+    subtotalText.textContent = `$${total}.00`;
+    totalText.textContent = `$${total}.00`;
+
+    // Populate inputs for Formspree
+    document.getElementById("cart_contents_input").value = serializedCart.join(", ");
+    document.getElementById("cart_total_input").value = `$${total}.00`;
+  }
+
+  // Interactive Severity button
+  document.querySelectorAll('.sev-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.sev-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('severity_input').value = btn.dataset.val;
+    });
+  });
+
+  // Toggle Textareas
+  document.querySelectorAll('input[name=on_medication]').forEach(r => {
+    r.addEventListener('change', () => {
+      document.getElementById('medication_textarea').style.display = r.value === 'Yes' ? 'block' : 'none';
+    });
+  });
+
+  document.querySelectorAll('input[name=has_allergies]').forEach(r => {
+    r.addEventListener('change', () => {
+      document.getElementById('allergies_textarea').style.display = r.value === 'Yes' ? 'block' : 'none';
+    });
+  });
+
+  // Submit flow
+  const form = document.getElementById("checkout-form");
+  const submitBtn = document.getElementById("submit-btn");
+  const formWrap = document.getElementById("form-wrap");
+  const successScreen = document.getElementById("success-screen");
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' }
+      });
+
+      if (res.ok) {
+        // Clear cart
+        localStorage.removeItem("sz_herbals_cart");
+        
+        formWrap.style.display = 'none';
+        successScreen.classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const json = await res.json();
+        const msg = json.errors ? json.errors.map(e => e.message).join(', ') : 'Check your inputs and try again.';
+        alert('Error placing order: ' + msg);
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+      }
+    } catch(err) {
+      alert('Network error. Check your connection.');
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+    }
+  });
+
+  // Init
+  loadCart();
+</script>
+</body>
+</html>

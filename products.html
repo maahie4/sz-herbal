@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="sz-herbals-favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="sz-herbals-favicon/favicon.svg" />
+  <link rel="shortcut icon" href="sz-herbals-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="sz-herbals-favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="sz-herbals-favicon/site.webmanifest" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop All Products — SZ Herbals | Pure Herbal Wellness</title>
+  <meta name="description" content="Browse the complete SZ Herbals collection — 100% organic herbal formulations for diabetes, liver health, blood building, weight management and vitality."/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="products-style.css"/>
+  <link rel="stylesheet" href="cart.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><img src="sz-herbals-logo-united-states.png" alt="SZ Herbals Logo" style="height: 112px; width: auto; object-fit: contain;"></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="products.html" style="color:var(--leaf)">Products</a></li>
+    <li><a href="blog.html">Journal</a></li>
+    <li><a href="index.html#process">Our Process</a></li>
+    <li><a href="index.html#reviews">Reviews</a></li>
+  </ul>
+  <a href="orderform.html" class="nav-cta">Order Now</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE OVERLAY -->
+<div class="mobile-overlay" id="mobileOverlay">
+  <a href="index.html#about" class="mobile-nav-link">About</a>
+  <a href="products.html" class="mobile-nav-link">Products</a>
+  <a href="blog.html" class="mobile-nav-link">Journal</a>
+  <a href="index.html#process" class="mobile-nav-link">Our Process</a>
+  <a href="orderform.html" class="mobile-nav-link">Order Now</a>
+</div>
+
+<!-- HERO -->
+<section class="shop-hero">
+  <div class="tag reveal">The complete collection</div>
+  <h1 class="reveal reveal-delay-1">Pure herbal <em>essentials</em></h1>
+  <p class="reveal reveal-delay-2">Every product is 100% organic, zero chemicals, and formulated for real results. Browse our full range below and add to your cart.</p>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-pills">
+    <div class="filter-pill active" data-filter="all">All Products</div>
+    <div class="filter-pill" data-filter="diabetes">Diabetes</div>
+    <div class="filter-pill" data-filter="liver">Liver</div>
+    <div class="filter-pill" data-filter="blood">Blood</div>
+    <div class="filter-pill" data-filter="weight">Weight</div>
+    <div class="filter-pill" data-filter="vitality">Vitality</div>
+  </div>
+  <div class="cart-count-wrap" id="cartToggle">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    Cart
+    <div class="cart-badge" id="cartBadge">0</div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="shop-grid" id="shopGrid">
+
+  <!-- FEATURED: Diabetes Reversal Bundle -->
+  <div class="p-card featured reveal" data-category="diabetes" data-name="Diabetes Reversal Bundle" data-price="399" onclick="window.location.href='glukora.html'" style="cursor:pointer;">
+    <div class="p-card-img" style="background:var(--cream)">
+      <div class="p-card-badge" style="background:var(--gold);color:#fff">Best Value</div>
+      <div style="display:flex;width:100%;height:100%;overflow:hidden">
+        <img src="diabetes-reversal-bundle-united-states.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Glukora Bundle"/>
+    </div>
+    </div>
+    <div class="p-card-body">
+      <div class="p-card-cat">Complete Course</div>
+      <h3 class="p-card-name">Diabetes Reversal Bundle</h3>
+      <p class="p-card-desc">Glukora + Livokara Gold · The ultimate synergistic approach to pancreatic and liver wellness. Addressing the root causes of diabetes from two fronts.</p>
+      <div class="p-card-foot">
+        <div class="p-card-price">$399 USD <span class="old">$548</span></div>
+        <button class="btn-cart" onclick="addToCart(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Glukora -->
+  <div class="p-card reveal reveal-delay-1" data-category="diabetes" data-name="Glukora" data-price="299" onclick="window.location.href='glukora.html'" style="cursor:pointer;">
+    <div class="p-card-img">
+      <div class="p-card-badge">Special</div>
+      <img src="glukora-product-image-united-states.png" alt="Glukora"/>
+    </div>
+    <div class="p-card-body">
+      <div class="p-card-cat">Pancreatic Wellness</div>
+      <h3 class="p-card-name">Glukora</h3>
+      <p class="p-card-desc">Picrorhiza Kurroa extract · Reverse your diabetes naturally with this powerful pancreatic wellness formula.</p>
+      <div class="p-card-foot">
+        <div class="p-card-price">$299 USD</div>
+        <button class="btn-cart" onclick="addToCart(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Livokara Gold -->
+  <div class="p-card reveal reveal-delay-2" data-category="liver" data-name="Livokara Gold" data-price="249" onclick="window.location.href='livokara-gold.html'" style="cursor:pointer;">
+    <div class="p-card-img" >
+      <div class="p-card-badge">New</div>
+      <img src="livokara-gold-product-image.png" alt="Livokara Gold"/>
+    </div>
+    <div class="p-card-body">
+      <div class="p-card-cat">Liver Wellness</div>
+      <h3 class="p-card-name">Livokara Gold</h3>
+      <p class="p-card-desc">Curcuma longa · Glycyrrhiza glabra · Foeniculum vulgare · Complete liver support for Hepatitis A, B & C.</p>
+      <div class="p-card-foot">
+        <div class="p-card-price">$249 USD</div>
+        <button class="btn-cart" onclick="addToCart(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Figuva -->
+  <div class="p-card reveal reveal-delay-3" data-category="vitality" data-name="Figuva" data-price="149" onclick="window.location.href='Figuva.html'" style="cursor:pointer;">
+    <div class="p-card-img">
+      <div class="p-card-badge">Popular</div>
+      <img src="figuva-product-image-united-states.png" alt="Figuva"/>
+    </div>
+    <div class="p-card-body">
+      <div class="p-card-cat">Strength & Vitality</div>
+      <h3 class="p-card-name">Figuva</h3>
+      <p class="p-card-desc">Ficus carica & Olea europaea syrup · For bone density, muscle mass and sustained energy.</p>
+      <div class="p-card-foot">
+        <div class="p-card-price">$149 USD</div>
+        <button class="btn-cart" onclick="addToCart(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slimzest -->
+  <div class="p-card reveal" data-category="weight" data-name="Slimzest" data-price="129" onclick="window.location.href='slimzest.html'" style="cursor:pointer;">
+    <div class="p-card-img">
+      <div class="p-card-badge">Best Seller</div>
+      <img src="slimzest-product-box-image-united-states.png" alt="Slimzest"/>
+    </div>
+    <div class="p-card-body">
+      <div class="p-card-cat">Weight Management</div>
+      <h3 class="p-card-name">Slimzest</h3>
+      <p class="p-card-desc">Trachyspermum ammi & Citrus limon tea · Boost metabolism and reduce bloating naturally.</p>
+      <div class="p-card-foot">
+        <div class="p-card-price">$129 USD</div>
+        <button class="btn-cart" onclick="addToCart(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Globivin -->
+  <div class="p-card reveal reveal-delay-1" data-category="blood" data-name="Globivin" data-price="149" onclick="window.location.href='globvin.html'" style="cursor:pointer;">
+    <div class="p-card-img">
+      <div class="p-card-badge">Limited</div>
+      <img src="globivin-product-image-united-states.png" alt="Globvin"/>
+    </div>
+    <div class="p-card-body">
+      <div class="p-card-cat">Blood Building</div>
+      <h3 class="p-card-name">Globivin</h3>
+      <p class="p-card-desc">Vitis vinifera L · Pure haematic syrup for hemoglobin support, iron levels and blood health.</p>
+      <div class="p-card-foot">
+        <div class="p-card-price">$149 USD</div>
+        <button class="btn-cart" onclick="addToCart(this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="trust-item reveal">
+    <svg viewBox="0 0 32 32" fill="none" stroke="#7AAF9E" stroke-width="1.2" stroke-linecap="round"><path d="M16 3C10 7 4 12 4 20c0 5 5 9 12 9s12-4 12-9c0-8-6-13-12-17z"/><path d="M11 18l3 3 7-7"/></svg>
+    <h4>100% Organic</h4>
+    <p>Every ingredient certified organic and traceable</p>
+  </div>
+  <div class="trust-item reveal reveal-delay-1">
+    <svg viewBox="0 0 32 32" fill="none" stroke="#7AAF9E" stroke-width="1.2" stroke-linecap="round"><circle cx="16" cy="16" r="12"/><path d="M10 16l4 4 8-8"/></svg>
+    <h4>Zero Chemicals</h4>
+    <p>No synthetic additives, preservatives or fillers</p>
+  </div>
+  <div class="trust-item reveal reveal-delay-2">
+    <svg viewBox="0 0 32 32" fill="none" stroke="#7AAF9E" stroke-width="1.2" stroke-linecap="round"><path d="M16 4l4 8h8l-6 5 2 9-8-5-8 5 2-9-6-5h8z"/></svg>
+    <h4>Money-Back Guarantee</h4>
+    <p>100% refund if you're not satisfied</p>
+  </div>
+  <div class="trust-item reveal reveal-delay-3">
+    <svg viewBox="0 0 32 32" fill="none" stroke="#7AAF9E" stroke-width="1.2" stroke-linecap="round"><path d="M26 12H6a2 2 0 00-2 2v12a2 2 0 002 2h20a2 2 0 002-2V14a2 2 0 00-2-2z"/><path d="M8 12V8a8 8 0 1116 0v4"/><circle cx="16" cy="21" r="2"/></svg>
+    <h4>Worldwide Shipping</h4>
+    <p>Secure packaging delivered to your door</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-logo" style="color:var(--cream)"><a href="index.html"><img src="sz-herbals-logo-united-states.png" alt="SZ Herbals Logo" style="height: 112px; width: auto; object-fit: contain; filter: brightness(0) invert(1);"></a></div>
+      <p>Pure herbal wellness rooted in nature. No chemicals, no compromise — just the earth's finest botanicals.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="glukora.html">Glukora</a></li>
+        <li><a href="livokara-gold.html">Livokara Gold</a></li>
+        <li><a href="Figuva.html">Figuva</a></li>
+        <li><a href="slimzest.html">Slimzest</a></li>
+        <li><a href="globvin.html">Globivin</a></li>
+        <li><a href="products.html">All Products</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="index.html#about">Our Story</a></li>
+        <li><a href="index.html#process">Our Process</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Support</h5>
+      <ul>
+        <li><a href="checkout.html">Order Now</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <a href="index.html" style="color:inherit;text-decoration:none">SZ Herbals</a>. All rights reserved.</p>
+    <p>Pure · Natural · Effective</p>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#F7F4EE" stroke-width="2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="cart.js"></script>
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', scrollY > 60);
+  backToTop.classList.toggle('visible', scrollY > 400);
+});
+backToTop.addEventListener('click', () => scrollTo({top:0,behavior:'smooth'}));
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const overlay = document.getElementById('mobileOverlay');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  overlay.classList.toggle('open');
+  document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+});
+document.querySelectorAll('.mobile-nav-link').forEach(l => {
+  l.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold: .12});
+reveals.forEach(el => obs.observe(el));
+
+// Filter
+document.querySelectorAll('.filter-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    const f = pill.dataset.filter;
+    document.querySelectorAll('.p-card').forEach(card => {
+      if(f === 'all' || card.dataset.category === f) {
+        card.style.display = '';
+        card.classList.remove('visible');
+        setTimeout(() => card.classList.add('visible'), 50);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+
+// Setup Add to Cart click handlers
+document.querySelectorAll('.btn-cart').forEach(btn => {
+  btn.removeAttribute('onclick'); // remove inline handler
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const card = btn.closest('.p-card');
+    const name = card.dataset.name;
+    addToCart(name, 1);
+    
+    btn.classList.add('added');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Added ✓';
+    setTimeout(() => {
+      btn.classList.remove('added');
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M16 10a4 4 0 01-8 0"/></svg> Add to Cart';
+    }, 1500);
+  });
+});
+</script>
+</body>
+</html>

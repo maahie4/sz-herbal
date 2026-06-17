@@ -1,0 +1,243 @@
+{
+  "@context": "https://schema.org",
+  "name": "SZ Herbals Knowledge Graph",
+  "description": "Entity relationships and knowledge graph for SZ Herbals herbal supplement brand",
+  "dateCreated": "2026-06-17",
+  "creator": "SZ Herbals",
+
+  "nodes": [
+    {
+      "id": "org-sz-herbals",
+      "type": "Organization",
+      "name": "SZ Herbals",
+      "description": "United States-based herbal supplement brand producing 100% organic, chemical-free botanical formulations",
+      "url": "https://www.szherbal.us",
+      "properties": {
+        "founded": "2025",
+        "location": "United States",
+        "tagline": "Rooted in Nature",
+        "guarantee": "100% Money-Back Guarantee",
+        "certifications": ["100% Organic", "Zero Chemicals", "Zero Fillers"]
+      }
+    },
+
+    {
+      "id": "person-megan-woods",
+      "type": "Person",
+      "name": "Megan Woods",
+      "description": "Healthcare Content Strategist & Medical Journalist",
+      "url": "https://www.szherbal.us/megan-woods.html",
+      "properties": {
+        "role": "Healthcare Content Strategist & Medical Journalist",
+        "expertise": ["Medical research translation", "Patient education", "Health literacy", "Evidence-based content"],
+        "philosophy": "Healthcare content should do more than rank — it should genuinely help people understand their health"
+      }
+    },
+
+    {
+      "id": "product-glukora",
+      "type": "Product",
+      "name": "Glukora",
+      "description": "100% organic herbal blood sugar support — pure Picrorhiza Kurroa extract, 40-day course",
+      "url": "https://www.szherbal.us/glukora.html",
+      "properties": {
+        "price": "$299",
+        "category": "Blood Sugar Support",
+        "form": "Herbal supplement",
+        "courseDuration": "40 days",
+        "ingredient": "Picrorhiza Kurroa",
+        "compounds": ["Picrosides I", "Picrosides II"],
+        "mechanism": "Pancreatic beta cell regeneration, natural GLP-1 support"
+      }
+    },
+
+    {
+      "id": "product-livokara-gold",
+      "type": "Product",
+      "name": "Livokara Gold",
+      "description": "100% organic herbal liver wellness supplement",
+      "url": "https://www.szherbal.us/livokara-gold.html",
+      "properties": {
+        "price": "$249",
+        "category": "Liver Wellness",
+        "benefits": ["Liver detoxification", "Fatty liver support", "Hepatitis wellness", "Liver cell regeneration"]
+      }
+    },
+
+    {
+      "id": "product-figuva",
+      "type": "Product",
+      "name": "Figuva",
+      "description": "100% organic herbal syrup for strength, vitality, bone density and muscle health",
+      "url": "https://www.szherbal.us/Figuva.html",
+      "properties": {
+        "price": "$149",
+        "category": "Strength & Vitality",
+        "form": "Herbal syrup (liquid)",
+        "ingredients": ["Ficus carica", "Olea europaea"],
+        "suitableAges": "Children (3+), Teens, Adults, Elderly",
+        "keyCompound": "Oleocanthal"
+      }
+    },
+
+    {
+      "id": "product-globivin",
+      "type": "Product",
+      "name": "Globivin",
+      "description": "100% organic haematic herbal syrup for iron and hemoglobin support",
+      "url": "https://www.szherbal.us/globvin.html",
+      "properties": {
+        "price": "$149",
+        "category": "Iron & Hemoglobin",
+        "form": "Haematic herbal syrup (liquid)",
+        "ingredient": "Vitis vinifera L",
+        "differentiator": "Iron supplementation without constipation"
+      }
+    },
+
+    {
+      "id": "product-slimzest",
+      "type": "Product",
+      "name": "SlimZest",
+      "description": "Herbal slimming tea for natural weight management",
+      "url": "https://www.szherbal.us/slimzest.html",
+      "properties": {
+        "price": "$129",
+        "category": "Weight Management",
+        "form": "Herbal tea sachets",
+        "ingredients": ["Citrus limon", "Trachyspermum ammi"]
+      }
+    },
+
+    {
+      "id": "ingredient-picrorhiza-kurroa",
+      "type": "Ingredient",
+      "name": "Picrorhiza Kurroa",
+      "description": "Perennial alpine herb from Himalayan highlands, used 5,000+ years in Ayurvedic medicine",
+      "properties": {
+        "origin": "Himalayan highlands",
+        "tradition": "Ayurvedic medicine",
+        "history": "5,000+ years",
+        "activeCompounds": ["Picrosides I", "Picrosides II"],
+        "studiedEffects": ["Anti-inflammatory", "Antioxidant", "Hepatoprotective", "Pancreatic beta cell regeneration", "Natural GLP-1 support"]
+      }
+    },
+
+    {
+      "id": "ingredient-ficus-carica",
+      "type": "Ingredient",
+      "name": "Ficus carica",
+      "alternateName": "Fig",
+      "description": "One of the most mineral-dense fruits on earth with more calcium per gram than milk",
+      "properties": {
+        "keyNutrients": ["Calcium", "Potassium", "Magnesium", "Iron", "Zinc"],
+        "studiedEffects": ["Bone density support", "Muscle strength", "Energy metabolism", "Antioxidant protection"],
+        "claimSource": "American Journal of Clinical Nutrition"
+      }
+    },
+
+    {
+      "id": "ingredient-olea-europaea",
+      "type": "Ingredient",
+      "name": "Olea europaea",
+      "alternateName": "Olive",
+      "description": "Contains oleocanthal — natural COX-inhibitor with same mechanism as ibuprofen",
+      "properties": {
+        "keyCompound": "Oleocanthal",
+        "otherCompounds": ["Oleic acid", "Polyphenols", "Squalene", "Vitamin E"],
+        "studiedEffects": ["Anti-inflammatory", "Cardiovascular protection", "Muscle recovery", "Immune support"],
+        "claimSource": "Nature (2005)"
+      }
+    },
+
+    {
+      "id": "ingredient-vitis-vinifera",
+      "type": "Ingredient",
+      "name": "Vitis vinifera L",
+      "alternateName": "Grape vine",
+      "description": "Natural blood-building botanical providing gentle iron supplementation",
+      "properties": {
+        "studiedEffects": ["Natural iron supplementation", "Hemoglobin support", "Red blood cell production"],
+        "advantage": "Gentle absorption without constipation"
+      }
+    },
+
+    {
+      "id": "condition-type2-diabetes",
+      "type": "MedicalCondition",
+      "name": "Type 2 Diabetes",
+      "description": "Chronic metabolic condition characterized by insulin resistance and pancreatic beta cell dysfunction",
+      "properties": {
+        "rootCause": "Pancreatic beta cell exhaustion",
+        "affectedOrgan": "Pancreas",
+        "conventionalTreatments": ["Metformin", "Ozempic/Semaglutide", "Insulin injections"],
+        "herbalApproaches": ["Picrorhiza Kurroa", "Berberine"]
+      }
+    },
+
+    {
+      "id": "condition-fatty-liver",
+      "type": "MedicalCondition",
+      "name": "Fatty Liver Disease",
+      "description": "Condition where excess fat builds up in the liver, impairing its function"
+    },
+
+    {
+      "id": "condition-iron-deficiency",
+      "type": "MedicalCondition",
+      "name": "Iron Deficiency Anemia",
+      "description": "Condition where the body lacks sufficient iron to produce adequate hemoglobin"
+    }
+  ],
+
+  "edges": [
+    { "from": "org-sz-herbals", "to": "product-glukora", "relationship": "manufactures" },
+    { "from": "org-sz-herbals", "to": "product-livokara-gold", "relationship": "manufactures" },
+    { "from": "org-sz-herbals", "to": "product-figuva", "relationship": "manufactures" },
+    { "from": "org-sz-herbals", "to": "product-globivin", "relationship": "manufactures" },
+    { "from": "org-sz-herbals", "to": "product-slimzest", "relationship": "manufactures" },
+    { "from": "org-sz-herbals", "to": "person-megan-woods", "relationship": "employs" },
+
+    { "from": "product-glukora", "to": "ingredient-picrorhiza-kurroa", "relationship": "contains" },
+    { "from": "product-figuva", "to": "ingredient-ficus-carica", "relationship": "contains" },
+    { "from": "product-figuva", "to": "ingredient-olea-europaea", "relationship": "contains" },
+    { "from": "product-globivin", "to": "ingredient-vitis-vinifera", "relationship": "contains" },
+
+    { "from": "product-glukora", "to": "condition-type2-diabetes", "relationship": "supports_management_of" },
+    { "from": "product-livokara-gold", "to": "condition-fatty-liver", "relationship": "supports_management_of" },
+    { "from": "product-globivin", "to": "condition-iron-deficiency", "relationship": "supports_management_of" },
+
+    { "from": "ingredient-picrorhiza-kurroa", "to": "condition-type2-diabetes", "relationship": "studied_for" },
+    { "from": "ingredient-olea-europaea", "to": "ingredient-ficus-carica", "relationship": "synergistic_with" },
+
+    { "from": "person-megan-woods", "to": "org-sz-herbals", "relationship": "content_strategist_for" }
+  ],
+
+  "semanticClusters": [
+    {
+      "name": "Blood Sugar & Diabetes",
+      "entities": ["product-glukora", "ingredient-picrorhiza-kurroa", "condition-type2-diabetes"],
+      "topics": ["blood sugar support", "pancreatic wellness", "GLP-1", "insulin production", "diabetes reversal", "Ozempic alternatives", "Berberine alternatives", "Metformin alternatives"]
+    },
+    {
+      "name": "Liver Health",
+      "entities": ["product-livokara-gold", "condition-fatty-liver"],
+      "topics": ["liver detoxification", "fatty liver", "hepatitis", "liver cell regeneration"]
+    },
+    {
+      "name": "Strength & Vitality",
+      "entities": ["product-figuva", "ingredient-ficus-carica", "ingredient-olea-europaea"],
+      "topics": ["muscle strength", "bone density", "energy", "oleocanthal", "calcium from figs", "anti-inflammatory"]
+    },
+    {
+      "name": "Iron & Blood Health",
+      "entities": ["product-globivin", "ingredient-vitis-vinifera", "condition-iron-deficiency"],
+      "topics": ["iron supplementation", "hemoglobin", "anemia", "constipation-free iron", "liquid iron"]
+    },
+    {
+      "name": "Weight Management",
+      "entities": ["product-slimzest"],
+      "topics": ["weight management", "slimming tea", "metabolism", "appetite regulation"]
+    }
+  ]
+}

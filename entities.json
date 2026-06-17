@@ -1,0 +1,163 @@
+[
+  {
+    "id": "org-sz-herbals",
+    "type": "Organization",
+    "name": "SZ Herbals",
+    "description": "United States-based herbal supplement brand producing 100% organic, chemical-free botanical formulations.",
+    "url": "https://www.szherbal.us",
+    "properties": {
+      "founded": "2025",
+      "location": "United States",
+      "tagline": "Rooted in Nature",
+      "certifications": ["100% Organic", "Zero Chemicals", "Zero Fillers"],
+      "guarantee": "100% Money-Back Guarantee"
+    }
+  },
+  {
+    "id": "person-megan-woods",
+    "type": "Person",
+    "name": "Megan Woods",
+    "description": "Healthcare Content Strategist & Medical Journalist.",
+    "url": "https://www.szherbal.us/megan-woods.html",
+    "properties": {
+      "role": "Healthcare Content Strategist & Medical Journalist",
+      "expertise": ["Medical research translation", "Patient education", "Health literacy", "Evidence-based content"]
+    }
+  },
+  {
+    "id": "product-glukora",
+    "type": "Product",
+    "name": "Glukora",
+    "description": "100% organic herbal blood sugar support supplement made of pure Picrorhiza Kurroa extract.",
+    "url": "https://www.szherbal.us/glukora.html",
+    "properties": {
+      "price": "$299",
+      "category": "Blood Sugar Support",
+      "form": "Herbal supplement",
+      "courseDuration": "40 days",
+      "ingredient": "Picrorhiza Kurroa",
+      "keyBioactives": ["Picrosides I", "Picrosides II"],
+      "mechanism": "Pancreatic beta cell regeneration, natural GLP-1 support"
+    }
+  },
+  {
+    "id": "product-livokara-gold",
+    "type": "Product",
+    "name": "Livokara Gold",
+    "description": "100% organic herbal liver wellness supplement supporting detoxification and regeneration.",
+    "url": "https://www.szherbal.us/livokara-gold.html",
+    "properties": {
+      "price": "$249",
+      "category": "Liver Wellness",
+      "benefits": ["Liver detoxification", "Fatty liver support", "Hepatitis wellness", "Liver cell regeneration"]
+    }
+  },
+  {
+    "id": "product-figuva",
+    "type": "Product",
+    "name": "Figuva",
+    "description": "100% organic herbal syrup for strength, vitality, bone density and muscle health.",
+    "url": "https://www.szherbal.us/Figuva.html",
+    "properties": {
+      "price": "$149",
+      "category": "Strength & Vitality",
+      "form": "Herbal syrup (liquid)",
+      "ingredients": ["Ficus carica", "Olea europaea"],
+      "keyCompound": "Oleocanthal"
+    }
+  },
+  {
+    "id": "product-globivin",
+    "type": "Product",
+    "name": "Globivin",
+    "description": "100% organic haematic herbal syrup for iron and hemoglobin support without constipation.",
+    "url": "https://www.szherbal.us/globvin.html",
+    "properties": {
+      "price": "$149",
+      "category": "Iron & Hemoglobin",
+      "form": "Haematic herbal syrup (liquid)",
+      "ingredient": "Vitis vinifera L"
+    }
+  },
+  {
+    "id": "product-slimzest",
+    "type": "Product",
+    "name": "SlimZest",
+    "description": "Herbal slimming tea for natural weight management.",
+    "url": "https://www.szherbal.us/slimzest.html",
+    "properties": {
+      "price": "$129",
+      "category": "Weight Management",
+      "form": "Herbal tea sachets",
+      "ingredients": ["Citrus limon", "Trachyspermum ammi"]
+    }
+  },
+  {
+    "id": "ingredient-picrorhiza-kurroa",
+    "type": "Ingredient",
+    "name": "Picrorhiza Kurroa",
+    "description": "Perennial alpine herb from Himalayan highlands used in Ayurvedic medicine.",
+    "properties": {
+      "origin": "Himalayan highlands",
+      "tradition": "Ayurvedic medicine",
+      "activeCompounds": ["Picrosides I", "Picrosides II"],
+      "studiedEffects": ["Anti-inflammatory", "Antioxidant", "Hepatoprotective", "Pancreatic beta cell regeneration", "Natural GLP-1 support"]
+    }
+  },
+  {
+    "id": "ingredient-ficus-carica",
+    "type": "Ingredient",
+    "name": "Ficus carica",
+    "alternateName": "Fig",
+    "description": "Mineral-dense fruit with high plant-based calcium.",
+    "properties": {
+      "keyNutrients": ["Calcium", "Potassium", "Magnesium", "Iron", "Zinc"],
+      "studiedEffects": ["Bone density support", "Muscle strength", "Energy metabolism"]
+    }
+  },
+  {
+    "id": "ingredient-olea-europaea",
+    "type": "Ingredient",
+    "name": "Olea europaea",
+    "alternateName": "Olive",
+    "description": "Contains oleocanthal, a natural COX-inhibitor.",
+    "properties": {
+      "keyCompound": "Oleocanthal",
+      "studiedEffects": ["Anti-inflammatory", "Cardiovascular protection", "Muscle recovery"]
+    }
+  },
+  {
+    "id": "ingredient-vitis-vinifera",
+    "type": "Ingredient",
+    "name": "Vitis vinifera L",
+    "alternateName": "Grape vine",
+    "description": "Natural blood-building botanical providing gentle iron supplementation.",
+    "properties": {
+      "studiedEffects": ["Natural iron supplementation", "Hemoglobin support", "Red blood cell production"]
+    }
+  },
+  {
+    "id": "condition-type2-diabetes",
+    "type": "MedicalCondition",
+    "name": "Type 2 Diabetes",
+    "description": "Chronic metabolic condition characterized by insulin resistance.",
+    "properties": {
+      "rootCause": "Pancreatic beta cell exhaustion",
+      "affectedOrgan": "Pancreas"
+    }
+  },
+  {
+    "id": "condition-fatty-liver",
+    "type": "MedicalCondition",
+    "name": "Fatty Liver Disease",
+    "description": "Condition where excess fat builds up in the liver.",
+    "properties": {}
+  },
+  {
+    "id": "condition-iron-deficiency",
+    "type": "MedicalCondition",
+    "name": "Iron Deficiency Anemia",
+    "description": "Condition where the body lacks sufficient iron to produce adequate hemoglobin.",
+    "properties": {}
+  }
+]
