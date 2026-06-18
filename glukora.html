@@ -42,11 +42,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "name": "Glukora",
   "brand": { "@type": "Brand", "name": "SZ Herbals" },
   "description": "100% organic herbal supplement for blood sugar support. Pure Picrorhiza Kurroa root extract. 40-day course. No chemicals.",
+  "image": "https://szherbal.us/glukora-product-image-united-states.png",
   "offers": {
     "@type": "Offer",
     "price": "299",
     "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
+    "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": "0",
+          "maxValue": "1",
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": "2",
+          "maxValue": "5",
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "US",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod",
+      "merchantReturnDays": "30",
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
   },
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -2344,10 +2380,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTZFQT8N"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
   <!-- NAV -->
   <nav id="nav">
     <div class="nav-brand">
@@ -3043,7 +3080,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="footer-bottom">
       <p>© 2025 Glukora by <a href="index.html" style="color:inherit;text-decoration:none;">SZ Herbals</a>. All rights
-        reserved.</p>
+        reserved. | <a href="https://lustrestudio.uk/" target="_blank" style="color:inherit;text-decoration:none;">Site By</a></p>
       <p>Pure · Natural · Effective</p>
     </div>
   </footer>

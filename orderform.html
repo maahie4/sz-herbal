@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MTZFQT8N');</script>
+<!-- End Google Tag Manager -->
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="sz-herbals-favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="sz-herbals-favicon/favicon.svg" />
@@ -188,6 +195,10 @@ input[type=range]{flex:1;accent-color:var(--leaf);}
 </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTZFQT8N"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div class="progress-bar" id="progress"></div>
 
@@ -672,8 +683,20 @@ if (productParam) {
   if (productParam === 'bundle') {
     const cb = document.getElementById('pb');
     if (cb) cb.checked = true;
-  } else if (productParam === 'single' || productParam === 'double') {
+  } else if (productParam === 'single' || productParam === 'double' || productParam === 'glukora') {
     const cb = document.getElementById('pg');
+    if (cb) cb.checked = true;
+  } else if (productParam === 'figuva' || productParam === 'single_figuva' || productParam === 'double_figuva') {
+    const cb = document.getElementById('pf');
+    if (cb) cb.checked = true;
+  } else if (productParam === 'slimzest' || productParam === 'single_slimzest' || productParam === 'double_slimzest') {
+    const cb = document.getElementById('ps');
+    if (cb) cb.checked = true;
+  } else if (productParam === 'globivin' || productParam === 'globvin' || productParam === 'single_globivin' || productParam === 'double_globivin') {
+    const cb = document.getElementById('pgv');
+    if (cb) cb.checked = true;
+  } else if (productParam === 'livokara' || productParam === 'livokara_gold') {
+    const cb = document.getElementById('pl');
     if (cb) cb.checked = true;
   }
 }
