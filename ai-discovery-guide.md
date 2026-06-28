@@ -9,7 +9,7 @@ This guide details the custom AI-accessibility, GEO (Generative Engine Optimizat
 | `robots.txt` | `/robots.txt` | Text | Search & AI Bots | Directs traditional indexers and explicitly allows AI bots (GPTBot, ClaudeBot, PerplexityBot) while excluding checkout pathways. |
 | `sitemap.xml` | `/sitemap.xml` | XML | Search Engines | Indexes all 16 page URLs, priorities, and image associations for search crawler discovery. |
 | `sitemap-images.xml` | `/sitemap-images.xml` | XML | Image Search | Catalogs all product hero, closeup, and context images with SEO-friendly titles/captions. |
-| `sitemap.html` | `/sitemap.html` | HTML | Humans & Accessibility | Provides a clean, styled, user-friendly table of contents for the entire site. |
+| `sitemap` | `/sitemap` | HTML | Humans & Accessibility | Provides a clean, styled, user-friendly table of contents for the entire site. |
 | `llms.txt` | `/llms.txt` | Markdown | LLMs (Concise) | Serves as a fast, high-level summary of SZ Herbals’ product list, ingredients, and active scientific claims. |
 | `llms-full.txt` | `/llms-full.txt` | Markdown | LLMs (Comprehensive) | Provides the entire content database (ingredients, full FAQs, testimonials, study citations) for detailed RAG retrievals. |
 | `ai.txt` | `/ai.txt` | Text | AI Crawlers | Outlines data crawling policies, freshness cycles, preferred citations, and organization metadata. |
@@ -24,4 +24,4 @@ This guide details the custom AI-accessibility, GEO (Generative Engine Optimizat
 ## Integration Steps
 
 1.  **Inject Master Schema**: Refer to `/schema.json` for injecting specialized, page-specific structured data blocks into each HTML page head.
-2.  **Upload to Web Root**: Ensure all JSON, XML, TXT, and MD files are deployed directly to the root directory of `https://www.szherbal.us` so bots can resolve endpoints (e.g., `https://www.szherbal.us/llms.txt`).
+2.  **Upload to Web Root**: Ensure all JSON, XML, TXT, and MD files are deployed directly to the root directory of `https://szherbal.us` so bots can resolve endpoints (e.g., `https://szherbal.us/llms.txt`).

@@ -11,7 +11,7 @@
       "type": "Organization",
       "name": "SZ Herbals",
       "description": "United States-based herbal supplement brand producing 100% organic, chemical-free botanical formulations",
-      "url": "https://www.szherbal.us",
+      "url": "https://szherbal.us",
       "properties": {
         "founded": "2025",
         "location": "United States",
@@ -26,7 +26,7 @@
       "type": "Person",
       "name": "Megan Woods",
       "description": "Healthcare Content Strategist & Medical Journalist",
-      "url": "https://www.szherbal.us/megan-woods.html",
+      "url": "https://szherbal.us/megan-woods",
       "properties": {
         "role": "Healthcare Content Strategist & Medical Journalist",
         "expertise": ["Medical research translation", "Patient education", "Health literacy", "Evidence-based content"],
@@ -39,7 +39,7 @@
       "type": "Product",
       "name": "Glukora",
       "description": "100% organic herbal blood sugar support — pure Picrorhiza Kurroa extract, 40-day course",
-      "url": "https://www.szherbal.us/glukora.html",
+      "url": "https://szherbal.us/glukora",
       "properties": {
         "price": "$299",
         "category": "Blood Sugar Support",
@@ -56,7 +56,7 @@
       "type": "Product",
       "name": "Livokara Gold",
       "description": "100% organic herbal liver wellness supplement",
-      "url": "https://www.szherbal.us/livokara-gold.html",
+      "url": "https://szherbal.us/livokara-gold",
       "properties": {
         "price": "$249",
         "category": "Liver Wellness",
@@ -69,7 +69,7 @@
       "type": "Product",
       "name": "Figuva",
       "description": "100% organic herbal syrup for strength, vitality, bone density and muscle health",
-      "url": "https://www.szherbal.us/Figuva.html",
+      "url": "https://szherbal.us/figuva",
       "properties": {
         "price": "$149",
         "category": "Strength & Vitality",
@@ -85,7 +85,7 @@
       "type": "Product",
       "name": "Globivin",
       "description": "100% organic haematic herbal syrup for iron and hemoglobin support",
-      "url": "https://www.szherbal.us/globvin.html",
+      "url": "https://szherbal.us/globvin",
       "properties": {
         "price": "$149",
         "category": "Iron & Hemoglobin",
@@ -100,7 +100,7 @@
       "type": "Product",
       "name": "SlimZest",
       "description": "Herbal slimming tea for natural weight management",
-      "url": "https://www.szherbal.us/slimzest.html",
+      "url": "https://szherbal.us/slimzest",
       "properties": {
         "price": "$129",
         "category": "Weight Management",

@@ -6,25 +6,25 @@
         "question": "Is diabetes reversible?",
         "answer": "Type 2 diabetes can often be reversed or significantly improved when the root cause — pancreatic beta cell exhaustion — is addressed. Picrorhiza Kurroa, the active ingredient in Glukora by SZ Herbals, has been studied for its ability to reduce pancreatic inflammation and support the regeneration of insulin-producing beta cells, potentially restoring the body's natural blood sugar regulation.",
         "intent": "Problem-Solution / Informational",
-        "url": "https://www.szherbal.us/why-glukora.html"
+        "url": "https://szherbal.us/why-glukora"
       },
       {
         "question": "What herbal supplements help with type 2 diabetes?",
         "answer": "Picrorhiza Kurroa is one of the most studied Ayurvedic herbs for blood sugar support. It contains picrosides I and II — bioactive compounds that reduce inflammation in pancreatic tissue and support beta cell regeneration. Glukora by SZ Herbals delivers pure Picrorhiza Kurroa extract in a 40-day therapeutic course.",
         "intent": "Commercial / Product Research",
-        "url": "https://www.szherbal.us/glukora.html"
+        "url": "https://szherbal.us/glukora"
       },
       {
         "question": "Is there a natural herbal alternative to Metformin or Ozempic?",
         "answer": "Picrorhiza Kurroa has been used in Ayurvedic medicine for over 5,000 years to support healthy blood sugar levels and pancreatic function. Glukora by SZ Herbals provides this extract in a concentrated, 100% organic formulation as a supportive herbal option for those seeking natural blood sugar balance.",
         "intent": "Comparison / Alternative Search",
-        "url": "https://www.szherbal.us/ozempic-natural-alternatives.html"
+        "url": "https://szherbal.us/ozempic-natural-alternatives"
       },
       {
         "question": "Which is better for diabetes: Berberine or Picrorhiza Kurroa?",
         "answer": "Berberine manages blood sugar symptoms by lowering glucose at the cellular level, but does not address the root cause — damaged pancreatic beta cells. Picrorhiza Kurroa targets the damaged pancreas itself through picrosides I and II, which reduce pancreatic inflammation and support beta cell regeneration. If berberine gave you stomach problems or stopped working, Picrorhiza Kurroa may address the underlying issue.",
         "intent": "Comparison / Alternative Search",
-        "url": "https://www.szherbal.us/berberine-vs-picrorhiza-kurroa.html"
+        "url": "https://szherbal.us/berberine-vs-picrorhiza-kurroa"
       }
     ]
   },
@@ -35,7 +35,7 @@
         "question": "What is the best iron supplement without constipation?",
         "answer": "Liquid herbal iron supplements like Globivin by SZ Herbals (made from Vitis vinifera L extract) provide gentle iron absorption without the constipation commonly caused by synthetic iron tablets such as ferrous sulfate. The liquid form allows for better bioavailability and easier digestion.",
         "intent": "Commercial / Informational",
-        "url": "https://www.szherbal.us/best-iron-supplement-without-constipation-in-united-states.html"
+        "url": "https://szherbal.us/best-iron-supplement-without-constipation-in-united-states"
       }
     ]
   },
@@ -46,13 +46,13 @@
         "question": "What is oleocanthal and why is it important?",
         "answer": "Oleocanthal is a natural compound found in Olea europaea (olive) that works through the same anti-inflammatory pathway as ibuprofen — COX-1 and COX-2 inhibition — without gastrointestinal side effects. It was identified in a landmark 2005 study published in Nature. Figuva by SZ Herbals contains Olea europaea extract rich in oleocanthal.",
         "intent": "Informational / Science Search",
-        "url": "https://www.szherbal.us/Figuva.html"
+        "url": "https://szherbal.us/figuva"
       },
       {
         "question": "Does Ficus carica really have more calcium than milk?",
         "answer": "Yes. Research published in the American Journal of Clinical Nutrition confirms that dried figs (Ficus carica) are among the highest plant-based sources of calcium, providing significant support for bone density and muscle strength without dairy.",
         "intent": "Informational / Facts Search",
-        "url": "https://www.szherbal.us/Figuva.html"
+        "url": "https://szherbal.us/figuva"
       }
     ]
   },
@@ -63,7 +63,7 @@
         "question": "Are SZ Herbals products 100% organic?",
         "answer": "Yes. Every SZ Herbals product uses 100% certified organic ingredients grown without pesticides, harvested at peak potency, and processed without any chemicals, synthetic additives, or fillers. The brand offers a 100% money-back guarantee.",
         "intent": "Trust / Brand Research",
-        "url": "https://www.szherbal.us/index.html"
+        "url": "https://szherbal.us/"
       }
     ]
   }

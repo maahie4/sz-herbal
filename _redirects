@@ -1,0 +1,47 @@
+# --------------------------------------------------
+# Cloudflare Pages Redirects — Enforce canonical domain & URLs
+# Preferred domain: https://szherbal.us
+# --------------------------------------------------
+
+# Redirect www to non-www
+https://www.szherbal.us/* https://szherbal.us/:splat 301
+http://www.szherbal.us/* https://szherbal.us/:splat 301
+http://szherbal.us/* https://szherbal.us/:splat 301
+
+# Strip trailing index.html from homepage
+/index.html https://szherbal.us/ 301
+
+# Enforce clean URLs (strip .html if accessed directly)
+/glukora.html https://szherbal.us/glukora 301
+/livokara-gold.html https://szherbal.us/livokara-gold 301
+/Figuva.html https://szherbal.us/figuva 301
+/figuva.html https://szherbal.us/figuva 301
+/globvin.html https://szherbal.us/globvin 301
+/slimzest.html https://szherbal.us/slimzest 301
+/blog.html https://szherbal.us/blog 301
+/products.html https://szherbal.us/products 301
+/megan-woods.html https://szherbal.us/megan-woods 301
+/orderform.html https://szherbal.us/orderform 301
+/assessment.html https://szherbal.us/assessment 301
+/glukora-story-blog.html https://szherbal.us/glukora-story-blog 301
+/why-glukora.html https://szherbal.us/why-glukora 301
+
+# Blog articles redirect to canonical clean paths
+/berberine-vs-picrorhiza-kurroa.html https://szherbal.us/berberine-vs-picrorhiza-kurroa 301
+/ozempic-natural-alternatives.html https://szherbal.us/ozempic-natural-alternatives 301
+/i-quit-ozempic-natural-blood-sugar-alternative.html https://szherbal.us/i-quit-ozempic-natural-blood-sugar-alternative 301
+/natural-alternative-to-ozempic-without-nausea.html https://szherbal.us/natural-alternative-to-ozempic-without-nausea 301
+/best-iron-supplement-without-constipation-in-united-states.html https://szherbal.us/best-iron-supplement-without-constipation-in-united-states 301
+/iron-pills-made-me-constipated-gentle-alternative.html https://szherbal.us/iron-pills-made-me-constipated-gentle-alternative 301
+/metformin-made-me-sick-natural-alternative.html https://szherbal.us/metformin-made-me-sick-natural-alternative 301
+/what-happens-when-you-have-diabetes.html https://szherbal.us/what-happens-when-you-have-diabetes 301
+
+# Fix legacy structured directories
+/blog/berberine-vs-picrorhiza-kurroa https://szherbal.us/berberine-vs-picrorhiza-kurroa 301
+/blog/best-iron-supplement-without-constipation https://szherbal.us/best-iron-supplement-without-constipation-in-united-states 301
+/blog/i-quit-ozempic-natural-blood-sugar-alternative https://szherbal.us/i-quit-ozempic-natural-blood-sugar-alternative 301
+/blog/iron-pills-made-me-constipated-gentle-alternative https://szherbal.us/iron-pills-made-me-constipated-gentle-alternative 301
+/blog/metformin-made-me-sick-natural-alternative https://szherbal.us/metformin-made-me-sick-natural-alternative 301
+/blog/natural-alternative-to-ozempic-without-nausea https://szherbal.us/natural-alternative-to-ozempic-without-nausea 301
+/blog/ozempic-made-me-sick-natural-alternatives https://szherbal.us/ozempic-natural-alternatives 301
+/blog/what-happens-when-you-have-diabetes https://szherbal.us/what-happens-when-you-have-diabetes 301

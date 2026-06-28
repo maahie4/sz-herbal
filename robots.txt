@@ -84,8 +84,8 @@ User-agent: AhrefsBot
 Allow: /
 
 # ── SITEMAPS ──
-Sitemap: https://www.szherbal.us/sitemap.xml
-Sitemap: https://www.szherbal.us/sitemap-images.xml
+Sitemap: https://szherbal.us/sitemap.xml
+Sitemap: https://szherbal.us/sitemap-images.xml
 
 # ── AI CONTENT FILES ──
 # These files provide structured content for AI systems:

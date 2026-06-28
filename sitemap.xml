@@ -1,229 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- HOMEPAGE -->
-  <!-- ═══════════════════════════════════════════════ -->
   <url>
-    <loc>https://www.szherbal.us/index.html</loc>
+    <loc>https://szherbal.us/</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.szherbal.us/sz-herbals-logo-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/sz-herbals-logo-united-states.png</image:loc>
       <image:title>SZ Herbals Logo — Pure Herbal Wellness Brand</image:title>
     </image:image>
   </url>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- PRODUCT LISTING -->
-  <!-- ═══════════════════════════════════════════════ -->
   <url>
-    <loc>https://www.szherbal.us/products.html</loc>
+    <loc>https://szherbal.us/products</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- PRODUCT PAGES -->
-  <!-- ═══════════════════════════════════════════════ -->
   <url>
-    <loc>https://www.szherbal.us/glukora.html</loc>
+    <loc>https://szherbal.us/glukora</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.szherbal.us/glukora-product-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/glukora-product-image-united-states.png</image:loc>
       <image:title>Glukora — Natural Herbal Blood Sugar Support Supplement by SZ Herbals</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/glukora-product-hero-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/glukora-product-hero-image-united-states.png</image:loc>
       <image:title>Glukora Product — Picrorhiza Kurroa Extract for Pancreatic Wellness</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/glukora-product-image-closeup-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/glukora-product-image-closeup-united-states.png</image:loc>
       <image:title>Glukora Close-Up — 100% Organic Herbal Diabetes Supplement</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/glukora-product-image-%20in-hand-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/glukora-product-image- in-hand-united-states.png</image:loc>
       <image:title>Glukora In Hand — Natural Ozempic Alternative Supplement</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/glukora-product-image-bundle-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/glukora-product-image-bundle-united-states.png</image:loc>
       <image:title>Glukora Bundle — Diabetes Reversal Course by SZ Herbals</image:title>
     </image:image>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/livokara-gold.html</loc>
+    <loc>https://szherbal.us/livokara-gold</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.szherbal.us/livokara-gold-product-image.png</image:loc>
+      <image:loc>https://szherbal.us/livokara-gold-product-image.png</image:loc>
       <image:title>Livokara Gold — Pure Herbal Liver Wellness Supplement by SZ Herbals</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/livokara-gold-hero-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/livokara-gold-hero-image-united-states.png</image:loc>
       <image:title>Livokara Gold Hero — Herbal Liver Detox and Hepatitis Support</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/livkara-gold-in-hand-product-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/livkara-gold-in-hand-product-image-united-states.png</image:loc>
       <image:title>Livokara Gold In Hand — Natural Liver Support Supplement</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/livkara-gold-product-image-close-up-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/livkara-gold-product-image-close-up-united-states.png</image:loc>
       <image:title>Livokara Gold Close-Up — 100% Organic Liver Wellness</image:title>
     </image:image>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/Figuva.html</loc>
+    <loc>https://szherbal.us/figuva</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.szherbal.us/figuva-product-hero-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/figuva-product-hero-image-united-states.png</image:loc>
       <image:title>Figuva — Ficus Carica and Olea Europaea Herbal Strength Syrup</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/figuva-product-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/figuva-product-image-united-states.png</image:loc>
       <image:title>Figuva Product — Pure Organic Strength and Vitality Supplement</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/figuva-in-hand-using-product-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/figuva-in-hand-using-product-image-united-states.png</image:loc>
       <image:title>Figuva In Hand — Herbal Syrup for Muscle and Bone Health</image:title>
     </image:image>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/globvin.html</loc>
+    <loc>https://szherbal.us/globvin</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.szherbal.us/globivin-product-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/globivin-product-image-united-states.png</image:loc>
       <image:title>Globivin — Haematic Herbal Syrup for Iron and Hemoglobin Support</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/globivin-product-hero-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/globivin-product-hero-image-united-states.png</image:loc>
       <image:title>Globivin Hero — Vitis Vinifera L Extract Blood Building Supplement</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/globivin-product-close-up-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/globivin-product-close-up-image-united-states.png</image:loc>
       <image:title>Globivin Close-Up — Natural Iron Supplement Without Constipation</image:title>
     </image:image>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/slimzest.html</loc>
+    <loc>https://szherbal.us/slimzest</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://www.szherbal.us/slimzest-product-hero-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/slimzest-product-hero-image-united-states.png</image:loc>
       <image:title>SlimZest — Citrus Limon Herbal Slimming Tea by SZ Herbals</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/slimzest-product-box-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/slimzest-product-box-image-united-states.png</image:loc>
       <image:title>SlimZest Box — Natural Weight Management Herbal Tea</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.szherbal.us/slimzest-product-scahet-image-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/slimzest-product-scahet-image-united-states.png</image:loc>
       <image:title>SlimZest Sachet — Trachyspermum Ammi Slimming Tea Sachets</image:title>
     </image:image>
   </url>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- BLOG / ARTICLES -->
-  <!-- ═══════════════════════════════════════════════ -->
   <url>
-    <loc>https://www.szherbal.us/blog.html</loc>
+    <loc>https://szherbal.us/blog</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/glukora-story-blog.html</loc>
+    <loc>https://szherbal.us/glukora-story-blog</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/why-glukora.html</loc>
+    <loc>https://szherbal.us/why-glukora</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/berberine-vs-picrorhiza-kurroa.html</loc>
+    <loc>https://szherbal.us/berberine-vs-picrorhiza-kurroa</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/ozempic-natural-alternatives.html</loc>
+    <loc>https://szherbal.us/ozempic-natural-alternatives</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/i-quit-ozempic-natural-blood-sugar-alternative.html</loc>
+    <loc>https://szherbal.us/i-quit-ozempic-natural-blood-sugar-alternative</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/natural-alternative-to-ozempic-without-nausea.html</loc>
+    <loc>https://szherbal.us/natural-alternative-to-ozempic-without-nausea</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/best-iron-supplement-without-constipation-in-united-states.html</loc>
+    <loc>https://szherbal.us/best-iron-supplement-without-constipation-in-united-states</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- AUTHOR / PERSON -->
-  <!-- ═══════════════════════════════════════════════ -->
   <url>
-    <loc>https://www.szherbal.us/megan-woods.html</loc>
+    <loc>https://szherbal.us/iron-pills-made-me-constipated-gentle-alternative</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://szherbal.us/metformin-made-me-sick-natural-alternative</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://szherbal.us/what-happens-when-you-have-diabetes</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://szherbal.us/megan-woods</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
-      <image:loc>https://www.szherbal.us/megan-woods-in-united-states.png</image:loc>
+      <image:loc>https://szherbal.us/megan-woods-in-united-states.png</image:loc>
       <image:title>Megan Woods — Healthcare Content Strategist and Medical Journalist</image:title>
     </image:image>
   </url>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- UTILITY PAGES -->
-  <!-- ═══════════════════════════════════════════════ -->
   <url>
-    <loc>https://www.szherbal.us/assessment.html</loc>
+    <loc>https://szherbal.us/assessment</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
-    <loc>https://www.szherbal.us/orderform.html</loc>
+    <loc>https://szherbal.us/orderform</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-
 </urlset>

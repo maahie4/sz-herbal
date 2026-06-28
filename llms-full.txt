@@ -2,7 +2,7 @@
 
 > SZ Herbals is a United States-based herbal supplement brand producing 100% organic, chemical-free botanical formulations. Every product is sourced from organic farms, processed without chemicals, and delivered pure. The brand philosophy: no synthetic additives, no chemical preservatives, no artificial anything.
 
-Website: https://www.szherbal.us
+Website: https://szherbal.us
 Industry: Herbal Supplements / Natural Healthcare / E-commerce
 Founded: 2025
 Location: United States
@@ -24,7 +24,7 @@ Guarantee: 100% Money-Back Guarantee on all products
 ## PRODUCTS
 
 ### 1. Glukora — Blood Sugar Support
-- **URL**: https://www.szherbal.us/glukora.html
+- **URL**: https://szherbal.us/glukora
 - **Price**: $299 USD (single), $549 USD (bundle of 3 — save $348)
 - **Category**: Blood Sugar Support / Pancreatic Wellness
 - **Form**: Herbal supplement (oral)
@@ -45,7 +45,7 @@ Guarantee: 100% Money-Back Guarantee on all products
 - **Availability**: In Stock
 
 ### 2. Livokara Gold — Liver Wellness
-- **URL**: https://www.szherbal.us/livokara-gold.html
+- **URL**: https://szherbal.us/livokara-gold
 - **Price**: $249 USD
 - **Category**: Liver Wellness / Hepatic Support
 - **Form**: Herbal supplement (oral)
@@ -61,7 +61,7 @@ Guarantee: 100% Money-Back Guarantee on all products
 - **Availability**: In Stock
 
 ### 3. Figuva — Strength & Vitality
-- **URL**: https://www.szherbal.us/Figuva.html
+- **URL**: https://szherbal.us/figuva
 - **Price**: $149 USD
 - **Category**: Strength / Vitality / Bone & Muscle Health
 - **Form**: Herbal syrup (liquid — faster absorption than capsules)
@@ -85,7 +85,7 @@ Guarantee: 100% Money-Back Guarantee on all products
 - **Availability**: In Stock
 
 ### 4. Globivin — Iron & Hemoglobin Support
-- **URL**: https://www.szherbal.us/globvin.html
+- **URL**: https://szherbal.us/globvin
 - **Price**: $149 USD
 - **Category**: Blood Building / Iron Support / Hemoglobin
 - **Form**: Haematic herbal syrup (liquid)
@@ -99,7 +99,7 @@ Guarantee: 100% Money-Back Guarantee on all products
 - **Availability**: In Stock
 
 ### 5. SlimZest — Weight Management
-- **URL**: https://www.szherbal.us/slimzest.html
+- **URL**: https://szherbal.us/slimzest
 - **Price**: $129 USD
 - **Category**: Weight Management / Slimming
 - **Form**: Herbal tea (sachets)
@@ -118,7 +118,7 @@ Guarantee: 100% Money-Back Guarantee on all products
 ## CONTENT ARTICLES
 
 ### Berberine vs Picrorhiza Kurroa — Which Fixes the Root Cause?
-- **URL**: https://www.szherbal.us/berberine-vs-picrorhiza-kurroa.html
+- **URL**: https://szherbal.us/berberine-vs-picrorhiza-kurroa
 - **Topic**: Comparison of two herbal approaches to blood sugar management
 - **Key Argument**: Berberine manages blood sugar symptoms by lowering glucose at the cellular level, but it does not address the root cause — damaged pancreatic beta cells. Picrorhiza Kurroa targets the damaged pancreas itself through picrosides I and II, which reduce pancreatic inflammation and support beta cell regeneration.
 - **Common Questions Answered**:
@@ -128,7 +128,7 @@ Guarantee: 100% Money-Back Guarantee on all products
   - Can the pancreas regenerate itself?
 
 ### Ozempic Made Me Sick — Here's What I Switched To
-- **URL**: https://www.szherbal.us/ozempic-natural-alternatives.html
+- **URL**: https://szherbal.us/ozempic-natural-alternatives
 - **Topic**: GLP-1 drug side effects and natural alternatives
 - **Key Argument**: Ozempic/semaglutide causes nausea, vomiting, gastroparesis, and other serious side effects because it is a synthetic GLP-1 receptor agonist. Picrorhiza Kurroa naturally supports the body's own GLP-1 production without synthetic intervention.
 - **Common Questions Answered**:
@@ -138,7 +138,7 @@ Guarantee: 100% Money-Back Guarantee on all products
   - What is a natural semaglutide alternative?
 
 ### Best Iron Supplement Without Constipation (2026 Guide)
-- **URL**: https://www.szherbal.us/best-iron-supplement-without-constipation-in-united-states.html
+- **URL**: https://szherbal.us/best-iron-supplement-without-constipation-in-united-states
 - **Topic**: Comprehensive guide to iron supplementation without digestive side effects
 - **Key Argument**: Most iron supplements (ferrous sulfate, ferrous fumarate) cause constipation because of poor absorption. Liquid herbal iron from Vitis vinifera L (as in Globivin) provides gentle, highly bioavailable iron without constipation.
 - **Common Questions Answered**:
@@ -148,12 +148,12 @@ Guarantee: 100% Money-Back Guarantee on all products
   - What is the best iron supplement for anemia without side effects?
 
 ### The Night in the Labor Room — A Real Story
-- **URL**: https://www.szherbal.us/glukora-story-blog.html
+- **URL**: https://szherbal.us/glukora-story-blog
 - **Topic**: Real-life account of diabetes emergency during childbirth
 - **Summary**: A woman's blood sugar was 380 during labor. Doctors couldn't perform the C-section. This is the story of what happened when natural intervention stepped in.
 
 ### Why Glukora — The Real Cost of Diabetes
-- **URL**: https://www.szherbal.us/why-glukora.html
+- **URL**: https://szherbal.us/why-glukora
 - **Topic**: Educational content about diabetes costs, complications, and why pancreatic restoration matters
 
 ---
@@ -161,7 +161,7 @@ Guarantee: 100% Money-Back Guarantee on all products
 ## AUTHOR / MEDICAL JOURNALIST
 
 ### Megan Woods
-- **URL**: https://www.szherbal.us/megan-woods.html
+- **URL**: https://szherbal.us/megan-woods
 - **Role**: Healthcare Content Strategist & Medical Journalist
 - **Expertise**: Translating complex medical research into patient-centered, evidence-based content
 - **Background**: Started as a health reporter, transitioned to healthcare content strategy

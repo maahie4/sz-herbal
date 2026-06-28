@@ -4,12 +4,12 @@
 
     {
       "@type": "Organization",
-      "@id": "https://www.szherbal.us/#organization",
+      "@id": "https://szherbal.us/#organization",
       "name": "SZ Herbals",
-      "url": "https://www.szherbal.us",
+      "url": "https://szherbal.us",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.szherbal.us/sz-herbals-logo-united-states.png",
+        "url": "https://szherbal.us/sz-herbals-logo-united-states.png",
         "width": 328,
         "height": 328
       },
@@ -42,16 +42,16 @@
 
     {
       "@type": "WebSite",
-      "@id": "https://www.szherbal.us/#website",
+      "@id": "https://szherbal.us/#website",
       "name": "SZ Herbals",
-      "url": "https://www.szherbal.us",
-      "publisher": { "@id": "https://www.szherbal.us/#organization" },
+      "url": "https://szherbal.us",
+      "publisher": { "@id": "https://szherbal.us/#organization" },
       "description": "Pure herbal wellness rooted in nature. 100% organic supplements with zero chemicals.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://www.szherbal.us/products.html?q={search_term_string}"
+          "urlTemplate": "https://szherbal.us/products?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       },
@@ -60,13 +60,13 @@
 
     {
       "@type": "Person",
-      "@id": "https://www.szherbal.us/megan-woods.html#person",
+      "@id": "https://szherbal.us/megan-woods#person",
       "name": "Megan Woods",
-      "url": "https://www.szherbal.us/megan-woods.html",
-      "image": "https://www.szherbal.us/megan-woods-in-united-states.png",
+      "url": "https://szherbal.us/megan-woods",
+      "image": "https://szherbal.us/megan-woods-in-united-states.png",
       "jobTitle": "Healthcare Content Strategist & Medical Journalist",
       "description": "Healthcare Content Strategist and Medical Journalist who bridges the gap between complex medical research and patient-centered, trust-building communication.",
-      "worksFor": { "@id": "https://www.szherbal.us/#organization" },
+      "worksFor": { "@id": "https://szherbal.us/#organization" },
       "knowsAbout": [
         "Healthcare journalism",
         "Medical research translation",
@@ -78,17 +78,17 @@
 
     {
       "@type": "Product",
-      "@id": "https://www.szherbal.us/glukora.html#product",
+      "@id": "https://szherbal.us/glukora#product",
       "name": "Glukora",
-      "url": "https://www.szherbal.us/glukora.html",
+      "url": "https://szherbal.us/glukora",
       "image": [
-        "https://www.szherbal.us/glukora-product-image-united-states.png",
-        "https://www.szherbal.us/glukora-product-hero-image-united-states.png",
-        "https://www.szherbal.us/glukora-product-image-closeup-united-states.png"
+        "https://szherbal.us/glukora-product-image-united-states.png",
+        "https://szherbal.us/glukora-product-hero-image-united-states.png",
+        "https://szherbal.us/glukora-product-image-closeup-united-states.png"
       ],
       "description": "100% organic herbal supplement for blood sugar support. Pure Picrorhiza Kurroa root extract. 40-day pancreatic restorative course. Natural GLP-1 booster. Injection-free alternative to synthetic medications.",
       "brand": { "@type": "Brand", "name": "SZ Herbals" },
-      "manufacturer": { "@id": "https://www.szherbal.us/#organization" },
+      "manufacturer": { "@id": "https://szherbal.us/#organization" },
       "category": "Herbal Supplements > Blood Sugar Support",
       "sku": "SZH-GLK-001",
       "material": "Picrorhiza Kurroa root extract",
@@ -106,7 +106,7 @@
         "priceCurrency": "USD",
         "offerCount": "2",
         "availability": "https://schema.org/InStock",
-        "seller": { "@id": "https://www.szherbal.us/#organization" },
+        "seller": { "@id": "https://szherbal.us/#organization" },
         "shippingDetails": {
           "@type": "OfferShippingDetails",
           "shippingRate": {
@@ -149,7 +149,7 @@
             "price": "299",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
-            "url": "https://www.szherbal.us/glukora.html"
+            "url": "https://szherbal.us/glukora"
           },
           {
             "@type": "Offer",
@@ -157,7 +157,7 @@
             "price": "549",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock",
-            "url": "https://www.szherbal.us/glukora.html"
+            "url": "https://szherbal.us/glukora"
           }
         ]
       },
@@ -181,16 +181,16 @@
 
     {
       "@type": "Product",
-      "@id": "https://www.szherbal.us/livokara-gold.html#product",
+      "@id": "https://szherbal.us/livokara-gold#product",
       "name": "Livokara Gold",
-      "url": "https://www.szherbal.us/livokara-gold.html",
+      "url": "https://szherbal.us/livokara-gold",
       "image": [
-        "https://www.szherbal.us/livokara-gold-product-image.png",
-        "https://www.szherbal.us/livokara-gold-hero-image-united-states.png"
+        "https://szherbal.us/livokara-gold-product-image.png",
+        "https://szherbal.us/livokara-gold-hero-image-united-states.png"
       ],
       "description": "100% organic herbal supplement for liver wellness. Supports liver detoxification, fatty liver, and hepatitis wellness. Pure botanical formulation with zero chemicals.",
       "brand": { "@type": "Brand", "name": "SZ Herbals" },
-      "manufacturer": { "@id": "https://www.szherbal.us/#organization" },
+      "manufacturer": { "@id": "https://szherbal.us/#organization" },
       "category": "Herbal Supplements > Liver Wellness",
       "sku": "SZH-LVK-001",
       "additionalProperty": [
@@ -203,7 +203,7 @@
         "price": "249",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "seller": { "@id": "https://www.szherbal.us/#organization" },
+        "seller": { "@id": "https://szherbal.us/#organization" },
         "shippingDetails": {
           "@type": "OfferShippingDetails",
           "shippingRate": {
@@ -251,16 +251,16 @@
 
     {
       "@type": "Product",
-      "@id": "https://www.szherbal.us/Figuva.html#product",
+      "@id": "https://szherbal.us/figuva#product",
       "name": "Figuva",
-      "url": "https://www.szherbal.us/Figuva.html",
+      "url": "https://szherbal.us/figuva",
       "image": [
-        "https://www.szherbal.us/figuva-product-hero-image-united-states.png",
-        "https://www.szherbal.us/figuva-product-image-united-states.png"
+        "https://szherbal.us/figuva-product-hero-image-united-states.png",
+        "https://szherbal.us/figuva-product-image-united-states.png"
       ],
       "description": "100% organic herbal syrup of pure Ficus carica (Fig) and Olea europaea (Olive) — two of the most powerful botanicals in traditional medicine. Builds muscle strength, bone density, energy and vitality for every age.",
       "brand": { "@type": "Brand", "name": "SZ Herbals" },
-      "manufacturer": { "@id": "https://www.szherbal.us/#organization" },
+      "manufacturer": { "@id": "https://szherbal.us/#organization" },
       "category": "Herbal Supplements > Strength & Vitality",
       "sku": "SZH-FGV-001",
       "material": "Ficus carica extract, Olea europaea extract",
@@ -276,7 +276,7 @@
         "price": "149",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "seller": { "@id": "https://www.szherbal.us/#organization" },
+        "seller": { "@id": "https://szherbal.us/#organization" },
         "shippingDetails": {
           "@type": "OfferShippingDetails",
           "shippingRate": {
@@ -324,16 +324,16 @@
 
     {
       "@type": "Product",
-      "@id": "https://www.szherbal.us/globvin.html#product",
+      "@id": "https://szherbal.us/globvin#product",
       "name": "Globivin",
-      "url": "https://www.szherbal.us/globvin.html",
+      "url": "https://szherbal.us/globvin",
       "image": [
-        "https://www.szherbal.us/globivin-product-image-united-states.png",
-        "https://www.szherbal.us/globivin-product-hero-image-united-states.png"
+        "https://szherbal.us/globivin-product-image-united-states.png",
+        "https://szherbal.us/globivin-product-hero-image-united-states.png"
       ],
       "description": "100% organic haematic herbal syrup of pure Vitis vinifera L extract — nature's most powerful blood-building botanical. Supports healthy hemoglobin, iron levels and red blood cell production without constipation.",
       "brand": { "@type": "Brand", "name": "SZ Herbals" },
-      "manufacturer": { "@id": "https://www.szherbal.us/#organization" },
+      "manufacturer": { "@id": "https://szherbal.us/#organization" },
       "category": "Herbal Supplements > Iron & Hemoglobin",
       "sku": "SZH-GLB-001",
       "material": "Vitis vinifera L extract",
@@ -348,7 +348,7 @@
         "price": "149",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "seller": { "@id": "https://www.szherbal.us/#organization" },
+        "seller": { "@id": "https://szherbal.us/#organization" },
         "shippingDetails": {
           "@type": "OfferShippingDetails",
           "shippingRate": {
@@ -396,16 +396,16 @@
 
     {
       "@type": "Product",
-      "@id": "https://www.szherbal.us/slimzest.html#product",
+      "@id": "https://szherbal.us/slimzest#product",
       "name": "SlimZest",
-      "url": "https://www.szherbal.us/slimzest.html",
+      "url": "https://szherbal.us/slimzest",
       "image": [
-        "https://www.szherbal.us/slimzest-product-hero-image-united-states.png",
-        "https://www.szherbal.us/slimzest-product-box-image-united-states.png"
+        "https://szherbal.us/slimzest-product-hero-image-united-states.png",
+        "https://szherbal.us/slimzest-product-box-image-united-states.png"
       ],
       "description": "Herbal slimming tea made with Citrus limon and Trachyspermum ammi for natural weight management. 100% organic with zero chemicals.",
       "brand": { "@type": "Brand", "name": "SZ Herbals" },
-      "manufacturer": { "@id": "https://www.szherbal.us/#organization" },
+      "manufacturer": { "@id": "https://szherbal.us/#organization" },
       "category": "Herbal Supplements > Weight Management",
       "sku": "SZH-SLZ-001",
       "material": "Citrus limon, Trachyspermum ammi",
@@ -419,7 +419,7 @@
         "price": "129",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "seller": { "@id": "https://www.szherbal.us/#organization" },
+        "seller": { "@id": "https://szherbal.us/#organization" },
         "shippingDetails": {
           "@type": "OfferShippingDetails",
           "shippingRate": {
@@ -467,7 +467,7 @@
 
     {
       "@type": "FAQPage",
-      "@id": "https://www.szherbal.us/#faq",
+      "@id": "https://szherbal.us/#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -538,97 +538,97 @@
 
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.szherbal.us/#breadcrumb-products",
+      "@id": "https://szherbal.us/#breadcrumb-products",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.szherbal.us/index.html" },
-        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.szherbal.us/products.html" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://szherbal.us/" },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://szherbal.us/products" }
       ]
     },
 
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.szherbal.us/#breadcrumb-glukora",
+      "@id": "https://szherbal.us/#breadcrumb-glukora",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.szherbal.us/index.html" },
-        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.szherbal.us/products.html" },
-        { "@type": "ListItem", "position": 3, "name": "Glukora", "item": "https://www.szherbal.us/glukora.html" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://szherbal.us/" },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://szherbal.us/products" },
+        { "@type": "ListItem", "position": 3, "name": "Glukora", "item": "https://szherbal.us/glukora" }
       ]
     },
 
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.szherbal.us/#breadcrumb-blog",
+      "@id": "https://szherbal.us/#breadcrumb-blog",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.szherbal.us/index.html" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.szherbal.us/blog.html" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://szherbal.us/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://szherbal.us/blog" }
       ]
     },
 
     {
       "@type": "Article",
-      "@id": "https://www.szherbal.us/berberine-vs-picrorhiza-kurroa.html#article",
+      "@id": "https://szherbal.us/berberine-vs-picrorhiza-kurroa#article",
       "headline": "Berberine vs Picrorhiza Kurroa — Which Fixes the Root Cause?",
-      "url": "https://www.szherbal.us/berberine-vs-picrorhiza-kurroa.html",
+      "url": "https://szherbal.us/berberine-vs-picrorhiza-kurroa",
       "description": "Berberine manages blood sugar symptoms. Picrorhiza Kurroa targets the damaged pancreas itself. A comparison of two herbal approaches to blood sugar management.",
-      "author": { "@id": "https://www.szherbal.us/megan-woods.html#person" },
-      "publisher": { "@id": "https://www.szherbal.us/#organization" },
+      "author": { "@id": "https://szherbal.us/megan-woods#person" },
+      "publisher": { "@id": "https://szherbal.us/#organization" },
       "datePublished": "2026-05-01",
       "dateModified": "2026-06-17",
-      "mainEntityOfPage": "https://www.szherbal.us/berberine-vs-picrorhiza-kurroa.html",
+      "mainEntityOfPage": "https://szherbal.us/berberine-vs-picrorhiza-kurroa",
       "about": ["Berberine", "Picrorhiza Kurroa", "Type 2 diabetes", "Blood sugar management", "Herbal supplements"],
       "inLanguage": "en-US"
     },
 
     {
       "@type": "Article",
-      "@id": "https://www.szherbal.us/ozempic-natural-alternatives.html#article",
+      "@id": "https://szherbal.us/ozempic-natural-alternatives#article",
       "headline": "Ozempic Made Me Sick — Here's What I Switched To",
-      "url": "https://www.szherbal.us/ozempic-natural-alternatives.html",
+      "url": "https://szherbal.us/ozempic-natural-alternatives",
       "description": "Ozempic side effects forcing you to stop? Learn why GLP-1 drugs cause nausea, vomiting, and pain — and what natural alternatives actually work instead.",
-      "author": { "@id": "https://www.szherbal.us/megan-woods.html#person" },
-      "publisher": { "@id": "https://www.szherbal.us/#organization" },
+      "author": { "@id": "https://szherbal.us/megan-woods#person" },
+      "publisher": { "@id": "https://szherbal.us/#organization" },
       "datePublished": "2026-05-15",
       "dateModified": "2026-06-17",
-      "mainEntityOfPage": "https://www.szherbal.us/ozempic-natural-alternatives.html",
+      "mainEntityOfPage": "https://szherbal.us/ozempic-natural-alternatives",
       "about": ["Ozempic", "Semaglutide", "GLP-1", "Natural alternatives", "Picrorhiza Kurroa"],
       "inLanguage": "en-US"
     },
 
     {
       "@type": "Article",
-      "@id": "https://www.szherbal.us/best-iron-supplement-without-constipation-in-united-states.html#article",
+      "@id": "https://szherbal.us/best-iron-supplement-without-constipation-in-united-states#article",
       "headline": "Best Iron Supplement Without Constipation (2026): A Complete Guide",
-      "url": "https://www.szherbal.us/best-iron-supplement-without-constipation-in-united-states.html",
+      "url": "https://szherbal.us/best-iron-supplement-without-constipation-in-united-states",
       "description": "Comprehensive guide covering every iron form, side effects comparison, and gentler herbal and liquid options including Globivin by SZ Herbals.",
-      "author": { "@id": "https://www.szherbal.us/megan-woods.html#person" },
-      "publisher": { "@id": "https://www.szherbal.us/#organization" },
+      "author": { "@id": "https://szherbal.us/megan-woods#person" },
+      "publisher": { "@id": "https://szherbal.us/#organization" },
       "datePublished": "2026-06-01",
       "dateModified": "2026-06-17",
-      "mainEntityOfPage": "https://www.szherbal.us/best-iron-supplement-without-constipation-in-united-states.html",
+      "mainEntityOfPage": "https://szherbal.us/best-iron-supplement-without-constipation-in-united-states",
       "about": ["Iron supplements", "Constipation", "Anemia", "Vitis vinifera", "Globivin"],
       "inLanguage": "en-US"
     },
 
     {
       "@type": "Article",
-      "@id": "https://www.szherbal.us/glukora-story-blog.html#article",
+      "@id": "https://szherbal.us/glukora-story-blog#article",
       "headline": "The Night in the Labor Room — A Real Story",
-      "url": "https://www.szherbal.us/glukora-story-blog.html",
+      "url": "https://szherbal.us/glukora-story-blog",
       "description": "Her blood sugar was 380. She was in labor. Doctors couldn't perform the C-section. This is the real story of what happened next.",
-      "author": { "@id": "https://www.szherbal.us/megan-woods.html#person" },
-      "publisher": { "@id": "https://www.szherbal.us/#organization" },
+      "author": { "@id": "https://szherbal.us/megan-woods#person" },
+      "publisher": { "@id": "https://szherbal.us/#organization" },
       "datePublished": "2026-04-15",
       "dateModified": "2026-06-17",
-      "mainEntityOfPage": "https://www.szherbal.us/glukora-story-blog.html",
+      "mainEntityOfPage": "https://szherbal.us/glukora-story-blog",
       "about": ["Diabetes", "Pregnancy", "Blood sugar crisis", "Natural intervention", "Glukora"],
       "inLanguage": "en-US"
     },
 
     {
       "@type": "MedicalWebPage",
-      "@id": "https://www.szherbal.us/why-glukora.html#medicalpage",
+      "@id": "https://szherbal.us/why-glukora#medicalpage",
       "name": "Why Glukora — The Real Cost of Diabetes",
-      "url": "https://www.szherbal.us/why-glukora.html",
+      "url": "https://szherbal.us/why-glukora",
       "description": "Educational content about diabetes costs, complications, and why pancreatic restoration through Picrorhiza Kurroa matters.",
       "lastReviewed": "2026-06-17",
       "medicalAudience": {
