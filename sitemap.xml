@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://szherbal.us/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -13,13 +13,13 @@
   </url>
   <url>
     <loc>https://szherbal.us/products</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://szherbal.us/glukora</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -45,7 +45,7 @@
   </url>
   <url>
     <loc>https://szherbal.us/livokara-gold</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -67,7 +67,7 @@
   </url>
   <url>
     <loc>https://szherbal.us/figuva</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -85,7 +85,7 @@
   </url>
   <url>
     <loc>https://szherbal.us/globvin</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -103,7 +103,7 @@
   </url>
   <url>
     <loc>https://szherbal.us/slimzest</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -121,37 +121,37 @@
   </url>
   <url>
     <loc>https://szherbal.us/blog</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://szherbal.us/glukora-story-blog</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://szherbal.us/why-glukora</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://szherbal.us/berberine-vs-picrorhiza-kurroa</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://szherbal.us/ozempic-natural-alternatives</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://szherbal.us/i-quit-ozempic-natural-blood-sugar-alternative</loc>
-    <lastmod>2026-06-27</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -163,31 +163,31 @@
   </url>
   <url>
     <loc>https://szherbal.us/best-iron-supplement-without-constipation-in-united-states</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://szherbal.us/iron-pills-made-me-constipated-gentle-alternative</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://szherbal.us/metformin-made-me-sick-natural-alternative</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://szherbal.us/what-happens-when-you-have-diabetes</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://szherbal.us/megan-woods</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -197,22 +197,17 @@
   </url>
   <url>
     <loc>https://szherbal.us/assessment</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://szherbal.us/orderform</loc>
-    <lastmod>2026-06-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://szherbal.us/checkout</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
   <url>
     <loc>https://szherbal.us/best-natural-blood-sugar-supplement-2026</loc>
     <lastmod>2026-07-03</lastmod>
@@ -233,6 +228,12 @@
   </url>
   <url>
     <loc>https://szherbal.us/how-to-lower-blood-sugar-naturally</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://szherbal.us/natural-blood-thinner</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

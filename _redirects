@@ -1,23 +1,29 @@
 # --------------------------------------------------
 # Cloudflare Pages Redirects — Enforce canonical domain & URLs
 # Preferred domain: https://szherbal.us
+# Last updated: 2026-07-03
+# --------------------------------------------------
+# IMPORTANT: Rule order matters! Cloudflare matches top-to-bottom.
+# .html strip rules MUST come BEFORE the www→non-www wildcard,
+# otherwise www+.html URLs hit a redirect chain (2 hops).
 # --------------------------------------------------
 
-# Redirect www to non-www
-https://www.szherbal.us/* https://szherbal.us/:splat 301
-http://www.szherbal.us/* https://szherbal.us/:splat 301
-http://szherbal.us/* https://szherbal.us/:splat 301
+# ── SECTION 1: Strip .html extensions ──
+# Path-only rules match on ANY host (www and non-www alike).
+# This ensures www.szherbal.us/page.html → szherbal.us/page in ONE hop.
 
-# Strip trailing index.html from homepage
+# Homepage
 /index.html https://szherbal.us/ 301
 
-# Enforce clean URLs (strip .html if accessed directly)
+# Product pages
 /glukora.html https://szherbal.us/glukora 301
 /livokara-gold.html https://szherbal.us/livokara-gold 301
 /Figuva.html https://szherbal.us/figuva 301
 /figuva.html https://szherbal.us/figuva 301
 /globvin.html https://szherbal.us/globvin 301
 /slimzest.html https://szherbal.us/slimzest 301
+
+# Core pages
 /blog.html https://szherbal.us/blog 301
 /products.html https://szherbal.us/products 301
 /megan-woods.html https://szherbal.us/megan-woods 301
@@ -25,8 +31,9 @@ http://szherbal.us/* https://szherbal.us/:splat 301
 /assessment.html https://szherbal.us/assessment 301
 /glukora-story-blog.html https://szherbal.us/glukora-story-blog 301
 /why-glukora.html https://szherbal.us/why-glukora 301
+/sitemap.html https://szherbal.us/sitemap 301
 
-# Blog articles redirect to canonical clean paths
+# Blog articles
 /berberine-vs-picrorhiza-kurroa.html https://szherbal.us/berberine-vs-picrorhiza-kurroa 301
 /ozempic-natural-alternatives.html https://szherbal.us/ozempic-natural-alternatives 301
 /i-quit-ozempic-natural-blood-sugar-alternative.html https://szherbal.us/i-quit-ozempic-natural-blood-sugar-alternative 301
@@ -35,8 +42,19 @@ http://szherbal.us/* https://szherbal.us/:splat 301
 /iron-pills-made-me-constipated-gentle-alternative.html https://szherbal.us/iron-pills-made-me-constipated-gentle-alternative 301
 /metformin-made-me-sick-natural-alternative.html https://szherbal.us/metformin-made-me-sick-natural-alternative 301
 /what-happens-when-you-have-diabetes.html https://szherbal.us/what-happens-when-you-have-diabetes 301
+/best-natural-blood-sugar-supplement-2026.html https://szherbal.us/best-natural-blood-sugar-supplement-2026 301
+/how-to-lower-blood-sugar-naturally.html https://szherbal.us/how-to-lower-blood-sugar-naturally 301
+/natural-blood-thinner.html https://szherbal.us/natural-blood-thinner 301
+/supplements-that-help-insulin-resistance.html https://szherbal.us/supplements-that-help-insulin-resistance 301
+/why-is-my-fasting-blood-sugar-high-every-morning.html https://szherbal.us/why-is-my-fasting-blood-sugar-high-every-morning 301
 
-# Fix legacy structured directories
+# ── SECTION 2: Redirect www → non-www (catch-all) ──
+# Must come AFTER .html rules to avoid creating redirect chains.
+https://www.szherbal.us/* https://szherbal.us/:splat 301
+http://www.szherbal.us/* https://szherbal.us/:splat 301
+http://szherbal.us/* https://szherbal.us/:splat 301
+
+# ── SECTION 3: Legacy /blog/ directory redirects ──
 /blog/berberine-vs-picrorhiza-kurroa https://szherbal.us/berberine-vs-picrorhiza-kurroa 301
 /blog/best-iron-supplement-without-constipation https://szherbal.us/best-iron-supplement-without-constipation-in-united-states 301
 /blog/i-quit-ozempic-natural-blood-sugar-alternative https://szherbal.us/i-quit-ozempic-natural-blood-sugar-alternative 301
