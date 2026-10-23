@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://szherbal.us/recipes/" />
+  <meta property="og:url" content="https://szherbal.us/recipes/" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MTZFQT8N');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="/sz-herbals-favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/sz-herbals-favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/sz-herbals-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/sz-herbals-favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/sz-herbals-favicon/site.webmanifest" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetic Kitchen & Healthy Recipes | SZ Herbals</title>
+  <meta name="description" content="Discover delicious, blood-sugar-friendly, high-protein, and diabetic-safe recipes created with wholesome whole foods and zero refined sugars.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Diabetic Kitchen & Healthy Recipes | SZ Herbals" />
+  <meta property="og:description" content="Delicious, diabetes-conscious recipes with carb and protein counts. Zero refined sugar." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts matching SZ Herbals Brand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/cart.css" />
+  <script src="/cart.js" defer></script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --deep: #0F2B24;
+      --dark: #1E3D35;
+      --mid: #2D5C52;
+      --leaf: #3D7A68;
+      --sage: #7AAF9E;
+      --mist: #B8D4CC;
+      --fog: #E4EFEB;
+      --cream: #F7F4EE;
+      --card-bg: #FFFFFF;
+      --ink: #111111;
+      --body: #2B2A24;
+      --muted: #626059;
+      --gold: #C4965A;
+      --gold-light: #dfb67d;
+      --rule: #e5dfd2;
+
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --display: 'DM Serif Display', Georgia, serif;
+      --sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--body);
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--dark); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--leaf); }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 5rem;
+      background: rgba(247, 244, 238, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--mist);
+      transition: all 0.4s;
+    }
+
+    nav.scrolled {
+      padding: 0.9rem 5rem;
+      box-shadow: 0 4px 20px rgba(15, 43, 36, 0.05);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--mid);
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--leaf);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+      transform-origin: left;
+    }
+
+    .nav-links a:hover { color: var(--leaf); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--dark);
+      color: var(--fog) !important;
+      padding: 0.75rem 1.6rem;
+      border: none;
+      transition: background 0.3s;
+    }
+
+    .nav-cta:hover { background: var(--deep); }
+
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 28px;
+      height: 20px;
+      position: relative;
+      z-index: 201;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 1.5px;
+      background: var(--dark);
+      position: absolute;
+      left: 0;
+      transition: all 0.35s ease;
+    }
+
+    .hamburger span:nth-child(1) { top: 0; }
+    .hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+    .hamburger span:nth-child(3) { bottom: 0; }
+    .hamburger.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { bottom: auto; top: 50%; transform: translateY(-50%) rotate(-45deg); }
+
+    /* ── MOBILE OVERLAY ── */
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 43, 36, 0.98);
+      backdrop-filter: blur(16px);
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .mobile-overlay.open { opacity: 1; pointer-events: auto; }
+
+    .mobile-nav-link {
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--fog);
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      transition: color 0.3s;
+    }
+
+    .mobile-nav-link:hover { color: var(--sage); }
+
+    /* ── HERO BANNER ── */
+    .hero {
+      background: var(--deep);
+      color: var(--cream);
+      padding: 9.5rem 5rem 6rem;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(61, 122, 104, 0.22) 0%, transparent 70%),
+                  radial-gradient(circle at 20% 80%, rgba(196, 150, 90, 0.14) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      color: #FFFFFF;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--sage);
+    }
+
+    .hero p {
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      line-height: 1.9;
+      font-weight: 300;
+      color: var(--mist);
+      max-width: 650px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── RECIPE SECTION ── */
+    .recipes-section {
+      padding: 5rem 5rem 7rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .filter-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 3.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .filter-pills {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      color: var(--muted);
+      transition: all 0.3s;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--dark);
+      border-color: var(--dark);
+      color: #FFFFFF;
+    }
+
+    .count-label {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* RECIPES GRID */
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    @media(max-width: 1024px) {
+      .recipe-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media(max-width: 680px) {
+      .recipe-grid { grid-template-columns: 1fr; }
+    }
+
+    /* FEATURED RECIPE CARD */
+    .featured-recipe-card {
+      grid-column: span 3;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(15, 43, 36, 0.04);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media(max-width: 900px) {
+      .featured-recipe-card { grid-column: span 1; grid-template-columns: 1fr; gap: 0; }
+    }
+
+    .featured-recipe-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(15, 43, 36, 0.09);
+    }
+
+    .featured-img-wrap {
+      position: relative;
+      min-height: 380px;
+      overflow: hidden;
+      background: var(--fog);
+    }
+
+    .featured-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .featured-recipe-card:hover .featured-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      background: var(--gold);
+      color: #FFFFFF;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: 2px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .featured-body {
+      padding: 3.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .recipe-meta-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.8rem;
+    }
+
+    .recipe-tag {
+      font-family: var(--sans);
+      font-size: 0.64rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--leaf);
+      font-weight: 600;
+    }
+
+    .recipe-title {
+      font-family: var(--display);
+      font-size: 2.1rem;
+      color: var(--deep);
+      line-height: 1.2;
+      margin-bottom: 1.1rem;
+      font-weight: 400;
+    }
+
+    .recipe-excerpt {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .nutrition-mini-pills {
+      display: flex;
+      gap: 1.2rem;
+      padding: 1.2rem 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .pill-item {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--body);
+    }
+
+    .pill-item strong {
+      color: var(--dark);
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: block;
+    }
+
+    .view-recipe-btn {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--dark);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: gap 0.3s;
+    }
+
+    .featured-recipe-card:hover .view-recipe-btn {
+      color: var(--gold);
+      gap: 0.8rem;
+    }
+
+    /* STANDARD RECIPE CARD */
+    .recipe-card {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 43, 36, 0.03);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(15, 43, 36, 0.08);
+    }
+
+    .card-img-wrap {
+      height: 230px;
+      background: var(--fog);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .recipe-card:hover .card-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .card-placeholder-text {
+      font-family: var(--display);
+      font-size: 1.8rem;
+      color: var(--sage);
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    .card-body {
+      padding: 1.8rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-family: var(--display);
+      font-size: 1.4rem;
+      color: var(--deep);
+      line-height: 1.25;
+      margin-bottom: 0.8rem;
+      font-weight: 400;
+    }
+
+    .card-excerpt {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .card-link {
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+    }
+
+    /* PROMO STRIP */
+    .kitchen-philosophy-strip {
+      background: var(--fog);
+      border-top: 1px solid var(--mist);
+      border-bottom: 1px solid var(--mist);
+      padding: 4.5rem 2rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .kp-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .kp-inner h2 {
+      font-family: var(--display);
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--deep);
+      margin-bottom: 1.2rem;
+    }
+
+    .kp-inner p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--body);
+      margin-bottom: 2rem;
+    }
+
+    .kp-btn {
+      display: inline-block;
+      background: var(--dark);
+      color: #FFFFFF;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      transition: background 0.3s;
+    }
+
+    .kp-btn:hover { background: var(--deep); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--deep);
+      padding: 5rem 5rem 2.5rem;
+      color: #FFFFFF;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 4rem;
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand { max-width: 380px; }
+
+    .footer-brand img {
+      height: 70px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-brand p {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 1.4rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-col a {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-col a:hover { color: #FFFFFF; }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom p {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      color: rgba(184, 212, 204, 0.5);
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      nav.scrolled { padding: 0.8rem 1.5rem; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: block; }
+      .hero { padding: 7rem 1.5rem 4rem; }
+      .recipes-section { padding: 3rem 1.5rem 4rem; }
+      footer { padding: 4rem 1.5rem 2rem; }
+      .footer-top { gap: 2.5rem; }
+      .featured-body { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body id="top">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTZFQT8N"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="/" class="nav-brand">
+      <img src="/sz-herbals-logo-united-states.png" alt="SZ Herbals Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/recipes/" style="color:var(--leaf);">Recipes</a></li>
+      <li><a href="/glukora">Glukora</a></li>
+      <li><a href="/why-glukora">Research</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+    <a href="/orderform" class="nav-cta">Order Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/recipes/" class="mobile-nav-link">Recipes</a>
+    <a href="/glukora" class="mobile-nav-link">Glukora</a>
+    <a href="/why-glukora" class="mobile-nav-link">Research</a>
+    <a href="/blog" class="mobile-nav-link">Blog</a>
+    <a href="/orderform" class="mobile-nav-link">Order Now</a>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-eyebrow">SZ Diabetic Kitchen &bull; Nourishing The Pancreas</div>
+    <h1>Wholesome Food, <em>Gentle On Blood Sugar</em></h1>
+    <p>Delicious diabetic-friendly and high-protein recipes built with complex whole grains, healthy fats, and zero refined sugar &mdash; designed to stabilize your glucose curves without sacrificing culinary joy.</p>
+  </header>
+
+  <!-- MAIN RECIPES FEED -->
+  <main class="recipes-section">
+    <div class="filter-bar">
+      <div class="filter-pills">
+        <button class="filter-btn active">All Recipes</button>
+        <button class="filter-btn">Baking &amp; Bread</button>
+        <button class="filter-btn">High-Protein Breakfasts</button>
+        <button class="filter-btn">Low-Carb Dinners</button>
+        <button class="filter-btn">Metabolism Snacks</button>
+      </div>
+      <div class="count-label">Showing recipes tested for steady blood sugar</div>
+    </div>
+
+    <div class="recipe-grid">
+      <!-- FEATURED RECIPE: High-Protein Chocolate Chip Banana Bread -->
+      <a href="/recipes/high-protein-chocolate-chip-banana-bread" class="featured-recipe-card">
+        <div class="featured-img-wrap">
+          <img src="/recipes/high-protein-chocolate-chip-banana-bread.jpg" alt="High-Protein Chocolate Chip Banana Bread with Cinnamon Crumble">
+          <span class="featured-badge">Featured Recipe</span>
+        </div>
+        <div class="featured-body">
+          <div class="recipe-meta-tags">
+            <span class="recipe-tag">Baking</span>
+            <span class="recipe-tag">&bull; Breakfast</span>
+            <span class="recipe-tag">&bull; Diabetic Friendly</span>
+          </div>
+          <h2 class="recipe-title">High-Protein Chocolate Chip Banana Bread with Cinnamon Crumble</h2>
+          <p class="recipe-excerpt">
+            A moist, tender bakery-style loaf packed with dark chocolate chips and a golden cinnamon crumble. Formulated with Greek yogurt, whey protein, and 100% whole-wheat &mdash; absolutely zero refined sugar.
+          </p>
+          <div class="nutrition-mini-pills">
+            <div class="pill-item"><strong>120 kcal</strong>Calories</div>
+            <div class="pill-item"><strong>10g</strong>Net Carbs</div>
+            <div class="pill-item"><strong>6g</strong>Protein</div>
+            <div class="pill-item"><strong>3g</strong>Fiber</div>
+          </div>
+          <span class="view-recipe-btn">View Full Recipe &amp; Instructions &rarr;</span>
+        </div>
+      </a>
+
+      <!-- RECIPE CARD 2: COMING SOON / PREVIEW -->
+      <div class="recipe-card">
+        <div class="card-img-wrap" style="background:#1e3d35;">
+          <div class="card-placeholder-text" style="color:var(--mist);">Breakfast Bowl</div>
+        </div>
+        <div class="card-body">
+          <div class="recipe-meta-tags">
+            <span class="recipe-tag">Breakfast &bull; Low Carb</span>
+          </div>
+          <h3 class="card-title">Chia Seed &amp; Ceylon Cinnamon Overnight Pudding</h3>
+          <p class="card-excerpt">
+            Infused with genuine Ceylon cinnamon to enhance cellular insulin sensitivity. Loaded with soluble prebiotic fiber and healthy omega-3 fatty acids.
+          </p>
+          <div class="card-footer">
+            <span>4g Net Carbs &bull; 9g Protein</span>
+            <span class="card-link" style="color:var(--gold);">Coming Next &rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECIPE CARD 3: COMING SOON / PREVIEW -->
+      <div class="recipe-card">
+        <div class="card-img-wrap" style="background:#2D5C52;">
+          <div class="card-placeholder-text" style="color:var(--fog);">Smoothie</div>
+        </div>
+        <div class="card-body">
+          <div class="recipe-meta-tags">
+            <span class="recipe-tag">Metabolism &bull; Quick Snack</span>
+          </div>
+          <h3 class="card-title">Himalayan Spiced Golden Turmeric Recovery Shake</h3>
+          <p class="card-excerpt">
+            Anti-inflammatory golden elixir crafted with unsweetened almond milk, organic turmeric, ginger root, and vanilla plant protein.
+          </p>
+          <div class="card-footer">
+            <span>3g Net Carbs &bull; 18g Protein</span>
+            <span class="card-link" style="color:var(--gold);">Coming Next &rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECIPE CARD 4: COMING SOON / PREVIEW -->
+      <div class="recipe-card">
+        <div class="card-img-wrap" style="background:#0F2B24;">
+          <div class="card-placeholder-text" style="color:var(--sage);">Dinner</div>
+        </div>
+        <div class="card-body">
+          <div class="recipe-meta-tags">
+            <span class="recipe-tag">Dinner &bull; Pancreas Support</span>
+          </div>
+          <h3 class="card-title">Wild Atlantic Salmon with Garlic Rosemary Cauliflower Mash</h3>
+          <p class="card-excerpt">
+            Rich in anti-inflammatory EPA/DHA fatty acids and potassium to soothe metabolic inflammation without post-prandial glucose surges.
+          </p>
+          <div class="card-footer">
+            <span>5g Net Carbs &bull; 34g Protein</span>
+            <span class="card-link" style="color:var(--gold);">Coming Next &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- KITCHEN PHILOSOPHY -->
+  <section class="kitchen-philosophy-strip">
+    <div class="kp-inner">
+      <h2>Food That Heals Rather Than Deprives</h2>
+      <p>
+        At SZ Herbals, we believe reversing insulin resistance and supporting pancreatic beta cells requires a dual approach: clean botanical extracts from the high Himalayas like Glukora, and delicious, real-food nutrition cooked with mindful macros.
+      </p>
+      <a href="/glukora" class="kp-btn">Discover Glukora Botanical Support &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/sz-herbals-logo-united-states.png" alt="SZ Herbals Logo">
+        <p>Thoughtful, blood-sugar-friendly recipes and pure Himalayan botanicals for people navigating diabetes and insulin sensitivity. Rooted in nature, guided by nutrition.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Diabetic Kitchen</h5>
+        <ul>
+          <li><a href="/recipes/">All Recipes</a></li>
+          <li><a href="/recipes/high-protein-chocolate-chip-banana-bread">High-Protein Banana Bread</a></li>
+          <li><a href="/recipes/">Low-Carb Breakfasts</a></li>
+          <li><a href="/recipes/">Diabetic Snacks</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Pure Formulations</h5>
+        <ul>
+          <li><a href="/glukora">Glukora &mdash; Blood Sugar</a></li>
+          <li><a href="/livokara-gold">Livokara Gold &mdash; Liver</a></li>
+          <li><a href="/figuva">Figuva &mdash; Gentle Iron</a></li>
+          <li><a href="/slimzest">Slimzest &mdash; Metabolism</a></li>
+          <li><a href="/orderform">Order Products</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company &amp; Legal</h5>
+        <ul>
+          <li><a href="/why-glukora">Clinical Research</a></li>
+          <li><a href="/blog">Journal &amp; Stories</a></li>
+          <li><a href="/contact">Contact Support</a></li>
+          <li><a href="/disclaimer">Medical Disclaimer</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 <a href="/" style="color:inherit;text-decoration:none;">SZ Herbals</a>. All rights reserved. | <a href="https://lustrestudio.uk/" target="_blank" style="color:inherit;text-decoration:none;">Site By</a></p>
+      <p>Pure &bull; Natural &bull; Rooted in Nature &bull; Alhamdulillah</p>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileOverlay.classList.toggle('open');
+      document.body.style.overflow = mobileOverlay.classList.contains('open') ? 'hidden' : '';
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+</body>
+</html>
