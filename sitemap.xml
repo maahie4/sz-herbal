@@ -12,6 +12,22 @@
     </image:image>
   </url>
   <url>
+    <loc>https://szherbal.us/recipes/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://szherbal.us/recipes/high-protein-chocolate-chip-banana-bread</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://szherbal.us/recipes/high-protein-chocolate-chip-banana-bread.jpg</image:loc>
+      <image:title>High-Protein Chocolate Chip Banana Bread with Cinnamon Crumble - SZ Herbals Diabetic Kitchen</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://szherbal.us/products</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
